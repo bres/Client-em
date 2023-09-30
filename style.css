@@ -247,66 +247,49 @@ nav .icon-burger .line {
   font-weight: 600;
   height: 4.4rem;
   justify-content: center;
-  min-width: 140px;
-  padding: 0 17px;
+  width: 140px;
+  padding: 0 1rem;
   text-align: center;
   text-decoration: none;
   transition: all 0.3s;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  border-radius:0.2rem;
 }
 
 .button-general:hover {
   background-color: var(--button-hover-color);
 }
 
-
-.small-button {
-  -webkit-backface-visibility: hidden;
-  width: 4rem;
-  display:inline-flex;
-  align-items:center;
-  justify-content: flex-start;
-  overflow: hidden;
-  transition: 0.5s;
-  padding: 0rem 0rem;
-  background-color: var(--blue-color);
-  border-top-right-radius: 25px;
-  border-bottom-right-radius: 25px;
-  margin: 1.5rem 0 2.5rem 0rem;
-  height: 4.4rem;
- }
-
-.small-button i {
-  color: white;
-  font-size:3.7rem;
+.read-more {
+display:inline-flex;
+text-decoration:none;
+margin:1.5rem 0;
+}
+.read-more i {
+font-size:2.9rem;
+color:var(--white-color);
+background:var(--blue-color);
+border-radius:0.2rem;
+padding:0.2rem 0.8rem;
 }
 
-header {
-  display: none;
-  white-space: nowrap;
-  padding-left: 10px;
-  color: white;
+.read-more i:hover {
+background:var(--button-hover-color);
 }
 
-.small-button:hover {
-  width:14rem;
-  transition:0.5s;
-  text-decoration: none;
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
-  -webkit-backface-visibility: hidden;
-}
 
-.small-button:hover header {
-  display: block;
-}
 
 @media (min-width: 768px) {
-  .button-general {
-    min-width: 170px;
-  }
+  
+.button-general {
+  font-size: 1.6rem;
+  height: 5rem;
+  justify-content: center;
+  width: 18rem;
+  padding: 0.5rem 1rem;
+}
 }
 
 /*------------------------------MOBILE VIEW------------------------------*/
@@ -378,7 +361,7 @@ header {
 .showcase-card p {
   color: var(--p-color);
   font-family: "Courier New", Courier, monospace;
-  font-size:1rem;
+  font-size:1.6rem;
 }
 /*-----------------------------------------------------------------------*/
 /* MOBILE VIEW - SECTION-A */
@@ -471,7 +454,7 @@ header {
   object-fit: cover;
 }
 #section-c li {
-  padding: 2.4rem 0rem 0rem 2.4rem;
+  padding: 2.4rem 0 0 2.4rem;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
   margin-bottom: 2.4rem;
   background-color: var(--gray-background-color);
@@ -563,7 +546,12 @@ object-fit:cover;
   padding-bottom: 1.5rem;
   color: #ffffff;
 }
-
+ .footer-content li  { 
+	display:flex;
+	justify-content:flex-start; 
+	align-items:center;
+	gap:1rem;
+  } 
 .footer-content p span {
   color: white;
   padding-left: 0.8rem;
@@ -768,6 +756,11 @@ object-fit:cover;
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 768   - SECTION-D */
   /*-----------------------------------------------------------------------*/
+  
+  #section-d {
+  padding: 0 13vw 20rem 13vw;
+  background-color: var(--gray-background-color);
+}
   #section-d ul {
     list-style-type:none;
     margin:0;
@@ -849,6 +842,7 @@ object-fit:cover;
     padding: 1.6rem 0;
     gap: 1.9rem;
     background-color: var(--blue-color);
+    border-radius:0.2rem;
   }
   #left {
     color: var(--white-color);
@@ -906,7 +900,7 @@ object-fit:cover;
   /* DESKTOP 991  - SECTION-SHOWCASE */
   /*-----------------------------------------------------------------------*/
   .bg-image {
-    padding: 0 5%;
+    padding: 0 5vw;
     display: grid;
     justify-items: start;
     align-items: center;
@@ -1037,11 +1031,13 @@ object-fit:cover;
     padding: 0rem 0rem 0.5rem 0rem;
   }
 
-
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 991  - SECTION-D */
   /*-----------------------------------------------------------------------*/
-
+#section-d {
+  padding: 0 5vw 20rem 5vw;
+  background-color: var(--gray-background-color);
+}
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 991  - SECTION-E */
   /*-----------------------------------------------------------------------*/
@@ -1182,7 +1178,7 @@ object-fit:cover;
   
   #section-c {
     color: var(--p-color);
-    padding: 12rem 0 12rem 12%;
+    padding: 20rem 0 20rem 12%;
     text-align: start;
   }
   
@@ -1194,14 +1190,17 @@ object-fit:cover;
   /*-----------------------------------------------------------------------*/
   /* DESKTOP VIEW   - SECTION-D */
   /*-----------------------------------------------------------------------*/
-
+#section-d {
+  padding: 0 12vw 20rem 12vw;
+  background-color: var(--gray-background-color);
+}
 
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1200  - SECTION-E */
   /*-----------------------------------------------------------------------*/
   #section-e {
     background-color: var(--white-color);
-    padding: 0rem 12% 12rem 12%;
+    padding: 0rem 12% 20rem 12%;
 
   }
   
