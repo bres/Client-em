@@ -1,0 +1,1292 @@
+/*-----------------------------------------------------------------------*/
+/* root */
+/*-----------------------------------------------------------------------*/
+
+:root {
+  --blue-color: #1b66d6;
+  --p-color: #616161;
+  --title-color:black;
+  --h4-color: var(--blue-color);
+  --button-hover-color: #1759bd;
+  --line-color: #2274ee;
+  --gray-background-color: #f5f5f5;
+  --white-color: #fff;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/*-----------------------------------------------------------------------*/
+/* Core Styles */
+/*-----------------------------------------------------------------------*/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Cabin", sans-serif;
+  background-color: var(--gray-background-color);
+  font-size: 1.6rem;
+  line-height: 1.5;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* img {
+  display: block;
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+} */
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Roboto Condensed", sans-serif;
+  line-height: 1.2;
+  letter-spacing:0.05rem;
+}
+
+h2 {
+  font-size: 3rem;
+  margin: 0em 0rem 4rem 0rem;
+  padding: 0;
+  color: var(--title-color);
+}
+
+h3 {
+  font-size: 2.2rem;
+  margin: 0;
+  padding:0 0 0.5rem 0;
+  color: var(--title-color);
+}
+
+h4 {
+  font-size: 1.5rem;
+  color: var(--h4-color);
+  margin: 0rem;
+  padding: 3rem 0rem 0.5rem 0rem;
+}
+
+p {
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 0;
+  color: var(--p-color);
+}
+
+ul i {
+  color: var(--blue-color);
+}
+
+.container {
+  position: relative;
+  margin-top: 80px;
+}
+
+/*-----------------------------------------------------------------------*/
+/* SECTION-NAV / NAVBAR */
+/*-----------------------------------------------------------------------*/
+nav {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 80px;
+  background-color:var(--white-color);
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+  padding: 0 5vw;
+}
+
+nav .logo {
+  float: left;
+  width: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 2.5rem;
+  color: var(--blue-color);
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+nav .links {
+  float: right;
+  padding: 0;
+  margin: 0;
+  width: auto;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav .links li {
+  list-style: none;
+}
+
+nav .links a {
+  display: block;
+  padding: 1rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--p-color);
+  text-decoration: none;
+}
+
+#nav-toggle {
+  position: absolute;
+  top: -80px;
+}
+
+nav .icon-burger {
+  display: none;
+  position: absolute;
+  right:5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+nav .icon-burger .line {
+  width: 30px;
+  height: 4px;
+  background-color: var(--blue-color);
+  margin: 5px;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* .nav-button {
+  text-decoration: none;
+  border: 1px solid var(--blue-color);
+  border-radius: 0.3rem;
+  color: var(--blue-color);
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin: 2.4rem 0;
+} */
+
+@media screen and (max-width: 991px) {
+  nav .logo {
+    float: none;
+    width: auto;
+    justify-content: start;
+  }
+
+  nav .links {
+    float: none;
+    position: fixed;
+    z-index: 9;
+    left: 0;
+    right: 0;
+    top: 80px;
+    bottom: 100%;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    justify-content: start;
+    background-color: var(--blue-color);
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: all 0.5s ease-in-out;
+  }
+
+  nav .links a {
+    font-size: 20px;
+    color: #ffffff;
+  }
+
+  nav :checked ~ .links {
+    bottom: 0;
+  }
+
+  nav .icon-burger {
+    display: block;
+  }
+
+  nav :checked ~ .icon-burger .line:nth-child(1) {
+    transform: translateY(9px) rotate(225deg);
+  }
+
+  nav :checked ~ .icon-burger .line:nth-child(3) {
+    transform: translateY(-9px) rotate(-225deg);
+  }
+
+  nav :checked ~ .icon-burger .line:nth-child(2) {
+    opacity: 0;
+  }
+}
+/*------------------------------BUTTONS-----------------------------*/
+.button-general {
+  align-items: center;
+  background-color: var(--blue-color);
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  fill: #000;
+  font-family: Inter, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  height: 4.4rem;
+  justify-content: center;
+  min-width: 140px;
+  padding: 0 17px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-general:hover {
+  background-color: var(--button-hover-color);
+}
+
+
+.small-button {
+  -webkit-backface-visibility: hidden;
+  width: 4rem;
+  display:inline-flex;
+  align-items:center;
+  justify-content: flex-start;
+  overflow: hidden;
+  transition: 0.5s;
+  padding: 0rem 0rem;
+  background-color: var(--blue-color);
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  margin: 1.5rem 0 2.5rem 0rem;
+  height: 4.4rem;
+ }
+
+.small-button i {
+  color: white;
+  font-size:3.7rem;
+}
+
+header {
+  display: none;
+  white-space: nowrap;
+  padding-left: 10px;
+  color: white;
+}
+
+.small-button:hover {
+  width:14rem;
+  transition:0.5s;
+  text-decoration: none;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  -webkit-backface-visibility: hidden;
+}
+
+.small-button:hover header {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .button-general {
+    min-width: 170px;
+  }
+}
+
+/*------------------------------MOBILE VIEW------------------------------*/
+
+/*-----------------------------------------------------------------------*/
+/* MOBILE VIEW -NAV */
+/*-----------------------------------------------------------------------*/
+/* nav{
+  padding: 0 5% 0 5%;
+ } */
+/*-----------------------------------------------------------------------*/
+/* MOBILE VIEW - SECTION SHOWCASE */
+/*-----------------------------------------------------------------------*/
+
+#icon-link {
+  display: none;
+}
+#showcase {
+  /* height: calc(100vh - 80px); */
+  height:50rem;
+  color: #fff;
+}
+
+#showcase .bg-image {
+  position: absolute;
+  background:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),  url("https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2674&q=80");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  text-align: left;
+  
+}
+.bg-image {
+  padding: 0 5vw;
+  display: grid;
+  justify-items: start;
+  align-items: center;
+}
+.bg-image p {
+  padding: 0;
+}
+#showcase .showcase-card {
+  display: none;
+  justify-content: space-between;
+  background-color: var(--white-color);
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+#showcase .showcase-nav {
+  display: flex;
+  align-items: center;
+  color: var(--blue-color);
+  gap: 1.6rem;
+}
+
+#showcase h2 {
+  margin: 0rem 0rem 0.8rem 0rem;
+  padding: 0;
+  color: var(--white-color);
+}
+#showcase h4 {
+  color: var(--white-color);
+  margin: 0rem;
+  padding: 3rem 0rem 0.5rem 0rem;
+}
+.showcase-card p {
+  color: var(--p-color);
+  font-family: "Courier New", Courier, monospace;
+  font-size:1rem;
+}
+/*-----------------------------------------------------------------------*/
+/* MOBILE VIEW - SECTION-A */
+/*-----------------------------------------------------------------------*/
+#section-a {
+  background-color: var(--white-color);
+  padding: 20rem 5vw;
+}
+
+#section-a .card-content {
+  text-align: start;
+}
+
+#section-a ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 5%;
+}
+
+#section-a img {
+  width: 100%;
+  height: 40rem;
+  object-fit: cover;
+}
+
+#section-a li {
+  padding-bottom: 5%;
+}
+
+#section-a .grid-list i {
+  /* padding-bottom: 0.8rem; */
+  font-size:3rem;
+}
+
+/*-----------------------------------------------------------------------*/
+/* MOBILE VIEW - SECTION-B */
+/*-----------------------------------------------------------------------*/
+
+#section-b {
+  padding: 0rem 5vw;
+  margin-bottom:20rem;
+}
+
+#section-b img {
+  padding: 2.5rem;
+  width: 100%;
+  height: 24rem;
+  object-fit: cover;
+}
+
+#section-b ul {
+  list-style: none;
+  margin-bottom: 6.4rem;
+  padding: 0;
+}
+
+#section-b li {
+  background: #fff;
+  color: #333;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 12px;
+}
+
+#section-b .card-content {
+  padding: 0rem 2.2rem;
+  text-align: start;
+}
+
+#section-b li:not(:last-child) {
+  margin-bottom: 4.8rem;
+}
+
+
+
+/*-----------------------------------------------------------------------*/
+/* MOBILE VIEW - SECTION-C */
+/*-----------------------------------------------------------------------*/
+#section-c {
+  background-color: var(--white-color);
+  padding: 0 5vw 20rem 5vw;
+  text-align: start;
+}
+#section-c ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#section-c img {
+  width: 100%;
+  height: 40rem;
+  object-fit: cover;
+}
+#section-c li {
+  padding: 2.4rem 0rem 0rem 2.4rem;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  margin-bottom: 2.4rem;
+  background-color: var(--gray-background-color);
+}
+
+#section-c h3 {
+  color: var(--title-color);
+  display: inline;
+}
+/*-----------------------------------------------------------------------*/
+/* MOBILE VIEW   - SECTION-D */
+/*-----------------------------------------------------------------------*/
+#section-d {
+  padding: 0 5vw 20rem 5vw;
+  background-color: var(--gray-background-color);
+}
+#section-d ul {
+list-style-type:none;
+margin:0;
+padding:0;
+display:grid;
+grid-template-columns:1fr 1fr;
+grid-gap:1.6rem;
+align-items:center;
+justify-items:center;
+}
+#section-d li {
+border:var(--white-color) 0.8rem solid;
+width:auto;
+aspect-ratio:1/1;
+}
+#section-d img {
+width:100%;
+height:100%;
+object-fit:cover;
+}
+/*-----------------------------------------------------------------------*/
+/* MOBILE VIEW - SECTION-E */
+/*-----------------------------------------------------------------------*/
+#section-e {
+  background-color: var(--white-color);
+  padding: 0rem 5vw 20rem 5vw;
+}
+
+.google-map {
+  position: relative;
+  height: 40rem;
+}
+
+.google-map iframe {
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+
+
+/*-----------------------------------------------------------------------*/
+/* MOBILE VIEW - SECTION-FOOTER */
+/*-----------------------------------------------------------------------*/
+
+.footer-content {
+  background-color: var(--blue-color);
+  color: white;
+  margin: 0;
+  text-align: start;
+  font-size: 1.6rem;
+  padding: 0rem 5vw;
+}
+
+.footer-content i{
+  font-size: 2rem; 
+}
+
+.footer-content h3 {
+  color: #ffffff;
+  margin: 0rem;
+  padding: 4rem 0rem 2.4rem 0rem;
+}
+
+.footer-content ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-content li {
+  padding-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+.footer-content p span {
+  color: white;
+  padding-left: 0.8rem;
+}
+
+.footer-content h2 {
+  color: rgb(255, 255, 255);
+  margin: 0;
+  padding: 0rem 0;
+}
+
+.design {
+  margin-top: 3rem;
+}
+
+.design p {
+  padding: 5rem 2rem;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: small;
+  border-top: solid 1px var(--line-color);
+}
+
+.col-2 i {
+  color: var(--white-color);
+}
+
+.col-3 i {
+  color: var(--white-color);
+}
+
+.col-4 i {
+  color: var(--white-color);
+}
+
+/*------------------------------DESKTOP-576 VIEW------------------------------*/
+@media (min-width: 576px) {
+  
+
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 576  - SECTION-SHOWCASE */
+  /*-----------------------------------------------------------------------*/
+
+  .bg-image {
+    padding: 0 10vw;
+    display: grid;
+    justify-items: start;
+    align-items: center;
+  }
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 576  - SECTION-A */
+  /*-----------------------------------------------------------------------*/
+  #section-a {
+    padding: 20rem 10vw;
+  }
+  #section-a .grid-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3%;
+  }
+  #section-a img {
+    width: 100%;
+    height: 40rem;
+    object-fit: cover;
+  }
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 576  - SECTION-B */
+  /*-----------------------------------------------------------------------*/
+
+  #section-b {
+    padding: 0em 10vw;
+    margin-bottom: 12rem;
+  }
+  #section-b img {
+    padding: 2.4rem;
+    width: 100%;
+    height: 30rem;
+  }
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 576  - SECTION-C */
+  /*-----------------------------------------------------------------------*/
+  #section-c {
+    background-color: var(--white-color);
+    padding: 0 10vw 20rem 10vw;
+    text-align: start;
+  }
+  #section-c img {
+    width: 100%;
+    height: 40rem;
+    object-fit: cover;
+  }
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP VIEW   - SECTION-D */
+  /*-----------------------------------------------------------------------*/
+  #section-d {
+    padding: 0 10vw 20rem 10vw;
+  }
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 576  - SECTION-E */
+  /*-----------------------------------------------------------------------*/
+  #section-e {
+    background-color: var(--white-color);
+    padding: 0rem 10vw 20rem 10vw;
+  }
+  
+  .google-map {
+    position: relative;
+    height: 40rem;
+  }
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 576 - FOOTER */
+  /*-----------------------------------------------------------------------*/
+  .footer-content {
+    background-color: var(--blue-color);
+    color: white;
+    margin: 0;
+    padding: 0rem 10vw;
+    text-align: start;
+    font-size: 1.4rem;
+  }
+}
+/*------------------------------DESKTOP-768 VIEW------------------------------*/
+@media (min-width: 768px) {
+  
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 768  - SECTION-SHOWCASE */
+  /*-----------------------------------------------------------------------*/
+  #showcase {
+    height: 57vw;
+    color: #fff;
+  }
+  .bg-image {
+    padding: 0 13vw;
+    display: grid;
+    justify-items: start;
+    align-items: center;
+  }
+  #showcase h4 {
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0.8rem 0;
+  }
+  #showcase h2 {
+    font-size: 4.5rem;
+  }
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 768  - SECTION-A */
+  /*-----------------------------------------------------------------------*/
+  #section-a {
+    /* background-color: var(--white-color); */
+    padding: 20rem 13vw;
+  }
+
+  #section-a .grid-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3%;
+  }
+
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 768  - SECTION-B */
+  /*-----------------------------------------------------------------------*/
+  #section-b .grid-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem;
+  }
+  #section-b {
+    padding: 0rem 13vw;
+    margin-bottom: 20rem;
+  }
+  #section-b li:not(:last-child) {
+    margin-bottom: 0rem;
+  }
+  #section-b img {
+    padding: 2.4rem;
+    width: 100%;
+    height: 24rem;
+  }
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 768  - SECTION-C */
+  /*-----------------------------------------------------------------------*/
+  #section-c {
+    background-color: var(--white-color);
+    padding: 0 13vw 20rem 13vw;
+    text-align: start;
+  }
+  #section-c .grid-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 3rem;
+  }
+  #section-c li {
+    margin-bottom: 3rem;
+  }
+  #section-c h4 {
+    margin: 0rem;
+    padding: 3rem 0rem 0.5rem 0rem;
+  }
+
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 768   - SECTION-D */
+  /*-----------------------------------------------------------------------*/
+  #section-d ul {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    grid-gap:3rem;
+    align-items:center;
+    justify-items:center;
+    }
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 768  - SECTION-E */
+  /*-----------------------------------------------------------------------*/
+  #section-e {
+    background-color: var(--white-color);
+    padding: 0rem 13vw 20rem 13vw;
+  }
+  .google-map {
+    position: relative;
+    height: 40rem;
+  }
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 768 - FOOTER */
+  /*-----------------------------------------------------------------------*/
+  .footer-content {
+    background-color: var(--blue-color);
+    color: white;
+    margin: 0;
+    padding: 0rem 13vw;
+    text-align: start;
+    font-size: 1.4rem;
+  }
+  footer .content-wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap:3rem;
+  }
+}
+  /*------------------------------DESKTOP-991 VIEW-------------------------*/
+@media (min-width: 991px) {
+
+  h2 {
+    font-size: 3.5rem;
+    margin: 0em 0rem 4rem 0rem;
+    padding: 0;
+    color: var(--title-color);
+  }
+  
+  h3 {
+    font-size: 2.5rem;
+    margin: 0;
+    padding:0 0 0.5rem 0;
+    color: var(--title-color);
+  }
+  
+  h4 {
+    font-size: 1.8rem;
+    color: var(--h4-color);
+    margin: 0rem;
+    padding: 3rem 0rem 0.5rem 0rem;
+  }
+  
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 991  - NAV */
+  /*-----------------------------------------------------------------------*/
+  nav {
+    padding: 0 5vw;
+  }
+  /*-----------------------------------------------------------------------*/
+  /* NAV BUTTON 991 */
+  /*-----------------------------------------------------------------------*/
+  #iconlink {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3.2rem;
+    height: 75%;
+    width: 270px;
+    padding: 1.6rem 0;
+    gap: 1.9rem;
+    background-color: var(--blue-color);
+  }
+  #left {
+    color: var(--white-color);
+    font-size: 1.9rem;
+    font-family: "Courier New", Courier, monospace;
+  }
+  #right a {
+    color: var(--white-color);
+    font-size: 2.8rem;
+    padding: 0;
+  }
+
+  #right:hover {
+    -webkit-animation: wiggle 0.05s alternate ease infinite;
+    animation: wiggle 0.05s alternate ease infinite;
+    cursor: pointer;
+  }
+
+  @keyframes wiggle {
+    0% {
+      transform: translate(0);
+    }
+    10% {
+      transform: translate(-2px, -2px);
+    }
+    20% {
+      transform: translate(2px, -2px);
+    }
+    30% {
+      transform: translate(-2px, 2px);
+    }
+    40% {
+      transform: translate(2px, 2px);
+    }
+    50% {
+      transform: translate(-2px, -2px);
+    }
+    60% {
+      transform: translate(2px, -2px);
+    }
+    70% {
+      transform: translate(-2px, 2px);
+    }
+    80% {
+      transform: translate(-2px, -2px);
+    }
+    90% {
+      transform: translate(2px, -2px);
+    }
+    100% {
+      transform: translate(0);
+    }
+  }
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 991  - SECTION-SHOWCASE */
+  /*-----------------------------------------------------------------------*/
+  .bg-image {
+    padding: 0 5%;
+    display: grid;
+    justify-items: start;
+    align-items: center;
+  }
+  
+  #showcase .showcase-card {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--white-color);
+    padding: 1.6rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  }
+  #showcase .showcase-card p{
+   font-size:1.6rem
+  }
+
+  #showcase h4 {
+    font-size: 2.5rem;
+    color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0.8rem 0;
+  }
+  #showcase h2 {
+    font-size: 5.5rem;
+  }
+
+
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 991  - SECTION-A */
+  /*-----------------------------------------------------------------------*/
+  #section-a {
+	  padding: 20rem 0;
+  }
+  #section-a .content-wrap {
+    padding-right: 2%;
+    text-align: start;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 3%;
+  }
+  #section-a ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 5%;
+  }
+  #section-a img {
+    object-fit: cover;
+    width: 100%;
+    height: 56rem;
+  }
+  #section-a li {
+    padding-right: 3.2rem;
+  }
+  #section-a h4 {
+    padding: 0 0 0.5rem 0;
+  }
+  #section-a .grid-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #section-a .grid-list i {
+    font-size:4rem;
+  }
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 991  - SECTION-B */
+  /*-----------------------------------------------------------------------*/
+  #section-b {
+    padding: 0rem 5vw;
+    margin-bottom: 20rem;
+  }
+
+  #section-b .grid-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2.4rem;
+  }
+  #section-b img {
+    padding: 2.4rem;
+    width: 100%;
+    height: 24rem;
+  }
+  #section-b ul li:nth-last-child(-n + 3) {
+    margin-bottom: 0rem;
+    background-color: var(--white-color);
+    color: #333;
+  }
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 991  - SECTION-C */
+  /*-----------------------------------------------------------------------*/
+
+  #section-c {
+    color: var(--p-color);
+    padding: 20rem 0 20rem 5vw;
+    text-align: start;
+  }
+
+  #section-c .content-wrap {
+    text-align: start;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 3%;
+  }
+
+  #section-c .grid-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 3.2rem;
+  }
+
+  #section-c ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  #section-c img {
+    width: 100%;
+    height: 56rem;
+    object-fit: cover;
+  }
+
+  #section-c li {
+    margin-bottom: 3.2rem;
+  }
+
+  #section-c h4 {
+    margin: 0rem;
+    padding: 0rem 0rem 0.5rem 0rem;
+  }
+
+
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 991  - SECTION-D */
+  /*-----------------------------------------------------------------------*/
+
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 991  - SECTION-E */
+  /*-----------------------------------------------------------------------*/
+  #section-e {
+    background-color: var(--white-color);
+    padding: 0rem 5vw 20rem 5vw;
+  }
+  
+  .google-map {
+    position: relative;
+    height: 56rem;
+  }
+  
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 991  - SECTION-FOOTER */
+  /*-----------------------------------------------------------------------*/
+  .footer-content {
+    background-color: var(--blue-color);
+    color: white;
+    margin: 0;
+    padding: 0rem 5vw;
+    text-align: start;
+    font-size: 1.4rem;
+  }
+
+  footer .content-wrap {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  footer .col-2,
+  .col-3,
+  .col-4 {
+    justify-self: end;
+  }
+
+  footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  footer li {
+    padding-bottom: 1rem;
+    color: #ffffff;
+  }
+
+  footer p span {
+    color: white;
+    padding-left: 0.8rem;
+  }
+
+  .design {
+    margin-top: 4.8rem;
+  }
+
+  .design p {
+    padding: 3.8rem 2.2rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: small;
+    font-family: "Roboto Condensed", sans-serif;
+    border-top: solid 1px var(--line-color);
+  }
+}
+
+/*------------------------------DESKTOP-1200 VIEW------------------------------*/
+@media (min-width: 1200px) {
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 1200  - NAV */
+  /*-----------------------------------------------------------------------*/
+  nav {
+    padding: 0 5vw;
+  }
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 1200  - SECTION-SHOWCASE */
+  /*-----------------------------------------------------------------------*/
+
+  #showcase {
+    height: calc(100vh - 80px) !important;
+    color: #fff;
+  }
+
+  .bg-image {
+    padding: 0 5vw;
+    display: grid;
+    justify-items: start;
+    align-items: center;
+   }
+
+  #showcase h4 {
+    font-size: 3rem;
+    color: var(--white-color);
+    margin: 0;
+    padding: 0.8rem 0;
+  }
+
+  #showcase h2 {
+    font-size: 6.5rem;
+    color: var(--white-color);
+  }
+
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 1200  - SECTION-A */
+  /*-----------------------------------------------------------------------*/
+  #section-a i {
+    padding-bottom: 0.8rem;
+    font-size:3.5rem;
+  }
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 1200  - SECTION-B */
+  /*-----------------------------------------------------------------------*/
+  #section-b .grid-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3.8rem;
+  }
+  #section-b img {
+    padding: 2.4rem;
+    width: 100%;
+    height: 32rem;
+  }
+  #section-b {
+    padding: 0rem 12%;
+    margin-bottom: 12rem;
+  }
+
+  #section-b ul li:nth-last-child(-n + 3) {
+    margin-bottom: 0rem;
+    background-color: var(--white-color);
+    color: #333;
+  }
+
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 1200  - SECTION-C */
+  /*-----------------------------------------------------------------------*/
+  
+  
+  #section-c {
+    color: var(--p-color);
+    padding: 12rem 0 12rem 12%;
+    text-align: start;
+  }
+  
+  #section-c .content-wrap {
+   
+    grid-gap: 4%;
+  }
+
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP VIEW   - SECTION-D */
+  /*-----------------------------------------------------------------------*/
+
+
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 1200  - SECTION-E */
+  /*-----------------------------------------------------------------------*/
+  #section-e {
+    background-color: var(--white-color);
+    padding: 0rem 12% 12rem 12%;
+
+  }
+  
+  .google-map {
+    position: relative;
+    height: 56rem;
+
+  }
+
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 1200  - SECTION-FOOTER */
+  /*-----------------------------------------------------------------------*/
+  .footer-content {
+    background-color: var(--blue-color);
+    width: 100%;
+    color: white;
+    margin: 0;
+    padding: 0rem 12%;
+    text-align: start;
+    font-size: 1.4rem;
+  }
+}
+
+/*------------------------------DESKTOP-1921 VIEW--------------------------*/
+
+@media (min-width: 1921px) {
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 1921  - NAV */
+  /*-----------------------------------------------------------------------*/
+  nav {
+    padding: 0 5% 0 5%;
+  }
+
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 1921  - SECTION-SHOWCASE */
+  /*-----------------------------------------------------------------------*/
+  .bg-image {
+    padding: 0 12%;
+    display: grid;
+    justify-items: start;
+    align-items: center;
+  }
+
+  #showcase h4 {
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0.8em 0;
+  }
+
+  #showcase h2 {
+    font-size: 7rem;
+  }
+
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 1921  - SECTION-A */
+  /*-----------------------------------------------------------------------*/
+
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 1921  - SECTION-B */
+  /*-----------------------------------------------------------------------*/
+
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 1921  - SECTION-C */
+  /*-----------------------------------------------------------------------*/
+
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 1921  - SECTION-D */
+  /*-----------------------------------------------------------------------*/
+
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 1921  - SECTION-E */
+  /*-----------------------------------------------------------------------*/
+  #section-e {
+    background-color: var(--white-color);
+    padding: 0rem 12% 12rem 12%;
+  }
+  
+  .google-map {
+    position: relative;
+    height: 56rem;
+  }
+
+  
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 1921  - SECTION-FOOTER */
+  /*-----------------------------------------------------------------------*/
+}
