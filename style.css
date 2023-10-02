@@ -56,7 +56,7 @@ h3,
 h4 {
   font-family: "Roboto Condensed", sans-serif;
   line-height: 1.2;
-  letter-spacing:0.05rem;
+  letter-spacing:0.08rem;
 }
 
 h2 {
@@ -77,7 +77,7 @@ h4 {
   font-size: 1.5rem;
   color: var(--h4-color);
   margin: 0rem;
-  padding: 3rem 0rem 0.5rem 0rem;
+  padding: 5rem 0rem 0.5rem 0rem;
 }
 
 p {
@@ -265,10 +265,10 @@ nav .icon-burger .line {
 .read-more {
 display:inline-flex;
 text-decoration:none;
-margin:1.5rem 0;
+margin:2.5rem 0;
 }
 .read-more i {
-font-size:2.9rem;
+font-size:2.8rem;
 color:var(--white-color);
 background:var(--blue-color);
 border-radius:0.2rem;
@@ -355,8 +355,6 @@ background:var(--button-hover-color);
 }
 #showcase h4 {
   color: var(--white-color);
-  margin: 0rem;
-  padding: 3rem 0rem 0.5rem 0rem;
 }
 .showcase-card p {
   color: var(--p-color);
@@ -414,7 +412,7 @@ background:var(--button-hover-color);
 
 #section-b ul {
   list-style: none;
-  margin-bottom: 6.4rem;
+  margin-bottom: 7rem;
   padding: 0;
 }
 
@@ -425,7 +423,7 @@ background:var(--button-hover-color);
 }
 
 #section-b .card-content {
-  padding: 0rem 2.2rem;
+  padding: 0rem 2.5rem 0rem 2.5rem;
   text-align: start;
 }
 
@@ -482,14 +480,17 @@ align-items:center;
 justify-items:center;
 }
 #section-d li {
-border:var(--white-color) 0.8rem solid;
+margin:0;
+padding:0;
+
 width:auto;
 aspect-ratio:1/1;
+border:var(--white-color ) 1.25rem solid;
 }
 #section-d img {
-width:100%;
 height:100%;
-object-fit:cover;
+width:100%;
+object-fit:fill;
 }
 /*-----------------------------------------------------------------------*/
 /* MOBILE VIEW - SECTION-E */
@@ -523,7 +524,7 @@ object-fit:cover;
   margin: 0;
   text-align: start;
   font-size: 1.6rem;
-  padding: 0rem 5vw;
+  padding: 0 5vw 0  5vw;
 }
 
 .footer-content i{
@@ -668,7 +669,7 @@ object-fit:cover;
     background-color: var(--blue-color);
     color: white;
     margin: 0;
-    padding: 0rem 10vw;
+    padding: 0 10vw 0 10vw;
     text-align: start;
     font-size: 1.4rem;
   }
@@ -684,16 +685,13 @@ object-fit:cover;
     color: #fff;
   }
   .bg-image {
-    padding: 0 13vw;
+    padding: 0 11vw;
     display: grid;
     justify-items: start;
     align-items: center;
   }
   #showcase h4 {
     font-size: 2rem;
-    color: rgb(255, 255, 255);
-    margin: 0;
-    padding: 0.8rem 0;
   }
   #showcase h2 {
     font-size: 4.5rem;
@@ -703,7 +701,7 @@ object-fit:cover;
   /*-----------------------------------------------------------------------*/
   #section-a {
     /* background-color: var(--white-color); */
-    padding: 20rem 13vw;
+    padding: 20rem 11vw;
   }
 
   #section-a .grid-list {
@@ -721,7 +719,7 @@ object-fit:cover;
     grid-gap: 3rem;
   }
   #section-b {
-    padding: 0rem 13vw;
+    padding: 0rem 11vw;
     margin-bottom: 20rem;
   }
   #section-b li:not(:last-child) {
@@ -737,7 +735,7 @@ object-fit:cover;
   /*-----------------------------------------------------------------------*/
   #section-c {
     background-color: var(--white-color);
-    padding: 0 13vw 20rem 13vw;
+    padding: 0 11vw 20rem 11vw;
     text-align: start;
   }
   #section-c .grid-list {
@@ -750,7 +748,6 @@ object-fit:cover;
   }
   #section-c h4 {
     margin: 0rem;
-    padding: 3rem 0rem 0.5rem 0rem;
   }
 
   /*-----------------------------------------------------------------------*/
@@ -758,7 +755,7 @@ object-fit:cover;
   /*-----------------------------------------------------------------------*/
   
   #section-d {
-  padding: 0 13vw 20rem 13vw;
+  padding: 0 11vw 20rem 11vw;
   background-color: var(--gray-background-color);
 }
   #section-d ul {
@@ -768,7 +765,7 @@ object-fit:cover;
     display:grid;
     grid-template-columns:repeat(4,1fr);
     grid-gap:3rem;
-    align-items:center;
+    align-items:baseline;
     justify-items:center;
     }
   /*-----------------------------------------------------------------------*/
@@ -776,7 +773,7 @@ object-fit:cover;
   /*-----------------------------------------------------------------------*/
   #section-e {
     background-color: var(--white-color);
-    padding: 0rem 13vw 20rem 13vw;
+    padding: 0rem 11vw 20rem 11vw;
   }
   .google-map {
     position: relative;
@@ -789,7 +786,7 @@ object-fit:cover;
     background-color: var(--blue-color);
     color: white;
     margin: 0;
-    padding: 0rem 13vw;
+    padding: 0 11vw 0 11vw;
     text-align: start;
     font-size: 1.4rem;
   }
@@ -820,7 +817,6 @@ object-fit:cover;
     font-size: 1.8rem;
     color: var(--h4-color);
     margin: 0rem;
-    padding: 3rem 0rem 0.5rem 0rem;
   }
   
   /*-----------------------------------------------------------------------*/
@@ -921,7 +917,6 @@ object-fit:cover;
     font-size: 2.5rem;
     color: rgb(255, 255, 255);
     margin: 0;
-    padding: 0.8rem 0;
   }
   #showcase h2 {
     font-size: 5.5rem;
@@ -932,7 +927,7 @@ object-fit:cover;
   /* DESKTOP 991  - SECTION-A */
   /*-----------------------------------------------------------------------*/
   #section-a {
-	  padding: 20rem 0;
+	  padding: 20rem 5vw 20rem 0;
   }
   #section-a .content-wrap {
     padding-right: 2%;
@@ -949,7 +944,7 @@ object-fit:cover;
   #section-a img {
     object-fit: cover;
     width: 100%;
-    height: 56rem;
+    height: 58rem;
   }
   #section-a li {
     padding-right: 3.2rem;
@@ -1018,7 +1013,7 @@ object-fit:cover;
 
   #section-c img {
     width: 100%;
-    height: 56rem;
+    height: 58rem;
     object-fit: cover;
   }
 
@@ -1028,8 +1023,9 @@ object-fit:cover;
 
   #section-c h4 {
     margin: 0rem;
-    padding: 0rem 0rem 0.5rem 0rem;
+    padding:0rem 0rem 0.5rem 0rem;
   }
+
 
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 991  - SECTION-D */
@@ -1048,7 +1044,7 @@ object-fit:cover;
   
   .google-map {
     position: relative;
-    height: 56rem;
+    height: 58rem;
   }
   
   /*-----------------------------------------------------------------------*/
@@ -1132,7 +1128,6 @@ object-fit:cover;
     font-size: 3rem;
     color: var(--white-color);
     margin: 0;
-    padding: 0.8rem 0;
   }
 
   #showcase h2 {
@@ -1143,6 +1138,10 @@ object-fit:cover;
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1200  - SECTION-A */
   /*-----------------------------------------------------------------------*/
+   #section-a {
+	  padding: 20rem 0 20rem 0;
+  }
+
   #section-a i {
     padding-bottom: 0.8rem;
     font-size:3.5rem;
@@ -1161,8 +1160,8 @@ object-fit:cover;
     height: 32rem;
   }
   #section-b {
-    padding: 0rem 12%;
-    margin-bottom: 12rem;
+    padding: 0rem 5vw;
+    margin-bottom: 20rem;
   }
 
   #section-b ul li:nth-last-child(-n + 3) {
@@ -1178,7 +1177,7 @@ object-fit:cover;
   
   #section-c {
     color: var(--p-color);
-    padding: 20rem 0 20rem 12%;
+    padding: 20rem 0 20rem 5vw;
     text-align: start;
   }
   
@@ -1188,10 +1187,10 @@ object-fit:cover;
   }
 
   /*-----------------------------------------------------------------------*/
-  /* DESKTOP VIEW   - SECTION-D */
+  /* DESKTOP 1200  VIEW   - SECTION-D */
   /*-----------------------------------------------------------------------*/
 #section-d {
-  padding: 0 12vw 20rem 12vw;
+  padding: 0 5vw 20rem 5vw;
   background-color: var(--gray-background-color);
 }
 
@@ -1200,13 +1199,12 @@ object-fit:cover;
   /*-----------------------------------------------------------------------*/
   #section-e {
     background-color: var(--white-color);
-    padding: 0rem 12% 20rem 12%;
+    padding: 0 5vw 20rem 5vw;
 
   }
   
   .google-map {
     position: relative;
-    height: 56rem;
 
   }
 
@@ -1218,10 +1216,99 @@ object-fit:cover;
     width: 100%;
     color: white;
     margin: 0;
-    padding: 0rem 12%;
+    padding: 0rem 5vw;
     text-align: start;
     font-size: 1.4rem;
   }
+}
+
+
+/*------------------------------DESKTOP-1400 VIEW--------------------------*/
+
+@media (min-width: 1400px) {
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 1400  - NAV */
+  /*-----------------------------------------------------------------------*/
+  nav {
+    padding: 0 5% 0 5%;
+  }
+
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 1400  - SECTION-SHOWCASE */
+  /*-----------------------------------------------------------------------*/
+  .bg-image {
+    padding: 0 15vw;
+    display: grid;
+    justify-items: start;
+    align-items: center;
+  }
+
+  #showcase h4 {
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    margin: 0;
+  }
+
+  #showcase h2 {
+    font-size: 7rem;
+  }
+
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 1400  - SECTION-A */
+  /*-----------------------------------------------------------------------*/
+  #section-a {
+	  padding: 20rem 0 20rem 0;
+  }
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 1400  - SECTION-B */
+  /*-----------------------------------------------------------------------*/
+  #section-b {
+    padding: 0rem 15vw;
+    margin-bottom: 20rem;
+  }
+
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 1400  - SECTION-C */
+  /*-----------------------------------------------------------------------*/
+  #section-c {
+    color: var(--p-color);
+    padding: 20rem 0 20rem 15vw;
+    text-align: start;
+  }
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 1400  - SECTION-D */
+  /*-----------------------------------------------------------------------*/
+#section-d {
+  padding: 0 15vw 20rem 15vw;
+  background-color: var(--gray-background-color);
+}
+
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 1400  - SECTION-E */
+  /*-----------------------------------------------------------------------*/
+  #section-e {
+    background-color: var(--white-color);
+    padding: 0rem 15vw 20rem 15vw;
+  }
+  
+  .google-map {
+    position: relative;
+  }
+
+  
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 1400  - SECTION-FOOTER */
+  /*-----------------------------------------------------------------------*/
+  .footer-content {
+    background-color: var(--blue-color);
+    width: 100%;
+    color: white;
+    margin: 0;
+    padding: 0 15vw 0 15vw;
+    text-align: start;
+    font-size: 1.4rem;
+  }
+
 }
 
 /*------------------------------DESKTOP-1921 VIEW--------------------------*/
@@ -1238,7 +1325,7 @@ object-fit:cover;
   /* DESKTOP 1921  - SECTION-SHOWCASE */
   /*-----------------------------------------------------------------------*/
   .bg-image {
-    padding: 0 12%;
+    padding: 0 23vw;
     display: grid;
     justify-items: start;
     align-items: center;
@@ -1248,7 +1335,6 @@ object-fit:cover;
     font-size: 2rem;
     color: rgb(255, 255, 255);
     margin: 0;
-    padding: 0.8em 0;
   }
 
   #showcase h2 {
@@ -1258,34 +1344,59 @@ object-fit:cover;
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1921  - SECTION-A */
   /*-----------------------------------------------------------------------*/
-
+  #section-a {
+	  padding: 20rem 0vw 20rem 0;
+  }
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1921  - SECTION-B */
   /*-----------------------------------------------------------------------*/
-
+  #section-b {
+    padding: 0rem 23vw;
+    margin-bottom: 20rem;
+  }
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1921  - SECTION-C */
   /*-----------------------------------------------------------------------*/
-
+  #section-c {
+    color: var(--p-color);
+    padding: 20rem 0 20rem 23vw;
+    text-align: start;
+  }
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1921  - SECTION-D */
   /*-----------------------------------------------------------------------*/
+#section-d {
+  padding: 0 23vw 20rem 23vw;
+  background-color: var(--gray-background-color);
+}
+
 
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1921  - SECTION-E */
   /*-----------------------------------------------------------------------*/
   #section-e {
     background-color: var(--white-color);
-    padding: 0rem 12% 12rem 12%;
+    padding: 0 23vw 20rem 23vw;
   }
   
   .google-map {
     position: relative;
-    height: 56rem;
+    height: 58rem;
   }
 
   
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1921  - SECTION-FOOTER */
-  /*-----------------------------------------------------------------------*/
+  /*-----------------------------------------------------------------------*/i
+
+  .footer-content {
+    background-color: var(--blue-color);
+    width: 100%;
+    color: white;
+    margin: 0;
+    padding: 0 23vw 0 23vw;
+    text-align: start;
+    font-size: 1.4rem;
+  }
+
 }
