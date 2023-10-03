@@ -3,12 +3,12 @@
 /*-----------------------------------------------------------------------*/
 
 :root {
-  --blue-color: #1b66d6;
+  --blue-color: #175cc5;
   --p-color: #616161;
-  --title-color:black;
+  --title-color: black;
   --h4-color: var(--blue-color);
-  --button-hover-color: #1759bd;
-  --line-color: #2274ee;
+  --button-hover-color: #1556b8;
+  --line-color: #1964d6;
   --gray-background-color: #f5f5f5;
   --white-color: #fff;
 }
@@ -56,11 +56,11 @@ h3,
 h4 {
   font-family: "Roboto Condensed", sans-serif;
   line-height: 1.2;
-  letter-spacing:0.08rem;
+  letter-spacing: 0.08rem;
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 4rem;
   margin: 0em 0rem 4rem 0rem;
   padding: 0;
   color: var(--title-color);
@@ -69,12 +69,12 @@ h2 {
 h3 {
   font-size: 2.2rem;
   margin: 0;
-  padding:0 0 0.5rem 0;
+  padding: 0 0 0.5rem 0;
   color: var(--title-color);
 }
 
 h4 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: var(--h4-color);
   margin: 0rem;
   padding: 5rem 0rem 0.5rem 0rem;
@@ -106,7 +106,7 @@ nav {
   right: 0;
   top: 0;
   height: 80px;
-  background-color:var(--white-color);
+  background-color: var(--white-color);
   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
   padding: 0 5vw;
 }
@@ -154,7 +154,7 @@ nav .links a {
 nav .icon-burger {
   display: none;
   position: absolute;
-  right:5%;
+  right: 5%;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -255,7 +255,7 @@ nav .icon-burger .line {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  border-radius:0.2rem;
+  border-radius: 0.2rem;
 }
 
 .button-general:hover {
@@ -263,33 +263,30 @@ nav .icon-burger .line {
 }
 
 .read-more {
-display:inline-flex;
-text-decoration:none;
-margin:2.5rem 0;
+  display: inline-flex;
+  text-decoration: none;
+  margin: 2.5rem 0;
 }
 .read-more i {
-font-size:2.8rem;
-color:var(--white-color);
-background:var(--blue-color);
-border-radius:0.2rem;
-padding:0.2rem 0.8rem;
+  font-size: 2.8rem;
+  color: var(--white-color);
+  background: var(--blue-color);
+  border-radius: 0.2rem;
+  padding: 0.2rem 0.8rem;
 }
 
 .read-more i:hover {
-background:var(--button-hover-color);
+  background: var(--button-hover-color);
 }
-
-
 
 @media (min-width: 768px) {
-  
-.button-general {
-  font-size: 1.6rem;
-  height: 5rem;
-  justify-content: center;
-  width: 18rem;
-  padding: 0.5rem 1rem;
-}
+  .button-general {
+    font-size: 1.6rem;
+    height: 5rem;
+    justify-content: center;
+    width: 18rem;
+    padding: 0.5rem 1rem;
+  }
 }
 
 /*------------------------------MOBILE VIEW------------------------------*/
@@ -309,13 +306,14 @@ background:var(--button-hover-color);
 }
 #showcase {
   /* height: calc(100vh - 80px); */
-  height:50rem;
+  height: 50rem;
   color: #fff;
 }
 
 #showcase .bg-image {
   position: absolute;
-  background:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),  url("https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2674&q=80");
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("https://images.boatsgroup.com/resize/1/73/88/9057388_20230924090018619_1_XLARGE.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -323,7 +321,6 @@ background:var(--button-hover-color);
   height: 100%;
   z-index: -1;
   text-align: left;
-  
 }
 .bg-image {
   padding: 0 5vw;
@@ -359,7 +356,7 @@ background:var(--button-hover-color);
 .showcase-card p {
   color: var(--p-color);
   font-family: "Courier New", Courier, monospace;
-  font-size:1.6rem;
+  font-size: 1.6rem;
 }
 /*-----------------------------------------------------------------------*/
 /* MOBILE VIEW - SECTION-A */
@@ -391,7 +388,7 @@ background:var(--button-hover-color);
 
 #section-a .grid-list i {
   /* padding-bottom: 0.8rem; */
-  font-size:3rem;
+  font-size: 3rem;
 }
 
 /*-----------------------------------------------------------------------*/
@@ -400,7 +397,7 @@ background:var(--button-hover-color);
 
 #section-b {
   padding: 0rem 5vw;
-  margin-bottom:20rem;
+  margin-bottom: 20rem;
 }
 
 #section-b img {
@@ -430,8 +427,6 @@ background:var(--button-hover-color);
 #section-b li:not(:last-child) {
   margin-bottom: 4.8rem;
 }
-
-
 
 /*-----------------------------------------------------------------------*/
 /* MOBILE VIEW - SECTION-C */
@@ -467,30 +462,34 @@ background:var(--button-hover-color);
 /*-----------------------------------------------------------------------*/
 #section-d {
   padding: 0 5vw 20rem 5vw;
-  background-color: var(--gray-background-color);
+  background-color: var(--blue-color);
 }
 #section-d ul {
-list-style-type:none;
-margin:0;
-padding:0;
-display:grid;
-grid-template-columns:1fr 1fr;
-grid-gap:1.6rem;
-align-items:center;
-justify-items:center;
+  list-style-type: none;
+  margin:0;
+  padding:0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1.6rem;
+  align-items: center;
+  justify-items: center;
 }
 #section-d li {
-margin:0;
-padding:0;
+  max-width: 250px;
+ }
 
-width:auto;
-aspect-ratio:1/1;
-border:var(--white-color ) 1.25rem solid;
+#section-d li img {
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border:var(--white-color) 0.5rem solid;
 }
-#section-d img {
-height:100%;
-width:100%;
-object-fit:fill;
+#section-d h2 {
+  color:white;
+}
+#section-d h4 {
+  color:white;
 }
 /*-----------------------------------------------------------------------*/
 /* MOBILE VIEW - SECTION-E */
@@ -513,7 +512,6 @@ object-fit:fill;
   position: absolute;
 }
 
-
 /*-----------------------------------------------------------------------*/
 /* MOBILE VIEW - SECTION-FOOTER */
 /*-----------------------------------------------------------------------*/
@@ -524,11 +522,11 @@ object-fit:fill;
   margin: 0;
   text-align: start;
   font-size: 1.6rem;
-  padding: 0 5vw 0  5vw;
+  padding: 0 5vw 0 5vw;
 }
 
-.footer-content i{
-  font-size: 2rem; 
+.footer-content i {
+  font-size: 2rem;
 }
 
 .footer-content h3 {
@@ -547,12 +545,12 @@ object-fit:fill;
   padding-bottom: 1.5rem;
   color: #ffffff;
 }
- .footer-content li  { 
-	display:flex;
-	justify-content:flex-start; 
-	align-items:center;
-	gap:1rem;
-  } 
+.footer-content li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
 .footer-content p span {
   color: white;
   padding-left: 0.8rem;
@@ -565,11 +563,11 @@ object-fit:fill;
 }
 
 .design {
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .design p {
-  padding: 5rem 2rem;
+  padding: 3rem 2rem;
   text-align: center;
   color: rgb(255, 255, 255);
   font-size: small;
@@ -590,8 +588,6 @@ object-fit:fill;
 
 /*------------------------------DESKTOP-576 VIEW------------------------------*/
 @media (min-width: 576px) {
-  
-
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 576  - SECTION-SHOWCASE */
   /*-----------------------------------------------------------------------*/
@@ -657,7 +653,7 @@ object-fit:fill;
     background-color: var(--white-color);
     padding: 0rem 10vw 20rem 10vw;
   }
-  
+
   .google-map {
     position: relative;
     height: 40rem;
@@ -676,7 +672,6 @@ object-fit:fill;
 }
 /*------------------------------DESKTOP-768 VIEW------------------------------*/
 @media (min-width: 768px) {
-  
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 768  - SECTION-SHOWCASE */
   /*-----------------------------------------------------------------------*/
@@ -753,21 +748,20 @@ object-fit:fill;
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 768   - SECTION-D */
   /*-----------------------------------------------------------------------*/
-  
+
   #section-d {
-  padding: 0 11vw 20rem 11vw;
-  background-color: var(--gray-background-color);
-}
+    padding: 0 11vw 20rem 11vw;
+  }
   #section-d ul {
-    list-style-type:none;
-    margin:0;
-    padding:0;
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    grid-gap:3rem;
-    align-items:baseline;
-    justify-items:center;
-    }
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 3rem;
+    align-items: baseline;
+    justify-items: center;
+  }
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 768  - SECTION-E */
   /*-----------------------------------------------------------------------*/
@@ -793,32 +787,31 @@ object-fit:fill;
   footer .content-wrap {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap:3rem;
+    grid-column-gap: 3rem;
   }
 }
-  /*------------------------------DESKTOP-991 VIEW-------------------------*/
+/*------------------------------DESKTOP-991 VIEW-------------------------*/
 @media (min-width: 991px) {
-
   h2 {
     font-size: 3.5rem;
     margin: 0em 0rem 4rem 0rem;
     padding: 0;
     color: var(--title-color);
   }
-  
+
   h3 {
     font-size: 2.5rem;
     margin: 0;
-    padding:0 0 0.5rem 0;
+    padding: 0 0 0.5rem 0;
     color: var(--title-color);
   }
-  
+
   h4 {
     font-size: 1.8rem;
     color: var(--h4-color);
     margin: 0rem;
   }
-  
+
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 991  - NAV */
   /*-----------------------------------------------------------------------*/
@@ -838,7 +831,7 @@ object-fit:fill;
     padding: 1.6rem 0;
     gap: 1.9rem;
     background-color: var(--blue-color);
-    border-radius:0.2rem;
+    border-radius: 0.2rem;
   }
   #left {
     color: var(--white-color);
@@ -901,7 +894,7 @@ object-fit:fill;
     justify-items: start;
     align-items: center;
   }
-  
+
   #showcase .showcase-card {
     display: flex;
     justify-content: space-between;
@@ -909,8 +902,8 @@ object-fit:fill;
     padding: 1.6rem;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   }
-  #showcase .showcase-card p{
-   font-size:1.6rem
+  #showcase .showcase-card p {
+    font-size: 1.6rem;
   }
 
   #showcase h4 {
@@ -922,12 +915,11 @@ object-fit:fill;
     font-size: 5.5rem;
   }
 
-
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 991  - SECTION-A */
   /*-----------------------------------------------------------------------*/
   #section-a {
-	  padding: 20rem 5vw 20rem 0;
+    padding: 20rem 5vw 20rem 0;
   }
   #section-a .content-wrap {
     padding-right: 2%;
@@ -957,7 +949,7 @@ object-fit:fill;
     grid-template-columns: repeat(2, 1fr);
   }
   #section-a .grid-list i {
-    font-size:4rem;
+    font-size: 4rem;
   }
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 991  - SECTION-B */
@@ -1023,17 +1015,15 @@ object-fit:fill;
 
   #section-c h4 {
     margin: 0rem;
-    padding:0rem 0rem 0.5rem 0rem;
+    padding: 0rem 0rem 0.5rem 0rem;
   }
-
 
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 991  - SECTION-D */
   /*-----------------------------------------------------------------------*/
-#section-d {
-  padding: 0 5vw 20rem 5vw;
-  background-color: var(--gray-background-color);
-}
+  #section-d {
+    padding: 0 5vw 20rem 5vw;
+  }
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 991  - SECTION-E */
   /*-----------------------------------------------------------------------*/
@@ -1041,12 +1031,12 @@ object-fit:fill;
     background-color: var(--white-color);
     padding: 0rem 5vw 20rem 5vw;
   }
-  
+
   .google-map {
     position: relative;
     height: 58rem;
   }
-  
+
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 991  - SECTION-FOOTER */
   /*-----------------------------------------------------------------------*/
@@ -1086,18 +1076,7 @@ object-fit:fill;
     padding-left: 0.8rem;
   }
 
-  .design {
-    margin-top: 4.8rem;
-  }
 
-  .design p {
-    padding: 3.8rem 2.2rem;
-    text-align: center;
-    color: rgb(255, 255, 255);
-    font-size: small;
-    font-family: "Roboto Condensed", sans-serif;
-    border-top: solid 1px var(--line-color);
-  }
 }
 
 /*------------------------------DESKTOP-1200 VIEW------------------------------*/
@@ -1122,7 +1101,7 @@ object-fit:fill;
     display: grid;
     justify-items: start;
     align-items: center;
-   }
+  }
 
   #showcase h4 {
     font-size: 3rem;
@@ -1138,13 +1117,13 @@ object-fit:fill;
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1200  - SECTION-A */
   /*-----------------------------------------------------------------------*/
-   #section-a {
-	  padding: 20rem 0 20rem 0;
+  #section-a {
+    padding: 20rem 0 20rem 0;
   }
 
   #section-a i {
     padding-bottom: 0.8rem;
-    font-size:3.5rem;
+    font-size: 3.5rem;
   }
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1200  - SECTION-B */
@@ -1173,26 +1152,23 @@ object-fit:fill;
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1200  - SECTION-C */
   /*-----------------------------------------------------------------------*/
-  
-  
+
   #section-c {
     color: var(--p-color);
     padding: 20rem 0 20rem 5vw;
     text-align: start;
   }
-  
+
   #section-c .content-wrap {
-   
     grid-gap: 4%;
   }
 
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1200  VIEW   - SECTION-D */
   /*-----------------------------------------------------------------------*/
-#section-d {
-  padding: 0 5vw 20rem 5vw;
-  background-color: var(--gray-background-color);
-}
+  #section-d {
+    padding: 0 5vw 20rem 5vw;
+  }
 
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1200  - SECTION-E */
@@ -1200,12 +1176,10 @@ object-fit:fill;
   #section-e {
     background-color: var(--white-color);
     padding: 0 5vw 20rem 5vw;
-
   }
-  
+
   .google-map {
     position: relative;
-
   }
 
   /*-----------------------------------------------------------------------*/
@@ -1221,7 +1195,6 @@ object-fit:fill;
     font-size: 1.4rem;
   }
 }
-
 
 /*------------------------------DESKTOP-1400 VIEW--------------------------*/
 
@@ -1257,7 +1230,7 @@ object-fit:fill;
   /* DESKTOP 1400  - SECTION-A */
   /*-----------------------------------------------------------------------*/
   #section-a {
-	  padding: 20rem 0 20rem 0;
+    padding: 20rem 0 20rem 0;
   }
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1400  - SECTION-B */
@@ -1278,10 +1251,9 @@ object-fit:fill;
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1400  - SECTION-D */
   /*-----------------------------------------------------------------------*/
-#section-d {
-  padding: 0 15vw 20rem 15vw;
-  background-color: var(--gray-background-color);
-}
+  #section-d {
+    padding: 0 15vw 20rem 15vw;
+  }
 
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1400  - SECTION-E */
@@ -1290,12 +1262,11 @@ object-fit:fill;
     background-color: var(--white-color);
     padding: 0rem 15vw 20rem 15vw;
   }
-  
+
   .google-map {
     position: relative;
   }
 
-  
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1400  - SECTION-FOOTER */
   /*-----------------------------------------------------------------------*/
@@ -1308,7 +1279,6 @@ object-fit:fill;
     text-align: start;
     font-size: 1.4rem;
   }
-
 }
 
 /*------------------------------DESKTOP-1921 VIEW--------------------------*/
@@ -1325,7 +1295,7 @@ object-fit:fill;
   /* DESKTOP 1921  - SECTION-SHOWCASE */
   /*-----------------------------------------------------------------------*/
   .bg-image {
-    padding: 0 23vw;
+    padding: 0 20vw;
     display: grid;
     justify-items: start;
     align-items: center;
@@ -1345,13 +1315,13 @@ object-fit:fill;
   /* DESKTOP 1921  - SECTION-A */
   /*-----------------------------------------------------------------------*/
   #section-a {
-	  padding: 20rem 0vw 20rem 0;
+    padding: 20rem 0vw 20rem 0;
   }
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1921  - SECTION-B */
   /*-----------------------------------------------------------------------*/
   #section-b {
-    padding: 0rem 23vw;
+    padding: 0rem 20vw;
     margin-bottom: 20rem;
   }
   /*-----------------------------------------------------------------------*/
@@ -1359,44 +1329,39 @@ object-fit:fill;
   /*-----------------------------------------------------------------------*/
   #section-c {
     color: var(--p-color);
-    padding: 20rem 0 20rem 23vw;
+    padding: 20rem 0 20rem 20vw;
     text-align: start;
   }
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1921  - SECTION-D */
   /*-----------------------------------------------------------------------*/
-#section-d {
-  padding: 0 23vw 20rem 23vw;
-  background-color: var(--gray-background-color);
-}
-
+  #section-d {
+    padding: 0 20vw 20rem 20vw;
+  }
 
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1921  - SECTION-E */
   /*-----------------------------------------------------------------------*/
   #section-e {
     background-color: var(--white-color);
-    padding: 0 23vw 20rem 23vw;
+    padding: 0 20vw 20rem 20vw;
   }
-  
+
   .google-map {
     position: relative;
     height: 58rem;
   }
 
-  
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1921  - SECTION-FOOTER */
-  /*-----------------------------------------------------------------------*/i
-
-  .footer-content {
+  /*-----------------------------------------------------------------------*/
+.footer-content {
     background-color: var(--blue-color);
     width: 100%;
     color: white;
     margin: 0;
-    padding: 0 23vw 0 23vw;
+    padding: 0 20vw 0 20vw;
     text-align: start;
     font-size: 1.4rem;
   }
-
 }
