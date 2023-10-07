@@ -3,12 +3,13 @@
 /*-----------------------------------------------------------------------*/
 
 :root {
-  --blue-color: #175cc5;
+  --blue-color: #2849a3;
   --p-color: #616161;
-  --title-color: black;
+  --h2-color: #3f3f3f;
+  --h3-color: #3f3f3f;
   --h4-color: var(--blue-color);
   --button-hover-color: #1556b8;
-  --line-color: #1964d6;
+  --line-color: #174d9e;
   --gray-background-color: #f5f5f5;
   --white-color: #fff;
 }
@@ -60,21 +61,21 @@ h4 {
 }
 
 h2 {
-  font-size: 4rem;
+  font-size: 3rem;
   margin: 0em 0rem 4rem 0rem;
   padding: 0;
-  color: var(--title-color);
+  color: var(--h2-color);
 }
 
 h3 {
-  font-size: 2.2rem;
+  font-size: 2rem;
   margin: 0;
   padding: 0 0 0.5rem 0;
-  color: var(--title-color);
+  color: var(--h3-color);
 }
 
 h4 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: var(--h4-color);
   margin: 0rem;
   padding: 5rem 0rem 0.5rem 0rem;
@@ -93,7 +94,11 @@ ul i {
 
 .container {
   position: relative;
-  margin-top: 80px;
+  margin-top: 90px;
+}
+
+img {
+  padding: 0;
 }
 
 /*-----------------------------------------------------------------------*/
@@ -105,7 +110,7 @@ nav {
   left: 0;
   right: 0;
   top: 0;
-  height: 80px;
+  height: 90px;
   background-color: var(--white-color);
   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
   padding: 0 5vw;
@@ -148,7 +153,7 @@ nav .links a {
 
 #nav-toggle {
   position: absolute;
-  top: -80px;
+  top: -90px;
 }
 
 nav .icon-burger {
@@ -168,21 +173,6 @@ nav .icon-burger .line {
   transition: all 0.3s ease-in-out;
 }
 
-/* .nav-button {
-  text-decoration: none;
-  border: 1px solid var(--blue-color);
-  border-radius: 0.3rem;
-  color: var(--blue-color);
-  background-color: #fff;
-  padding: 0.5rem 1rem;
-  font-weight: 500;
-  display: inline-flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 0.5rem;
-  margin: 2.4rem 0;
-} */
-
 @media screen and (max-width: 991px) {
   nav .logo {
     float: none;
@@ -196,7 +186,7 @@ nav .icon-burger .line {
     z-index: 9;
     left: 0;
     right: 0;
-    top: 80px;
+    top: 90px;
     bottom: 100%;
     width: auto;
     height: auto;
@@ -213,7 +203,7 @@ nav .icon-burger .line {
     color: #ffffff;
   }
 
-  nav :checked ~ .links {
+  nav :checked~.links {
     bottom: 0;
   }
 
@@ -221,18 +211,19 @@ nav .icon-burger .line {
     display: block;
   }
 
-  nav :checked ~ .icon-burger .line:nth-child(1) {
+  nav :checked~.icon-burger .line:nth-child(1) {
     transform: translateY(9px) rotate(225deg);
   }
 
-  nav :checked ~ .icon-burger .line:nth-child(3) {
+  nav :checked~.icon-burger .line:nth-child(3) {
     transform: translateY(-9px) rotate(-225deg);
   }
 
-  nav :checked ~ .icon-burger .line:nth-child(2) {
+  nav :checked~.icon-burger .line:nth-child(2) {
     opacity: 0;
   }
 }
+
 /*------------------------------BUTTONS-----------------------------*/
 .button-general {
   align-items: center;
@@ -255,28 +246,10 @@ nav .icon-burger .line {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  border-radius: 0.2rem;
 }
 
 .button-general:hover {
   background-color: var(--button-hover-color);
-}
-
-.read-more {
-  display: inline-flex;
-  text-decoration: none;
-  margin: 2.5rem 0;
-}
-.read-more i {
-  font-size: 2.8rem;
-  color: var(--white-color);
-  background: var(--blue-color);
-  border-radius: 0.2rem;
-  padding: 0.2rem 0.8rem;
-}
-
-.read-more i:hover {
-  background: var(--button-hover-color);
 }
 
 @media (min-width: 768px) {
@@ -304,16 +277,16 @@ nav .icon-burger .line {
 #icon-link {
   display: none;
 }
+
 #showcase {
-  /* height: calc(100vh - 80px); */
-  height: 50rem;
+  height: calc(100vh - 90px);
   color: #fff;
 }
 
 #showcase .bg-image {
   position: absolute;
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url("https://images.boatsgroup.com/resize/1/73/88/9057388_20230924090018619_1_XLARGE.jpg");
+    url("https://www.amphitrite-yachts.com/storage/app/media/Bering%20145/b145b.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -322,15 +295,18 @@ nav .icon-burger .line {
   z-index: -1;
   text-align: left;
 }
+
 .bg-image {
   padding: 0 5vw;
   display: grid;
   justify-items: start;
   align-items: center;
 }
+
 .bg-image p {
   padding: 0;
 }
+
 #showcase .showcase-card {
   display: none;
   justify-content: space-between;
@@ -338,6 +314,7 @@ nav .icon-burger .line {
   padding: 1rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
+
 #showcase .showcase-nav {
   display: flex;
   align-items: center;
@@ -350,20 +327,29 @@ nav .icon-burger .line {
   padding: 0;
   color: var(--white-color);
 }
+
 #showcase h4 {
   color: var(--white-color);
 }
+
 .showcase-card p {
   color: var(--p-color);
   font-family: "Courier New", Courier, monospace;
   font-size: 1.6rem;
 }
+
 /*-----------------------------------------------------------------------*/
-/* MOBILE VIEW - SECTION-A */
+/* MOBILE VIEW - SECTION-A / ABOUT US */
 /*-----------------------------------------------------------------------*/
 #section-a {
   background-color: var(--white-color);
   padding: 20rem 5vw;
+}
+
+#section-a img {
+  width: 100%;
+  height: 40rem;
+  object-fit: cover;
 }
 
 #section-a .card-content {
@@ -376,23 +362,16 @@ nav .icon-burger .line {
   margin-top: 5%;
 }
 
-#section-a img {
-  width: 100%;
-  height: 40rem;
-  object-fit: cover;
-}
-
 #section-a li {
   padding-bottom: 5%;
 }
 
-#section-a .grid-list i {
-  /* padding-bottom: 0.8rem; */
+#section-a i {
   font-size: 3rem;
 }
 
 /*-----------------------------------------------------------------------*/
-/* MOBILE VIEW - SECTION-B */
+/* MOBILE VIEW - SECTION-B / OUR PROJECTS */
 /*-----------------------------------------------------------------------*/
 
 #section-b {
@@ -400,103 +379,168 @@ nav .icon-burger .line {
   margin-bottom: 20rem;
 }
 
-#section-b img {
-  padding: 2.5rem;
+.cards {
+  margin: 0;
+  padding: 0 0 5rem 0;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(230px, 1fr));
+  gap: 3rem;
+  list-style-type: none;
+}
+
+.card {
+  border: 2.5rem solid white;
+  background-color: #ffffff;
+}
+
+.card__image {
   width: 100%;
-  height: 24rem;
+  aspect-ratio: 3/2;
   object-fit: cover;
+  display: block;
 }
 
-#section-b ul {
-  list-style: none;
-  margin-bottom: 7rem;
-  padding: 0;
+.card__content {
+  text-align: left;
+  line-height: 1.5;
+  padding: 2rem 0px;
+  font-size: 0.9em;
 }
 
-#section-b li {
-  background: #fff;
-  color: #333;
-  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 12px;
+.card__content h3 {
+  margin-top: 0;
 }
 
-#section-b .card-content {
-  padding: 0rem 2.5rem 0rem 2.5rem;
-  text-align: start;
+.card__content p {
+  margin-bottom: 0;
 }
 
-#section-b li:not(:last-child) {
-  margin-bottom: 4.8rem;
+#section-b .card__info {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--blue-color);
+  font-size: 0.8em;
+  font-family: sans-serif;
+  /* border-bottom:2px solid #cccccc;    */
+}
+
+#section-b .card__info i {
+  font-size: 2rem;
+  margin-right: 8px;
+  color: var(--white-color);
+}
+
+#section-b .card__date {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgb(255, 255, 255);
+}
+
+#section-b .card__link {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+#section-b .card__link:hover {
+  text-decoration: underline;
 }
 
 /*-----------------------------------------------------------------------*/
-/* MOBILE VIEW - SECTION-C */
+/* MOBILE VIEW - SECTION-C / OUR SERVICES */
 /*-----------------------------------------------------------------------*/
 #section-c {
   background-color: var(--white-color);
   padding: 0 5vw 20rem 5vw;
   text-align: start;
 }
+
 #section-c ul {
   list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 3rem;
   margin: 0;
   padding: 0;
 }
+
+#section-c li {
+  padding: 1rem;
+  background-color: var(--blue-color);
+}
+
+#section-c li h3 {
+  color: white;
+}
+
+#section-c li p {
+  color: white;
+}
+
+#section-c .read-more {
+  color: white;
+  float: right;
+}
+
+
+
 #section-c img {
   width: 100%;
   height: 40rem;
   object-fit: cover;
 }
-#section-c li {
-  padding: 2.4rem 0 0 2.4rem;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
-  margin-bottom: 2.4rem;
-  background-color: var(--gray-background-color);
-}
 
-#section-c h3 {
-  color: var(--title-color);
-  display: inline;
-}
+
+
+
+
 /*-----------------------------------------------------------------------*/
-/* MOBILE VIEW   - SECTION-D */
+/* MOBILE VIEW   - SECTION-D / OUR CLIENTS  */
 /*-----------------------------------------------------------------------*/
 #section-d {
   padding: 0 5vw 20rem 5vw;
   background-color: var(--blue-color);
 }
+
 #section-d ul {
   list-style-type: none;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1.6rem;
   align-items: center;
   justify-items: center;
 }
+
 #section-d li {
-  max-width: 250px;
- }
+  max-width: 25rem;
+}
 
 #section-d li img {
   object-fit: cover;
   max-width: 100%;
   height: auto;
   vertical-align: middle;
-  border:var(--white-color) 0.5rem solid;
+  border: var(--white-color) 1rem solid;
 }
+
 #section-d h2 {
-  color:white;
+  color: white;
 }
+
 #section-d h4 {
-  color:white;
+  color: white;
 }
+
 /*-----------------------------------------------------------------------*/
-/* MOBILE VIEW - SECTION-E */
+/* MOBILE VIEW - SECTION-E / OUR BASE */
 /*-----------------------------------------------------------------------*/
 #section-e {
   background-color: var(--white-color);
-  padding: 0rem 5vw 20rem 5vw;
+  padding: 0 5vw 20rem 5vw;
 }
 
 .google-map {
@@ -515,14 +559,13 @@ nav .icon-burger .line {
 /*-----------------------------------------------------------------------*/
 /* MOBILE VIEW - SECTION-FOOTER */
 /*-----------------------------------------------------------------------*/
-
 .footer-content {
   background-color: var(--blue-color);
   color: white;
   margin: 0;
   text-align: start;
-  font-size: 1.6rem;
-  padding: 0 5vw 0 5vw;
+  font-size: 1.4rem;
+  padding: 0 5vw;
 }
 
 .footer-content i {
@@ -545,12 +588,14 @@ nav .icon-burger .line {
   padding-bottom: 1.5rem;
   color: #ffffff;
 }
+
 .footer-content li {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 1rem;
 }
+
 .footer-content p span {
   color: white;
   padding-left: 0.8rem;
@@ -570,7 +615,7 @@ nav .icon-burger .line {
   padding: 3rem 2rem;
   text-align: center;
   color: rgb(255, 255, 255);
-  font-size: small;
+  font-size: 1rem;
   border-top: solid 1px var(--line-color);
 }
 
@@ -592,225 +637,178 @@ nav .icon-burger .line {
   /* DESKTOP 576  - SECTION-SHOWCASE */
   /*-----------------------------------------------------------------------*/
 
-  .bg-image {
-    padding: 0 10vw;
-    display: grid;
-    justify-items: start;
-    align-items: center;
+  /* increase font size for h2 showcase */
+  #showcase h2 {
+    font-size: 3.3rem;
   }
+
+  /* increase font size for h4 showcase */
+  #showcase h4 {
+    font-size: 1.7rem;
+  }
+
+  .bg-image {
+    /* increase the padding for left and right */
+    padding: 0 10vw;
+  }
+
+  #showcase {
+    height: 57vw;
+  }
+
   /*-----------------------------------------------------------------------*/
-  /* DESKTOP 576  - SECTION-A */
+  /* DESKTOP 576  - SECTION-A / ABOUT US */
   /*-----------------------------------------------------------------------*/
+
+  /* increase the padding for left and right */
   #section-a {
     padding: 20rem 10vw;
   }
+
+  /* grid-list for the li objects */
   #section-a .grid-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 3%;
   }
-  #section-a img {
-    width: 100%;
-    height: 40rem;
-    object-fit: cover;
+
+  #section-a li {
+    padding-bottom: 0%;
   }
+
   /*-----------------------------------------------------------------------*/
-  /* DESKTOP 576  - SECTION-B */
+  /* DESKTOP 576  - SECTION-B / OUR PROJECTS  */
   /*-----------------------------------------------------------------------*/
 
+  /* increase the padding for left and right */
   #section-b {
     padding: 0em 10vw;
-    margin-bottom: 12rem;
   }
-  #section-b img {
-    padding: 2.4rem;
-    width: 100%;
-    height: 30rem;
-  }
+
   /*-----------------------------------------------------------------------*/
-  /* DESKTOP 576  - SECTION-C */
+  /* DESKTOP 576  - SECTION-C / OUR SERVICES */
   /*-----------------------------------------------------------------------*/
   #section-c {
-    background-color: var(--white-color);
+    /* increase the padding for left and right */
     padding: 0 10vw 20rem 10vw;
-    text-align: start;
   }
-  #section-c img {
-    width: 100%;
-    height: 40rem;
-    object-fit: cover;
-  }
+
   /*-----------------------------------------------------------------------*/
-  /* DESKTOP VIEW   - SECTION-D */
+  /* DESKTOP 576   - SECTION-D / OUR CLIENTS */
   /*-----------------------------------------------------------------------*/
   #section-d {
+    /* increase the padding for left and right */
     padding: 0 10vw 20rem 10vw;
   }
+
   /*-----------------------------------------------------------------------*/
-  /* DESKTOP 576  - SECTION-E */
+  /* DESKTOP 576  - SECTION-E / OUR BASE */
   /*-----------------------------------------------------------------------*/
   #section-e {
-    background-color: var(--white-color);
+    /* increase the padding for left and right */
     padding: 0rem 10vw 20rem 10vw;
   }
 
-  .google-map {
-    position: relative;
-    height: 40rem;
-  }
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 576 - FOOTER */
   /*-----------------------------------------------------------------------*/
   .footer-content {
-    background-color: var(--blue-color);
-    color: white;
-    margin: 0;
+    /* increase the padding for left and right */
     padding: 0 10vw 0 10vw;
-    text-align: start;
-    font-size: 1.4rem;
   }
 }
+
 /*------------------------------DESKTOP-768 VIEW------------------------------*/
 @media (min-width: 768px) {
+
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 768  - SECTION-SHOWCASE */
   /*-----------------------------------------------------------------------*/
   #showcase {
     height: 57vw;
-    color: #fff;
   }
+
   .bg-image {
+    /* increase the padding for left and right */
     padding: 0 11vw;
-    display: grid;
-    justify-items: start;
-    align-items: center;
   }
-  #showcase h4 {
-    font-size: 2rem;
-  }
-  #showcase h2 {
-    font-size: 4.5rem;
-  }
+
   /*-----------------------------------------------------------------------*/
-  /* DESKTOP 768  - SECTION-A */
+  /* DESKTOP 768  - SECTION-A / ABOUT US */
   /*-----------------------------------------------------------------------*/
   #section-a {
-    /* background-color: var(--white-color); */
+    /* increase the padding for left and right */
     padding: 20rem 11vw;
   }
 
-  #section-a .grid-list {
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 768  - SECTION-B / OUR PROJECTS */
+  /*-----------------------------------------------------------------------*/
+  #section-b {
+    /* increase the padding for left and right */
+    padding: 0rem 11vw;
+  }
+
+  .cards {
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 3%;
+    grid-template-columns: repeat(2, minmax(230px, 1fr));
   }
 
   /*-----------------------------------------------------------------------*/
-  /* DESKTOP 768  - SECTION-B */
-  /*-----------------------------------------------------------------------*/
-  #section-b .grid-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 3rem;
-  }
-  #section-b {
-    padding: 0rem 11vw;
-    margin-bottom: 20rem;
-  }
-  #section-b li:not(:last-child) {
-    margin-bottom: 0rem;
-  }
-  #section-b img {
-    padding: 2.4rem;
-    width: 100%;
-    height: 24rem;
-  }
-  /*-----------------------------------------------------------------------*/
-  /* DESKTOP 768  - SECTION-C */
+  /* DESKTOP 768  - SECTION-C / OUR SERVICES  */
   /*-----------------------------------------------------------------------*/
   #section-c {
-    background-color: var(--white-color);
+    /* increase the padding for left and right */
     padding: 0 11vw 20rem 11vw;
-    text-align: start;
-  }
-  #section-c .grid-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 3rem;
-  }
-  #section-c li {
-    margin-bottom: 3rem;
-  }
-  #section-c h4 {
-    margin: 0rem;
   }
 
   /*-----------------------------------------------------------------------*/
-  /* DESKTOP 768   - SECTION-D */
+  /* DESKTOP 768   - SECTION-D / OUR CLIENTS */
   /*-----------------------------------------------------------------------*/
-
   #section-d {
+    /* increase the padding for left and right */
     padding: 0 11vw 20rem 11vw;
   }
+
+  /* create a grid */
   #section-d ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-gap: 3rem;
-    align-items: baseline;
+    align-items: center;
     justify-items: center;
   }
+
   /*-----------------------------------------------------------------------*/
-  /* DESKTOP 768  - SECTION-E */
+  /* DESKTOP 768  - SECTION-E / OUR BASE */
   /*-----------------------------------------------------------------------*/
   #section-e {
-    background-color: var(--white-color);
+    /* increase the padding for left and right */
     padding: 0rem 11vw 20rem 11vw;
   }
-  .google-map {
-    position: relative;
-    height: 40rem;
-  }
+
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 768 - FOOTER */
   /*-----------------------------------------------------------------------*/
   .footer-content {
-    background-color: var(--blue-color);
-    color: white;
-    margin: 0;
+    /* increase the padding for left and right */
     padding: 0 11vw 0 11vw;
-    text-align: start;
-    font-size: 1.4rem;
   }
+
+  /* create a grid */
   footer .content-wrap {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 3rem;
   }
 }
+
 /*------------------------------DESKTOP-991 VIEW-------------------------*/
 @media (min-width: 991px) {
-  h2 {
-    font-size: 3.5rem;
-    margin: 0em 0rem 4rem 0rem;
-    padding: 0;
-    color: var(--title-color);
-  }
-
-  h3 {
-    font-size: 2.5rem;
-    margin: 0;
-    padding: 0 0 0.5rem 0;
-    color: var(--title-color);
-  }
-
-  h4 {
-    font-size: 1.8rem;
-    color: var(--h4-color);
-    margin: 0rem;
-  }
 
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 991  - NAV */
@@ -818,6 +816,7 @@ nav .icon-burger .line {
   nav {
     padding: 0 5vw;
   }
+
   /*-----------------------------------------------------------------------*/
   /* NAV BUTTON 991 */
   /*-----------------------------------------------------------------------*/
@@ -826,18 +825,19 @@ nav .icon-burger .line {
     justify-content: center;
     align-items: center;
     margin-left: 3.2rem;
-    height: 75%;
+    height: 65%;
     width: 270px;
     padding: 1.6rem 0;
     gap: 1.9rem;
     background-color: var(--blue-color);
-    border-radius: 0.2rem;
   }
+
   #left {
     color: var(--white-color);
     font-size: 1.9rem;
     font-family: "Courier New", Courier, monospace;
   }
+
   #right a {
     color: var(--white-color);
     font-size: 2.8rem;
@@ -854,47 +854,57 @@ nav .icon-burger .line {
     0% {
       transform: translate(0);
     }
+
     10% {
       transform: translate(-2px, -2px);
     }
+
     20% {
       transform: translate(2px, -2px);
     }
+
     30% {
       transform: translate(-2px, 2px);
     }
+
     40% {
       transform: translate(2px, 2px);
     }
+
     50% {
       transform: translate(-2px, -2px);
     }
+
     60% {
       transform: translate(2px, -2px);
     }
+
     70% {
       transform: translate(-2px, 2px);
     }
+
     80% {
       transform: translate(-2px, -2px);
     }
+
     90% {
       transform: translate(2px, -2px);
     }
+
     100% {
       transform: translate(0);
     }
   }
+
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 991  - SECTION-SHOWCASE */
   /*-----------------------------------------------------------------------*/
   .bg-image {
+    /* decrease the padding for left and right */
     padding: 0 5vw;
-    display: grid;
-    justify-items: start;
-    align-items: center;
   }
 
+  /* show card */
   #showcase .showcase-card {
     display: flex;
     justify-content: space-between;
@@ -902,88 +912,81 @@ nav .icon-burger .line {
     padding: 1.6rem;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   }
+
   #showcase .showcase-card p {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    font-family: sans-serif;
+  }
+
+  #showcase h2 {
+    font-size: 3.5rem;
   }
 
   #showcase h4 {
-    font-size: 2.5rem;
-    color: rgb(255, 255, 255);
-    margin: 0;
-  }
-  #showcase h2 {
-    font-size: 5.5rem;
+    font-size: 2rem;
   }
 
   /*-----------------------------------------------------------------------*/
-  /* DESKTOP 991  - SECTION-A */
+  /* DESKTOP 991  - SECTION-A / ABOUT US */
   /*-----------------------------------------------------------------------*/
   #section-a {
+    /* decrease the padding for left and right */
     padding: 20rem 5vw 20rem 0;
   }
+
   #section-a .content-wrap {
-    padding-right: 2%;
     text-align: start;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 3%;
   }
+
   #section-a ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 5%;
+    /* create a margin-top from paragraph text */
+    margin-top: 3rem;
   }
+
   #section-a img {
-    object-fit: cover;
-    width: 100%;
+    /* increase the image height */
     height: 58rem;
   }
-  #section-a li {
-    padding-right: 3.2rem;
-  }
-  #section-a h4 {
-    padding: 0 0 0.5rem 0;
-  }
+
+  /* create grid for list */
   #section-a .grid-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 3rem;
   }
-  #section-a .grid-list i {
-    font-size: 4rem;
+
+  /* remove padding from h4 */
+  #section-a h4 {
+    padding: 0 0 0.5rem 0;
   }
+
   /*-----------------------------------------------------------------------*/
-  /* DESKTOP 991  - SECTION-B */
+  /* DESKTOP 991  - SECTION-B / OUR PROJECTS */
   /*-----------------------------------------------------------------------*/
   #section-b {
+    /* decrease the padding for left and right */
     padding: 0rem 5vw;
-    margin-bottom: 20rem;
   }
 
-  #section-b .grid-list {
+  /* create 3 columns grid */
+  .cards {
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2.4rem;
+    grid-template-columns: repeat(3, minmax(230px, 1fr));
   }
-  #section-b img {
-    padding: 2.4rem;
-    width: 100%;
-    height: 24rem;
-  }
-  #section-b ul li:nth-last-child(-n + 3) {
-    margin-bottom: 0rem;
-    background-color: var(--white-color);
-    color: #333;
-  }
-  /*-----------------------------------------------------------------------*/
-  /* DESKTOP 991  - SECTION-C */
-  /*-----------------------------------------------------------------------*/
 
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 991  - SECTION-C / OUR SERVICES */
+  /*-----------------------------------------------------------------------*/
   #section-c {
-    color: var(--p-color);
+    /* decrease the padding for left and right */
     padding: 20rem 0 20rem 5vw;
-    text-align: start;
   }
 
+  /* create 2 columns main grid */
   #section-c .content-wrap {
     text-align: start;
     display: grid;
@@ -991,18 +994,14 @@ nav .icon-burger .line {
     grid-column-gap: 3%;
   }
 
+  /* create 3 columns list grid */
   #section-c .grid-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 3.2rem;
+    grid-gap: 3rem;
   }
 
-  #section-c ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
+  /* increase the image height */
   #section-c img {
     width: 100%;
     height: 58rem;
@@ -1010,30 +1009,33 @@ nav .icon-burger .line {
   }
 
   #section-c li {
-    margin-bottom: 3.2rem;
+    margin-bottom: 0rem;
   }
 
+  /* remove padding from h4 */
   #section-c h4 {
     margin: 0rem;
     padding: 0rem 0rem 0.5rem 0rem;
   }
 
   /*-----------------------------------------------------------------------*/
-  /* DESKTOP 991  - SECTION-D */
+  /* DESKTOP 991  - SECTION-D / OUR CLIENTS */
   /*-----------------------------------------------------------------------*/
   #section-d {
+    /* decrease the padding for left and right */
     padding: 0 5vw 20rem 5vw;
   }
+
   /*-----------------------------------------------------------------------*/
-  /* DESKTOP 991  - SECTION-E */
+  /* DESKTOP 991  - SECTION-E / OUR BASE */
   /*-----------------------------------------------------------------------*/
   #section-e {
-    background-color: var(--white-color);
+    /* decrease the padding for left and right */
     padding: 0rem 5vw 20rem 5vw;
   }
 
   .google-map {
-    position: relative;
+    /* increase the image height */
     height: 58rem;
   }
 
@@ -1041,16 +1043,12 @@ nav .icon-burger .line {
   /* DESKTOP 991  - SECTION-FOOTER */
   /*-----------------------------------------------------------------------*/
   .footer-content {
-    background-color: var(--blue-color);
-    color: white;
-    margin: 0;
-    padding: 0rem 5vw;
-    text-align: start;
-    font-size: 1.4rem;
+    /* decrease the padding for left and right */
+    padding: 0 5vw;
   }
 
   footer .content-wrap {
-    display: grid;
+    /* create 4 columns grid */
     grid-template-columns: repeat(4, 1fr);
   }
 
@@ -1059,309 +1057,180 @@ nav .icon-burger .line {
   .col-4 {
     justify-self: end;
   }
-
-  footer ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  footer li {
-    padding-bottom: 1rem;
-    color: #ffffff;
-  }
-
-  footer p span {
-    color: white;
-    padding-left: 0.8rem;
-  }
-
-
 }
 
 /*------------------------------DESKTOP-1200 VIEW------------------------------*/
 @media (min-width: 1200px) {
   /*-----------------------------------------------------------------------*/
-  /* DESKTOP 1200  - NAV */
-  /*-----------------------------------------------------------------------*/
-  nav {
-    padding: 0 5vw;
-  }
-  /*-----------------------------------------------------------------------*/
   /* DESKTOP 1200  - SECTION-SHOWCASE */
   /*-----------------------------------------------------------------------*/
 
+  /* full height showcase image */
   #showcase {
-    height: calc(100vh - 80px) !important;
-    color: #fff;
+    height: calc(100vh - 90px) !important;
   }
 
-  .bg-image {
-    padding: 0 5vw;
-    display: grid;
-    justify-items: start;
-    align-items: center;
-  }
-
-  #showcase h4 {
-    font-size: 3rem;
-    color: var(--white-color);
-    margin: 0;
-  }
-
+  /* increase the showcase h2 size */
   #showcase h2 {
-    font-size: 6.5rem;
-    color: var(--white-color);
+    font-size: 4.5rem;
+  }
+
+  /* increase the showcase h4 size */
+  #showcase h4 {
+    font-size: 2.5rem;
+  }
+
+  #showcase .showcase-card p {
+    font-size: 1.6rem;
   }
 
   /*-----------------------------------------------------------------------*/
-  /* DESKTOP 1200  - SECTION-A */
+  /* DESKTOP 1200  - SECTION-A / ABOUT US  */
   /*-----------------------------------------------------------------------*/
-  #section-a {
-    padding: 20rem 0 20rem 0;
-  }
-
   #section-a i {
-    padding-bottom: 0.8rem;
+    /* increase the i height */
     font-size: 3.5rem;
-  }
-  /*-----------------------------------------------------------------------*/
-  /* DESKTOP 1200  - SECTION-B */
-  /*-----------------------------------------------------------------------*/
-  #section-b .grid-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 3.8rem;
-  }
-  #section-b img {
-    padding: 2.4rem;
-    width: 100%;
-    height: 32rem;
-  }
-  #section-b {
-    padding: 0rem 5vw;
-    margin-bottom: 20rem;
-  }
-
-  #section-b ul li:nth-last-child(-n + 3) {
-    margin-bottom: 0rem;
-    background-color: var(--white-color);
-    color: #333;
-  }
-
-  /*-----------------------------------------------------------------------*/
-  /* DESKTOP 1200  - SECTION-C */
-  /*-----------------------------------------------------------------------*/
-
-  #section-c {
-    color: var(--p-color);
-    padding: 20rem 0 20rem 5vw;
-    text-align: start;
-  }
-
-  #section-c .content-wrap {
-    grid-gap: 4%;
-  }
-
-  /*-----------------------------------------------------------------------*/
-  /* DESKTOP 1200  VIEW   - SECTION-D */
-  /*-----------------------------------------------------------------------*/
-  #section-d {
-    padding: 0 5vw 20rem 5vw;
-  }
-
-  /*-----------------------------------------------------------------------*/
-  /* DESKTOP 1200  - SECTION-E */
-  /*-----------------------------------------------------------------------*/
-  #section-e {
-    background-color: var(--white-color);
-    padding: 0 5vw 20rem 5vw;
-  }
-
-  .google-map {
-    position: relative;
-  }
-
-  /*-----------------------------------------------------------------------*/
-  /* DESKTOP 1200  - SECTION-FOOTER */
-  /*-----------------------------------------------------------------------*/
-  .footer-content {
-    background-color: var(--blue-color);
-    width: 100%;
-    color: white;
-    margin: 0;
-    padding: 0rem 5vw;
-    text-align: start;
-    font-size: 1.4rem;
   }
 }
 
 /*------------------------------DESKTOP-1400 VIEW--------------------------*/
-
 @media (min-width: 1400px) {
-  /*-----------------------------------------------------------------------*/
-  /* DESKTOP 1400  - NAV */
-  /*-----------------------------------------------------------------------*/
-  nav {
-    padding: 0 5% 0 5%;
-  }
 
-  /*-----------------------------------------------------------------------*/
+  /*------------------------------------------------------------------------*/
   /* DESKTOP 1400  - SECTION-SHOWCASE */
   /*-----------------------------------------------------------------------*/
   .bg-image {
+    /* increase the padding for left and right */
     padding: 0 15vw;
-    display: grid;
-    justify-items: start;
-    align-items: center;
   }
 
-  #showcase h4 {
-    font-size: 2rem;
-    color: rgb(255, 255, 255);
-    margin: 0;
-  }
-
-  #showcase h2 {
-    font-size: 7rem;
+  #showcase .showcase-card p {
+    font-size: 1.7rem;
   }
 
   /*-----------------------------------------------------------------------*/
-  /* DESKTOP 1400  - SECTION-A */
+  /* DESKTOP 1400  - SECTION-A / ABOUT US */
   /*-----------------------------------------------------------------------*/
   #section-a {
-    padding: 20rem 0 20rem 0;
-  }
-  /*-----------------------------------------------------------------------*/
-  /* DESKTOP 1400  - SECTION-B */
-  /*-----------------------------------------------------------------------*/
-  #section-b {
-    padding: 0rem 15vw;
-    margin-bottom: 20rem;
+    /* increase the padding for left and right */
+    padding: 20rem 15vw 20rem 0;
   }
 
   /*-----------------------------------------------------------------------*/
-  /* DESKTOP 1400  - SECTION-C */
+  /* DESKTOP 1400  - SECTION-B / OUR PROJECTS*/
+  /*-----------------------------------------------------------------------*/
+  #section-b {
+    /* increase the padding for left and right */
+    padding: 0rem 15vw;
+  }
+
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 1400  - SECTION-C / OUR SERVICES  */
   /*-----------------------------------------------------------------------*/
   #section-c {
-    color: var(--p-color);
+    /* increase the padding for left and right */
     padding: 20rem 0 20rem 15vw;
-    text-align: start;
   }
+
   /*-----------------------------------------------------------------------*/
-  /* DESKTOP 1400  - SECTION-D */
+  /* DESKTOP 1400  - SECTION-D / OUR CLIENTS */
   /*-----------------------------------------------------------------------*/
   #section-d {
+    /* increase the padding for left and right */
     padding: 0 15vw 20rem 15vw;
   }
 
   /*-----------------------------------------------------------------------*/
-  /* DESKTOP 1400  - SECTION-E */
+  /* DESKTOP 1400  - SECTION-E / OUR BASE*/
   /*-----------------------------------------------------------------------*/
   #section-e {
-    background-color: var(--white-color);
+    /* increase the padding for left and right */
     padding: 0rem 15vw 20rem 15vw;
-  }
-
-  .google-map {
-    position: relative;
   }
 
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1400  - SECTION-FOOTER */
   /*-----------------------------------------------------------------------*/
   .footer-content {
-    background-color: var(--blue-color);
-    width: 100%;
-    color: white;
-    margin: 0;
+    /* increase the padding for left and right */
     padding: 0 15vw 0 15vw;
-    text-align: start;
-    font-size: 1.4rem;
   }
 }
 
 /*------------------------------DESKTOP-1921 VIEW--------------------------*/
 
 @media (min-width: 1921px) {
-  /*-----------------------------------------------------------------------*/
-  /* DESKTOP 1921  - NAV */
-  /*-----------------------------------------------------------------------*/
-  nav {
-    padding: 0 5% 0 5%;
-  }
 
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1921  - SECTION-SHOWCASE */
   /*-----------------------------------------------------------------------*/
   .bg-image {
-    padding: 0 20vw;
-    display: grid;
-    justify-items: start;
-    align-items: center;
+    /* increase the padding for left and right */
+    padding: 0 18vw;
   }
 
   #showcase h4 {
     font-size: 2rem;
-    color: rgb(255, 255, 255);
-    margin: 0;
   }
 
   #showcase h2 {
-    font-size: 7rem;
+    font-size: 6rem;
+  }
+
+  #showcase .showcase-card p {
+    font-size: 1.9rem;
   }
 
   /*-----------------------------------------------------------------------*/
-  /* DESKTOP 1921  - SECTION-A */
+  /* DESKTOP 1921  - SECTION-A / ABOUT US*/
   /*-----------------------------------------------------------------------*/
   #section-a {
-    padding: 20rem 0vw 20rem 0;
+    /* increase the padding for left and right */
+    padding: 20rem 18vw 20rem 0;
   }
+
+  #section-a i {
+    /* increase the i height */
+    font-size: 4rem;
+  }
+
   /*-----------------------------------------------------------------------*/
-  /* DESKTOP 1921  - SECTION-B */
+  /* DESKTOP 1921  - SECTION-B / OUR PROJECTS */
   /*-----------------------------------------------------------------------*/
   #section-b {
-    padding: 0rem 20vw;
-    margin-bottom: 20rem;
+    /* increase the padding for left and right */
+    padding: 0rem 18vw;
   }
+
   /*-----------------------------------------------------------------------*/
-  /* DESKTOP 1921  - SECTION-C */
+  /* DESKTOP 1921  - SECTION-C / OUR SERVICES */
   /*-----------------------------------------------------------------------*/
   #section-c {
-    color: var(--p-color);
-    padding: 20rem 0 20rem 20vw;
-    text-align: start;
+    /* increase the padding for left and right */
+    padding: 20rem 0 20rem 18vw;
   }
+
   /*-----------------------------------------------------------------------*/
-  /* DESKTOP 1921  - SECTION-D */
+  /* DESKTOP 1921  - SECTION-D / OUR CLIENTS*/
   /*-----------------------------------------------------------------------*/
   #section-d {
-    padding: 0 20vw 20rem 20vw;
+    /* increase the padding for left and right */
+    padding: 0 18vw 20rem 18vw;
   }
 
   /*-----------------------------------------------------------------------*/
-  /* DESKTOP 1921  - SECTION-E */
+  /* DESKTOP 1921  - SECTION-E / OUR BASE */
   /*-----------------------------------------------------------------------*/
   #section-e {
-    background-color: var(--white-color);
-    padding: 0 20vw 20rem 20vw;
-  }
-
-  .google-map {
-    position: relative;
-    height: 58rem;
+    /* increase the padding for left and right */
+    padding: 0 18vw 20rem 18vw;
   }
 
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1921  - SECTION-FOOTER */
   /*-----------------------------------------------------------------------*/
-.footer-content {
-    background-color: var(--blue-color);
-    width: 100%;
-    color: white;
-    margin: 0;
-    padding: 0 20vw 0 20vw;
-    text-align: start;
-    font-size: 1.4rem;
+  .footer-content {
+    /* increase the padding for left and right */
+    padding: 0 18vw 0 18vw;
   }
 }

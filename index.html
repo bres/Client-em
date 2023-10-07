@@ -9,11 +9,12 @@
   <link rel="stylesheet" href="background_style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cabin&family=IBM+Plex+Mono:wght@500&family=Roboto+Condensed:wght@400;700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cabin&family=IBM+Plex+Mono:wght@500&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />  
+  
   <!-- Bootstrap Font Icon CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"> -->
+</head>
 
 <body>
 
@@ -32,7 +33,9 @@
           tel:6980-256899
         </div>
         <div id="right">
-            <a href="https://wa.me/6980256899" class="bi bi-whatsapp"></a>
+            <a href="https://wa.me/6980256899" class="material-symbols-outlined">
+              call
+              </a>
         </div>
       </li>
     </ul>
@@ -87,12 +90,16 @@
           </p>
           <ul class="grid-list">
             <li>
-              <i class="bi bi-people"></i>
-              <h3>Experienced team </h3>
+              <i class="material-symbols-outlined">
+                group
+              </i>              
+                <h3>Experienced team </h3>
               <p>We are an Experienced Team with 30 years on the field of ship repairs.</p>
             </li>
             <li>
-              <i class="bi bi-hourglass"></i>
+              <i class="material-symbols-outlined">
+                hourglass_top
+              </i>
               <h3>On Time Delivery</h3>
               <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam justo.</p>
             </li>
@@ -105,115 +112,113 @@
     </section>
 
     <!-- Section-b / Our projects-->
-
     <section id="section-b">
       <h4>OUR PROJECTS</h4>
       <h2>Latest projects</h2>
-      <ul class="grid-list">
-        <li>
-          <div class="card">
-            <img
-              src="https://images.unsplash.com/photo-1542397284385-6010376c5337?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
-              alt="No image">
-            <div class="card-content">
-              <h3>Air Freight</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-          
-  <div class="read-more">
-              <a href="http://www.in.gr" title='Button'>
-                <i class="bi bi-arrow-right-short"></i>
-              </a>
-	      </div>
+      <ul class="cards">
+        <li class="card">
+            <img src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_2400,w_3600,x_0,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_1080/06_Living_Room_uhzytq.jpg" alt="" class="card__image">
+            <div class="card__content">
+                <h3>Ship:eirini</h3>   
+                <p>Wood repair and painting.</p>
+            </div>
+            <div class="card__info">  
+              <div class="card__link">
+                <a href="./" class="card__link">View project</a>            
+              </div>
+              <div class="card__date">
+                <i class="material-symbols-outlined">
+                calendar_month
+                </i>12/05/2023
+              </div>
+            </div>
+        </li>
+        <li class="card">
+          <img src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_2400,w_3600,x_0,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_1080/06_Living_Room_uhzytq.jpg" alt="" class="card__image">
+          <div class="card__content">
+              <h3>Ship:eirini</h3>   
+              <p>Wood repair and painting.</p>
+          </div>
+          <div class="card__info">  
+            <div class="card__link">
+              <a href="./" class="card__link">View project</a>            
+            </div>
+            <div class="card__date">
+              <i class="material-symbols-outlined">
+              calendar_month
+              </i>12/05/2023
             </div>
           </div>
-        </li>
-        <li>
-          <div class="card">
-            <img
-              src="https://images.unsplash.com/photo-1542397284385-6010376c5337?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
-              alt="">
-            <div class="card-content">
-              <h3>Air Freight</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-          
-  <div class="read-more">
-              <a href="http://www.in.gr" title='Button'>
-                <i class="bi bi-arrow-right-short"></i>
-              </a>
-	      </div>
-            </div>
+      </li>
+      <li class="card">
+        <img src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_2400,w_3600,x_0,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_1080/06_Living_Room_uhzytq.jpg" alt="" class="card__image">
+        <div class="card__content">
+            <h3>Ship:eirini</h3>   
+            <p>Wood repair and painting.</p>
+        </div>
+        <div class="card__info">  
+          <div class="card__link">
+            <a href="./" class="card__link">View project</a>            
           </div>
-        </li>
-        <li>
-          <div class="card">
-            <img
-              src="https://images.unsplash.com/photo-1542397284385-6010376c5337?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
-              alt="">
-            <div class="card-content">
-              <h3>Air Freight</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-          
-  <div class="read-more">
-              <a href="http://www.in.gr" title='Button'>
-                <i class="bi bi-arrow-right-short"></i>
-              </a>
-	      </div>
-            </div>
+          <div class="card__date">
+            <i class="material-symbols-outlined">
+            calendar_month
+            </i>12/05/2023
           </div>
-        </li>
-        <li>
-          <div class="card">
-            <img
-              src="https://images.unsplash.com/photo-1542397284385-6010376c5337?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
-              alt="">
-            <div class="card-content">
-              <h3>Air Freight</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-          
-  <div class="read-more">
-              <a href="http://www.in.gr" title='Button'>
-                <i class="bi bi-arrow-right-short"></i>
-              </a>
-	      </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="card">
-            <img
-              src="https://images.unsplash.com/photo-1542397284385-6010376c5337?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
-              alt="">
-            <div class="card-content">
-              <h3>Air Freight</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-          
-  <div class="read-more">
-              <a href="http://www.in.gr" title='Button'>
-                <i class="bi bi-arrow-right-short"></i>
-              </a>
-	      </div>
-            </div>
-          </div>
-        </li>
- 
-        <li>
-          <div class="card">
-            <img
-              src="https://images.unsplash.com/photo-1542397284385-6010376c5337?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
-              alt="">
-            <div class="card-content">
-              <h3>Air Freight</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-          
-  <div class="read-more">
-              <a href="http://www.in.gr" title='Button'>
-                <i class="bi bi-arrow-right-short"></i>
-              </a>
-	      </div>
-            </div>
-          </div>
-        </li>
-      </ul>
+        </div>
+    </li>
+    <li class="card">
+      <img src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_2400,w_3600,x_0,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_1080/06_Living_Room_uhzytq.jpg" alt="" class="card__image">
+      <div class="card__content">
+          <h3>Ship:eirini</h3>   
+          <p>Wood repair and painting.</p>
+      </div>
+      <div class="card__info">  
+        <div class="card__link">
+          <a href="./" class="card__link">View project</a>            
+        </div>
+        <div class="card__date">
+          <i class="material-symbols-outlined">
+          calendar_month
+          </i>12/05/2023
+        </div>
+      </div>
+  </li>
+  <li class="card">
+    <img src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_2400,w_3600,x_0,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_1080/06_Living_Room_uhzytq.jpg" alt="" class="card__image">
+    <div class="card__content">
+        <h3>Ship:eirini</h3>   
+        <p>Wood repair and painting.</p>
+    </div>
+    <div class="card__info">  
+      <div class="card__link">
+        <a href="./" class="card__link">View project</a>            
+      </div>
+      <div class="card__date">
+        <i class="material-symbols-outlined">
+        calendar_month
+        </i>12/05/2023
+      </div>
+    </div>
+</li>
+<li class="card">
+  <img src="https://res.cloudinary.com/sagacity/image/upload/c_crop,h_2400,w_3600,x_0,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_1080/06_Living_Room_uhzytq.jpg" alt="" class="card__image">
+  <div class="card__content">
+      <h3>Ship:eirini</h3>   
+      <p>Wood repair and painting.</p>
+  </div>
+  <div class="card__info">  
+    <div class="card__link">
+      <a href="./" class="card__link">View project</a>            
+    </div>
+    <div class="card__date">
+      <i class="material-symbols-outlined">
+      calendar_month
+      </i>12/05/2023
+    </div>
+  </div>
+</li>
+    </ul>    
    
       <a href="www.in.gr" class="button-general" role="button">Check all</a>
 
@@ -221,7 +226,6 @@
     </section>
 
     <!-- Section-c / Our Services-->
-
     <section id="section-c">
       <div class="content-wrap">
         <div class="card-content">
@@ -229,43 +233,42 @@
           <h2>Explore Our Services</h2>
           <ul class="grid-list">
             <li>
-              <h3>Wood Varnish</h3>
-              <p>Repair Damage Varnish on Wood. </p>
-	      <div class="read-more">
-              <a href="http://www.in.gr" title='Button'>
-                <i class="bi bi-arrow-right-short"></i>
-              </a>
-	      </div>
+            <div>  
+            <h3>Wood Paint </h3>  
+            <p>Repair Damage Varnish on Wood. </p>
+            <a class="read-more" href="http://www.in.gr" title='Button'>
+            Read more
+            </a>
+            </div>
             </li>
-    <li>
-              <h3>Wood Varnish</h3>
-              <p>Repair Damage Varnish on Wood. </p>
-	      <div class="read-more">
-              <a href="http://www.in.gr" title='Button'>
-                <i class="bi bi-arrow-right-short"></i>
-              </a>
-	      </div>
+            <li>
+            <div>  
+            <h3>Wood Paint </h3>  
+            <p>Repair Damage Varnish on Wood. </p>
+            <a class="read-more" href="http://www.in.gr" title='Button'>
+            Read more
+            </a>
+            </div>
             </li>
-    <li>
-              <h3>Wood Varnish</h3>
-              <p>Repair Damage Varnish on Wood. </p>
-	      <div class="read-more">
-              <a href="http://www.in.gr" title='Button'>
-                <i class="bi bi-arrow-right-short"></i>
-              </a>
-	      </div>
+            <li>
+            <div>  
+            <h3>Wood Paint </h3>  
+            <p>Repair Damage Varnish on Wood. </p>
+            <a class="read-more" href="http://www.in.gr" title='Button'>
+            Read more
+            </a>
+            </div>
             </li>
-   <li>
-              <h3>Wood Varnish</h3>
-              <p>Repair Damage Varnish on Wood. </p>
-	      <div class="read-more">
-              <a href="http://www.in.gr" title='Button'>
-                <i class="bi bi-arrow-right-short"></i>
-              </a>
-	      </div>
+            <li>
+            <div>  
+            <h3>Wood Paint </h3>  
+            <p>Repair Damage Varnish on Wood. </p>
+            <a class="read-more" href="http://www.in.gr" title='Button'>
+            Read more
+            </a>
+            </div>
             </li>
-
-</ul>
+        </ul>
         </div>
         <img
           src="https://images.unsplash.com/photo-1658867846023-9b34a243c0d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2574&q=80"
@@ -274,14 +277,23 @@
     </section>
 
     <!-- Section-d / Our clients -->
-
     <section id="section-d">
-      <h4>OUR PARTNERS</h4>
-      <h2>Some of our partners</h2>
+      <h4>OUR CLIENTS</h4>
+      <h2>Some of our clients</h2>
       <ul>
         <li>
           <img
             src="https://images-platform.99static.com//SxCErt1zjd1ib35vyLqHFqlI9H0=/148x123:1085x1060/fit-in/590x590/99designs-contests-attachments/80/80253/attachment_80253079"  alt="Client brand">
+        </li>
+        <li>
+          <img
+            src="https://images-platform.99static.com//SxCErt1zjd1ib35vyLqHFqlI9H0=/148x123:1085x1060/fit-in/590x590/99designs-contests-attachments/80/80253/attachment_80253079"
+            alt="">
+        </li>
+        <li>
+          <img
+            src="https://images-platform.99static.com//SxCErt1zjd1ib35vyLqHFqlI9H0=/148x123:1085x1060/fit-in/590x590/99designs-contests-attachments/80/80253/attachment_80253079"
+            alt="">
         </li>
         <li>
           <img
@@ -329,14 +341,20 @@
           <h3>INFORMATIONS</h3>
           <ul>
             <li>
-                <i class="bi bi-map"></i>
+              <i class="material-symbols-outlined">
+                map
+              </i>   
                 <span>Peiraus 34, 12233</span>
             <li>
-                <i class="bi bi-telephone"></i>
+              <i class="material-symbols-outlined">
+                phone_iphone
+              </i>    
                 <span>+012 345 67890</span>
             </li>
             <li>
-                <i class="bi bi-envelope"></i>
+              <i class="material-symbols-outlined">
+                mail
+              </i>      
                 <span>info@example.com</span>
             </li>
           </ul>
@@ -346,20 +364,28 @@
           <ul>
             <li>
              
-                <i class="bi bi-caret-right"></i>
+              <i class="material-symbols-outlined">
+                navigate_next
+              </i> 
                 <span>About</span>
               
             </li>
             <li>
-                <i class="bi bi-caret-right"></i>
+              <i class="material-symbols-outlined">
+                navigate_next
+              </i> 
                 <span>Projects</span>
             </li>
             <li>
-                <i class="bi bi-caret-right"></i>
+              <i class="material-symbols-outlined">
+                navigate_next
+              </i> 
                 <span>Services</span>
             </li>
-            <li>
-                <i class="bi bi-caret-right"></i>
+            <li> 
+               <i class="material-symbols-outlined">
+              navigate_next
+            </i> 
                 <span>Contact</span>
             </li>
           </ul>
@@ -368,20 +394,28 @@
           <h3>TERMS</h3>
           <ul>
             <li>
-                <i class="bi bi-caret-right"></i>
-                <span>Cookies</span>
+              <i class="material-symbols-outlined">
+                navigate_next
+              </i>     
+               <span>Cookies</span>
             </li>
             <li>
-                <i class="bi bi-caret-right"></i>
-                <span>Legal Terms</span>
+              <i class="material-symbols-outlined">
+                navigate_next
+              </i>       
+               <span>Legal Terms</span>
             </li>
             <li>
-                <i class="bi bi-caret-right"></i>
-                <span>Privacy</span>
+              <i class="material-symbols-outlined">
+                navigate_next
+              </i>          
+               <span>Privacy</span>
             </li>
             <li>
-                <i class="bi bi-caret-right"></i>
-                <span>ISO</span>
+              <i class="material-symbols-outlined">
+                navigate_next
+              </i>     
+              <span>ISO</span>
             </li>
           <ul>
         </div>
