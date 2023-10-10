@@ -3,8 +3,8 @@
 /*-----------------------------------------------------------------------*/
 
 :root {
-  --blue-color: #2849a3;
-  --p-color: #616161;
+  --blue-color: #2b42a7;
+  --p-color: #7a7a7a;
   --h2-color: #3f3f3f;
   --h3-color: #3f3f3f;
   --h4-color: var(--blue-color);
@@ -28,8 +28,6 @@ html {
 /* Core Styles */
 /*-----------------------------------------------------------------------*/
 body {
-  margin: 0;
-  padding: 0;
   font-family: "Cabin", sans-serif;
   background-color: var(--gray-background-color);
   font-size: 1.6rem;
@@ -38,18 +36,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: antialiased;
   font-smoothing: antialiased;
+  height:100%;
+  padding:0;
+  margin:0;
 }
-
-* {
-  box-sizing: border-box;
-}
-
-/* img {
-  display: block;
-  width: 100%;
-  height: 350px;
-  object-fit: cover;
-} */
 
 h1,
 h2,
@@ -94,7 +84,7 @@ ul i {
 
 .container {
   position: relative;
-  margin-top: 90px;
+  margin-top: 80px;
 }
 
 img {
@@ -110,7 +100,7 @@ nav {
   left: 0;
   right: 0;
   top: 0;
-  height: 90px;
+  height: 80px;
   background-color: var(--white-color);
   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
   padding: 0 5vw;
@@ -153,7 +143,7 @@ nav .links a {
 
 #nav-toggle {
   position: absolute;
-  top: -90px;
+  top: -80px;
 }
 
 nav .icon-burger {
@@ -186,7 +176,7 @@ nav .icon-burger .line {
     z-index: 9;
     left: 0;
     right: 0;
-    top: 90px;
+    top: 80px;
     bottom: 100%;
     width: auto;
     height: auto;
@@ -264,12 +254,7 @@ nav .icon-burger .line {
 
 /*------------------------------MOBILE VIEW------------------------------*/
 
-/*-----------------------------------------------------------------------*/
-/* MOBILE VIEW -NAV */
-/*-----------------------------------------------------------------------*/
-/* nav{
-  padding: 0 5% 0 5%;
- } */
+
 /*-----------------------------------------------------------------------*/
 /* MOBILE VIEW - SECTION SHOWCASE */
 /*-----------------------------------------------------------------------*/
@@ -279,14 +264,14 @@ nav .icon-burger .line {
 }
 
 #showcase {
-  height: calc(100vh - 90px);
+  height: calc(100vh - 80px) !important;
   color: #fff;
 }
 
 #showcase .bg-image {
   position: absolute;
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url("https://www.amphitrite-yachts.com/storage/app/media/Bering%20145/b145b.jpg");
+    url("https://images.sunseeker.com/images/b1d679e5de286bd22a66c3ddf3f6807e/en/9k=");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -381,21 +366,22 @@ nav .icon-burger .line {
 
 .cards {
   margin: 0;
-  padding: 0 0 5rem 0;
+  padding: 0 0 6rem 0;
   display: grid;
   grid-template-columns: repeat(1, minmax(230px, 1fr));
-  gap: 3rem;
+  gap:2.5rem;
   list-style-type: none;
 }
 
 .card {
   border: 2.5rem solid white;
   background-color: #ffffff;
-}
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+ }
 
 .card__image {
   width: 100%;
-  aspect-ratio: 3/2;
+  aspect-ratio: 3/2.1;
   object-fit: cover;
   display: block;
 }
@@ -403,7 +389,7 @@ nav .icon-burger .line {
 .card__content {
   text-align: left;
   line-height: 1.5;
-  padding: 2rem 0px;
+  padding: 2rem 0 4rem 0px;
   font-size: 0.9em;
 }
 
@@ -421,7 +407,7 @@ nav .icon-burger .line {
   align-items: center;
   justify-content: space-between;
   background: var(--blue-color);
-  font-size: 0.8em;
+  font-size: 1.4rem;
   font-family: sans-serif;
   /* border-bottom:2px solid #cccccc;    */
 }
@@ -457,43 +443,43 @@ nav .icon-burger .line {
   text-align: start;
 }
 
-#section-c ul {
-  list-style: none;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 3rem;
-  margin: 0;
-  padding: 0;
+  /* create 1 columns list grid */
+  #section-c ul {
+    padding:0;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 2.5rem;
+  }
+
+#section-c ul li {
+list-style-type:none;
+background-color: var(--gray-background-color);
+box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+padding:1rem;
+ }
+#section-c h3{
+  color:var(--h2-color);
 }
 
-#section-c li {
-  padding: 1rem;
-  background-color: var(--blue-color);
+#section-c .top__flex {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  color:var(--blue-color);
 }
-
-#section-c li h3 {
-  color: white;
+#section-c i {
+  font-size:3.6rem;
+  padding:0.3rem;
 }
-
-#section-c li p {
-  color: white;
-}
-
-#section-c .read-more {
-  color: white;
-  float: right;
-}
-
-
 
 #section-c img {
   width: 100%;
   height: 40rem;
   object-fit: cover;
 }
-
-
-
+#section-c .button-general {
+  margin:2.5rem 0;;
+}
 
 
 /*-----------------------------------------------------------------------*/
@@ -504,29 +490,6 @@ nav .icon-burger .line {
   background-color: var(--blue-color);
 }
 
-#section-d ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 1.6rem;
-  align-items: center;
-  justify-items: center;
-}
-
-#section-d li {
-  max-width: 25rem;
-}
-
-#section-d li img {
-  object-fit: cover;
-  max-width: 100%;
-  height: auto;
-  vertical-align: middle;
-  border: var(--white-color) 1rem solid;
-}
-
 #section-d h2 {
   color: white;
 }
@@ -534,6 +497,28 @@ nav .icon-burger .line {
 #section-d h4 {
   color: white;
 }
+
+#section-d .container {
+  display: flex;
+  justify-content: center;
+/*   margin: -7px; */
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+#section-d .item {
+  width: 150px;
+  height: 150px;
+  background-color: rgb(252, 252, 252);
+  margin: 7px;
+  padding:2rem
+}
+
+#section-d .container img {
+  width:100%;
+  height:100%
+}
+
 
 /*-----------------------------------------------------------------------*/
 /* MOBILE VIEW - SECTION-E / OUR BASE */
@@ -995,10 +980,10 @@ nav .icon-burger .line {
   }
 
   /* create 3 columns list grid */
-  #section-c .grid-list {
+  #section-c ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 3rem;
+    grid-gap:2.5rem;
   }
 
   /* increase the image height */
@@ -1067,7 +1052,7 @@ nav .icon-burger .line {
 
   /* full height showcase image */
   #showcase {
-    height: calc(100vh - 90px) !important;
+    height: calc(100vh - 80px) !important;
   }
 
   /* increase the showcase h2 size */
@@ -1101,7 +1086,7 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
   .bg-image {
     /* increase the padding for left and right */
-    padding: 0 15vw;
+    padding: 0 18vw;
   }
 
   #showcase .showcase-card p {
@@ -1113,7 +1098,7 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
   #section-a {
     /* increase the padding for left and right */
-    padding: 20rem 15vw 20rem 0;
+    padding: 20rem 18vw 20rem 0;
   }
 
   /*-----------------------------------------------------------------------*/
@@ -1121,7 +1106,7 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
   #section-b {
     /* increase the padding for left and right */
-    padding: 0rem 15vw;
+    padding: 0rem 18vw;
   }
 
   /*-----------------------------------------------------------------------*/
@@ -1129,7 +1114,7 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
   #section-c {
     /* increase the padding for left and right */
-    padding: 20rem 0 20rem 15vw;
+    padding: 20rem 0 20rem 18vw;
   }
 
   /*-----------------------------------------------------------------------*/
@@ -1137,7 +1122,7 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
   #section-d {
     /* increase the padding for left and right */
-    padding: 0 15vw 20rem 15vw;
+    padding: 0 18vw 20rem 18vw;
   }
 
   /*-----------------------------------------------------------------------*/
@@ -1145,7 +1130,7 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
   #section-e {
     /* increase the padding for left and right */
-    padding: 0rem 15vw 20rem 15vw;
+    padding: 0rem 18vw 20rem 18vw;
   }
 
   /*-----------------------------------------------------------------------*/
@@ -1153,7 +1138,7 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
   .footer-content {
     /* increase the padding for left and right */
-    padding: 0 15vw 0 15vw;
+    padding: 0 18vw 0 18vw;
   }
 }
 
@@ -1166,7 +1151,7 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
   .bg-image {
     /* increase the padding for left and right */
-    padding: 0 18vw;
+    padding: 0 20vw;
   }
 
   #showcase h4 {
@@ -1186,7 +1171,7 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
   #section-a {
     /* increase the padding for left and right */
-    padding: 20rem 18vw 20rem 0;
+    padding: 20rem 20vw 20rem 0;
   }
 
   #section-a i {
@@ -1199,7 +1184,7 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
   #section-b {
     /* increase the padding for left and right */
-    padding: 0rem 18vw;
+    padding: 0rem 20vw;
   }
 
   /*-----------------------------------------------------------------------*/
@@ -1207,7 +1192,7 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
   #section-c {
     /* increase the padding for left and right */
-    padding: 20rem 0 20rem 18vw;
+    padding: 20rem 0 20rem 20vw;
   }
 
   /*-----------------------------------------------------------------------*/
@@ -1215,7 +1200,7 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
   #section-d {
     /* increase the padding for left and right */
-    padding: 0 18vw 20rem 18vw;
+    padding: 0 20vw 20rem 20vw;
   }
 
   /*-----------------------------------------------------------------------*/
@@ -1223,7 +1208,7 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
   #section-e {
     /* increase the padding for left and right */
-    padding: 0 18vw 20rem 18vw;
+    padding: 0 20vw 20rem 20vw;
   }
 
   /*-----------------------------------------------------------------------*/
@@ -1231,6 +1216,6 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
   .footer-content {
     /* increase the padding for left and right */
-    padding: 0 18vw 0 18vw;
+    padding: 0 20vw 0 20vw;
   }
 }
