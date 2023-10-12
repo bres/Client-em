@@ -3,13 +3,13 @@
 /*-----------------------------------------------------------------------*/
 
 :root {
-  --blue-color: #1a3fb9;
+  --blue-color: #2a43b3;
   --p-color: #7a7a7a;
   --h2-color: #3f3f3f;
   --h3-color: #3f3f3f;
   --h4-color: var(--blue-color);
-  --button-hover-color: #1839a5;
-  --line-color: #1d48d4;
+  --button-hover-color: #21358d;
+  --line-color: #2e49c2;
   --gray-background-color: #f5f5f5;
   --white-color: #fff;
 }
@@ -36,9 +36,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: antialiased;
   font-smoothing: antialiased;
-  height:100%;
-  padding:0;
-  margin:0;
+  height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 h1,
@@ -216,30 +216,26 @@ nav .icon-burger .line {
 
 /*------------------------------BUTTONS-----------------------------*/
 .button-general {
-  align-items: center;
   background-color: var(--blue-color);
-  box-sizing: border-box;
   color: #fff;
   cursor: pointer;
   display: inline-flex;
-  fill: #000;
-  font-family: Inter, sans-serif;
-  font-size: 1.6rem;
-  font-weight: 600;
-  height: 4.4rem;
+  align-items: center;
   justify-content: center;
+  height: 4.4rem;
   width: 140px;
   padding: 0 1rem;
-  text-align: center;
+  font-family: sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
   text-decoration: none;
   transition: all 0.3s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
+  margin-top:4rem;
+   }
 
 .button-general:hover {
-  background-color: var(--button-hover-color);
+  /* background-color: var(--button-hover-color); */
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 @media (min-width: 768px) {
@@ -271,7 +267,7 @@ nav .icon-burger .line {
 #showcase .bg-image {
   position: absolute;
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url("https://images.sunseeker.com/images/b1d679e5de286bd22a66c3ddf3f6807e/en/9k=");
+    url("https://s3.eu-west-1.amazonaws.com/shorthand.boatinternational.com/stories/edge-on-board-the-pocket-superyacht-by-sarp-yachts/assets/nMHIkQ5jlt/_hop9286-2560x1850.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -311,12 +307,12 @@ nav .icon-burger .line {
   margin: 0rem 0rem 0.8rem 0rem;
   padding: 0;
   color: var(--white-color);
-  font-size:3.2rem;
+  font-size: 3.2rem;
 }
 
 #showcase h4 {
   color: var(--white-color);
-  font-size:1.6rem;
+  font-size: 1.6rem;
 
 }
 
@@ -346,13 +342,15 @@ nav .icon-burger .line {
 #section-a ul {
   list-style: none;
   padding: 0;
-  margin-top: 5%;
-}
+  margin:3rem 0 0 0;
+ }
 
-#section-a li {
-  padding-bottom: 5%;
+ /* grid-list for the li objects */
+ #section-a ul{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap:2.5rem;
 }
-
 #section-a i {
   font-size: 3rem;
 }
@@ -368,10 +366,10 @@ nav .icon-burger .line {
 
 .cards {
   margin: 0;
-  padding: 0 0 6rem 0;
+  padding: 0;
   display: grid;
   grid-template-columns: repeat(1, minmax(230px, 1fr));
-  gap:2.5rem;
+  gap: 2.5rem;
   list-style-type: none;
 }
 
@@ -379,7 +377,7 @@ nav .icon-burger .line {
   border: 2.5rem solid white;
   background-color: #ffffff;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
- }
+}
 
 .card__image {
   width: 100%;
@@ -390,17 +388,7 @@ nav .icon-burger .line {
 
 .card__content {
   text-align: left;
-  line-height: 1.5;
   padding: 2rem 0 4rem 0px;
-  font-size: 0.9em;
-}
-
-.card__content h3 {
-  margin-top: 0;
-}
-
-.card__content p {
-  margin-bottom: 0;
 }
 
 #section-b .card__info {
@@ -410,13 +398,11 @@ nav .icon-burger .line {
   justify-content: space-between;
   background: var(--blue-color);
   font-size: 1.4rem;
-  font-family: sans-serif;
-  /* border-bottom:2px solid #cccccc;    */
 }
 
 #section-b .card__info i {
   font-size: 2rem;
-  margin-right: 8px;
+  margin-right:0.8rem;
   color: var(--white-color);
 }
 
@@ -424,7 +410,7 @@ nav .icon-burger .line {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: rgb(255, 255, 255);
+  color: var(--white-color);
 }
 
 #section-b .card__link {
@@ -445,33 +431,59 @@ nav .icon-burger .line {
   text-align: start;
 }
 
-  /* create 1 columns list grid */
-  #section-c ul {
-    padding:0;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 2.5rem;
+/* create 1 columns grid */
+#section-c ul {
+  padding: 0;
+  margin-bottom:4rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 2.5rem;
+}
+
+#section-c  li {
+  list-style-type: none;
+  background-color: var(--gray-background-color);
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+  padding: 1.3rem;
+}
+
+#section-c  ul a{
+ text-decoration: none;
+}
+#section-c li:hover p{
+  
+   color:white;
+}
+
+#section-c li:hover i{
+  
+  color:white;
+}
+#section-c li:hover h3{
+  
+  color:white;
+}
+
+#section-c li:hover {
+  background-color: var(--blue-color);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   }
 
-#section-c ul li {
-list-style-type:none;
-background-color: var(--gray-background-color);
-box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
-padding:1.5rem;
- }
-#section-c h3{
-  color:var(--h2-color);
+
+#section-c h3 {
+  color: var(--h2-color);
 }
 
 #section-c .top__flex {
-  display:flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  color:var(--blue-color);
+  color: var(--blue-color);
 }
+
 #section-c i {
-  font-size:3rem;
-  padding:0.5rem;
+  font-size: 3rem;
+  padding:0.5rem 1rem;
 }
 
 #section-c img {
@@ -479,9 +491,7 @@ padding:1.5rem;
   height: 40rem;
   object-fit: cover;
 }
-#section-c .button-general {
-  margin:2.5rem 0;;
-}
+
 
 
 /*-----------------------------------------------------------------------*/
@@ -504,22 +514,21 @@ padding:1.5rem;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  row-gap:2.5rem ;
+  row-gap: 2.5rem;
 }
 
 #section-d .item {
-  flex:0 0 47%;
+  flex: 0 0 47%;
   background-color: rgb(252, 252, 252);
-  padding:2rem
+  padding: 2rem
 }
 
 #section-d .container img {
-  width:100%;
-  height:100%;
-  object-fit:contain;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   mix-blend-mode: multiply;
 }
-
 
 /*-----------------------------------------------------------------------*/
 /* MOBILE VIEW - SECTION-E / OUR BASE */
@@ -567,7 +576,7 @@ padding:1.5rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap:1rem;
+  gap: 1rem;
 }
 
 .footer-content p span {
@@ -576,7 +585,7 @@ padding:1.5rem;
 }
 
 .footer-content i {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 .footer-content h3 {
@@ -650,15 +659,14 @@ padding:1.5rem;
   }
 
   /* grid-list for the li objects */
-  #section-a .grid-list {
+  #section-a ul{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 3%;
+    grid-gap:2.5rem;
   }
+  
+  
 
-  #section-a li {
-    padding-bottom: 0%;
-  }
 
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 576  - SECTION-B / OUR PROJECTS  */
@@ -702,7 +710,7 @@ padding:1.5rem;
   }
 }
 
-/*------------------------------DESKTOP-768 VIEW------------------------------*/
+   /*---------------------------DESKTOP-768 VIEW---------------------------*/
 @media (min-width: 768px) {
 
   /*-----------------------------------------------------------------------*/
@@ -759,14 +767,15 @@ padding:1.5rem;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap:2.5rem ;
+    gap: 2.5rem;
   }
 
   #section-d .item {
-    flex:0 0 30%;
+    flex: 0 0 30%;
     background-color: rgb(252, 252, 252);
-    padding:2rem
+    padding: 2rem
   }
+
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 768  - SECTION-E / OUR BASE */
   /*-----------------------------------------------------------------------*/
@@ -774,7 +783,6 @@ padding:1.5rem;
     /* increase the padding for left and right */
     padding: 0rem 11vw 20rem 11vw;
   }
-
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 768 - FOOTER */
   /*-----------------------------------------------------------------------*/
@@ -791,7 +799,7 @@ padding:1.5rem;
   }
 }
 
-/*------------------------------DESKTOP-991 VIEW-------------------------*/
+  /*------------------------------DESKTOP-991 VIEW-------------------------*/
 @media (min-width: 991px) {
 
   /*-----------------------------------------------------------------------*/
@@ -925,18 +933,15 @@ padding:1.5rem;
     grid-column-gap: 3%;
   }
 
-  #section-a ul {
-    /* create a margin-top from paragraph text */
-    margin-top: 3rem;
-  }
-
   #section-a img {
     /* increase the image height */
     height: 55rem;
   }
 
   /* create grid for list */
-  #section-a .grid-list {
+  #section-a .ul {
+    /* create a margin-top from paragraph text */
+    margin-top: 3rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 3rem;
@@ -978,23 +983,26 @@ padding:1.5rem;
     grid-column-gap: 3%;
   }
 
-  /* create 3 columns list grid */
+  /* create 2 columns ul grid */
   #section-c ul {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap:2.5rem;
-  }
-
-  /* increase the image height */
-  #section-c img {
-    width: 100%;
-    height: 55rem;
-    object-fit: cover;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 2rem;
+    margin-bottom:0;
   }
 
   #section-c li {
     margin-bottom: 0rem;
+    height:8rem;
   }
+
+    /* increase the image height */
+    #section-c img {
+      width: 100%;
+      height: 55rem;
+      object-fit: cover;
+    }
+  
 
   /* remove padding from h4 */
   #section-c h4 {
@@ -1009,18 +1017,20 @@ padding:1.5rem;
     /* decrease the padding for left and right */
     padding: 0 5vw 20rem 5vw;
   }
+
   #section-d .container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap:2.5rem ;
+    gap: 2.5rem;
   }
 
   #section-d .item {
-    flex:0 0 16%;
+    flex: 0 0 16%;
     background-color: rgb(252, 252, 252);
-    padding:2rem
+    padding: 2rem
   }
+
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 991  - SECTION-E / OUR BASE */
   /*-----------------------------------------------------------------------*/
@@ -1054,7 +1064,7 @@ padding:1.5rem;
   }
 }
 
-/*------------------------------DESKTOP-1200 VIEW------------------------------*/
+  /*------------------------------DESKTOP-1200 VIEW------------------------*/
 @media (min-width: 1200px) {
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1200  - SECTION-SHOWCASE */
@@ -1079,29 +1089,50 @@ padding:1.5rem;
     font-size: 1.6rem;
   }
 
-  /*-----------------------------------------------------------------------*/
+  /*----------------------------------------------------------------------*/
   /* DESKTOP 1200  - SECTION-A / ABOUT US  */
-  /*-----------------------------------------------------------------------*/
+  /*----------------------------------------------------------------------*/
   #section-a i {
     /* increase the i height */
     font-size: 3.5rem;
   }
+
+
+
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 991  - SECTION-C / OUR SERVICES */
+  /*-----------------------------------------------------------------------*/
+
+ /* create 2 columns ul grid */
+ #section-c ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  margin-bottom:0;
 }
 
-/*------------------------------DESKTOP-1400 VIEW--------------------------*/
+#section-c li {
+  margin-bottom: 0rem;
+  height:10rem;
+}
+
+}
+
+  /*----------------------------DESKTOP-1400 VIEW-------------------------*/
 @media (min-width: 1400px) {
 
-  /*------------------------------------------------------------------------*/
+  /*----------------------------------------------------------------------*/
   /* DESKTOP 1400  - SECTION-SHOWCASE */
-  /*-----------------------------------------------------------------------*/
+  /*----------------------------------------------------------------------*/
   .bg-image {
     /* increase the padding for left and right */
-    padding: 0 18vw;
+    padding: 0 16vw;
   }
 
   #showcase .showcase-card p {
     font-size: 1.7rem;
   }
+
   #showcase h2 {
     font-size: 5.5rem;
   }
@@ -1110,13 +1141,20 @@ padding:1.5rem;
     font-size: 2.5rem;
   }
 
-  
+
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1400  - SECTION-A / ABOUT US */
   /*-----------------------------------------------------------------------*/
   #section-a {
     /* increase the padding for left and right */
-    padding: 20rem 18vw 20rem 0;
+    padding: 20rem 16vw 20rem 0;
+  }
+ 
+  #section-a .content-wrap {
+    text-align: start;
+    display: grid;
+    grid-template-columns: 1.2fr  1fr;
+    grid-column-gap: 3%;
   }
 
   /*-----------------------------------------------------------------------*/
@@ -1124,7 +1162,7 @@ padding:1.5rem;
   /*-----------------------------------------------------------------------*/
   #section-b {
     /* increase the padding for left and right */
-    padding: 0rem 18vw;
+    padding: 0rem 16vw;
   }
 
   /*-----------------------------------------------------------------------*/
@@ -1132,17 +1170,25 @@ padding:1.5rem;
   /*-----------------------------------------------------------------------*/
   #section-c {
     /* increase the padding for left and right */
-    padding: 20rem 0 20rem 18vw;
+    padding: 20rem 0 20rem 16vw;
   }
+  #section-c .content-wrap {
+    text-align: start;
+    display: grid;
+    grid-template-columns:1fr 1.2fr;
+    grid-column-gap: 3%;
+  }
+
   #section-c i {
-    font-size:3.5rem;
-   }
+    font-size: 3.5rem;
+  }
+
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1400  - SECTION-D / OUR CLIENTS */
   /*-----------------------------------------------------------------------*/
   #section-d {
     /* increase the padding for left and right */
-    padding: 0 18vw 20rem 18vw;
+    padding: 0 16vw 20rem 16vw;
   }
 
   /*-----------------------------------------------------------------------*/
@@ -1150,7 +1196,7 @@ padding:1.5rem;
   /*-----------------------------------------------------------------------*/
   #section-e {
     /* increase the padding for left and right */
-    padding: 0rem 18vw 20rem 18vw;
+    padding: 0rem 16vw 20rem 16vw;
   }
 
   /*-----------------------------------------------------------------------*/
@@ -1158,11 +1204,11 @@ padding:1.5rem;
   /*-----------------------------------------------------------------------*/
   .footer-content {
     /* increase the padding for left and right */
-    padding: 0 18vw 0 18vw;
+    padding: 0 16vw 0 16vw;
   }
 }
 
-/*------------------------------DESKTOP-1921 VIEW--------------------------*/
+  /*----------------------------DESKTOP-1921 VIEW--------------------------*/
 
 @media (min-width: 1921px) {
 
@@ -1198,10 +1244,12 @@ padding:1.5rem;
     /* increase the i height */
     font-size: 4rem;
   }
+
   #section-a img {
     /* increase the image height */
     height: 57rem;
   }
+
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1921  - SECTION-B / OUR PROJECTS */
   /*-----------------------------------------------------------------------*/
@@ -1216,14 +1264,17 @@ padding:1.5rem;
   #section-c {
     /* increase the padding for left and right */
     padding: 20rem 0 20rem 20vw;
-  }  
+  }
+
   #section-c img {
     /* increase the image height */
     height: 57rem;
   }
+
   #section-c i {
-    font-size:4rem;
-   }
+    font-size: 4rem;
+  }
+
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1921  - SECTION-D / OUR CLIENTS*/
   /*-----------------------------------------------------------------------*/
@@ -1239,10 +1290,12 @@ padding:1.5rem;
     /* increase the padding for left and right */
     padding: 0 20vw 20rem 20vw;
   }
+
   .google-map {
     /* increase the image height */
     height: 57rem;
   }
+
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1921  - SECTION-FOOTER */
   /*-----------------------------------------------------------------------*/
