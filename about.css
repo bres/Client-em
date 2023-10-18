@@ -23,6 +23,9 @@
 
 html {
   font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: antialiased;
+  font-smoothing: antialiased;
 }
 
 /*-----------------------------------------------------------------------*/
@@ -34,9 +37,6 @@ body {
   font-size: 1.6rem;
   line-height: 1.7;
   text-align: center;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: antialiased;
-  font-smoothing: antialiased;
   height: 100%;
   padding: 0;
   margin: 0;
@@ -53,7 +53,7 @@ h4 {
 
 h2 {
   font-size: 3rem;
-  margin: 0em 0rem 3.5rem 0rem;
+  margin: 0 0 3rem 0;
   padding: 0;
   color: var(--h2-color);
 }
@@ -118,11 +118,10 @@ nav .logo {
   font-family: "Roboto Condensed", sans-serif;
 }
 
-  
-nav .logo a{
+nav .logo a {
   text-decoration: none;
-  color:var(--blue-color)
-  }
+  color: var(--blue-color)
+}
 
 nav .links {
   float: right;
@@ -267,14 +266,14 @@ nav .icon-burger .line {
 }
 
 #showcase {
-  height: calc(100vh - 80px) !important;
+  height: 30vh;
   color: #fff;
 }
 
 #showcase .bg-image {
   position: absolute;
   background: linear-gradient(rgba(0, 0, 0, 0.116), rgba(0, 0, 0, 0.2)),
-    url("https://scontent.fath7-1.fna.fbcdn.net/v/t39.30808-6/332723352_737989887733236_951829062879884596_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=iq8rr-I67NQAX83XlDo&_nc_ht=scontent.fath7-1.fna&oh=00_AfDeWw49KsT-jJTErLOLPWPb76ZjnswsiCsDzSJVBI8y_g&oe=6532EF81");
+    url("https://scontent.fath7-1.fna.fbcdn.net/v/t39.30808-6/328478972_703159681543134_2801693530372195024_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=_lDeH9osWdwAX9QbB97&_nc_ht=scontent.fath7-1.fna&oh=00_AfD-ljpocZkYYPuU32vHoVAN0A0uEalAa_ipDjLsAibKMQ&oe=6534B947");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -328,228 +327,228 @@ nav .icon-burger .line {
   font-family: sans-serif;
 }
 
+
 /*-----------------------------------------------------------------------*/
-/* MOBILE VIEW - SECTION-A / ABOUT US */
+/* MOBILE VIEW - SECTION BANNER */
 /*-----------------------------------------------------------------------*/
+ .banner {
+  width:100%;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  padding:1rem 5vw;
+  background: var(--gray-background-color);
+ }
+
+ .banner i {
+  font-size:2.2rem;
+  color: var(--h2-color);
+  padding:0;
+  margin:0;
+}
+
+ .banner p {
+  color: var(--h2-color);
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  font-weight: 500;
+}
+
+/*-----------------------------------------------------------------------*/
+/* MOBILE VIEW - SECTION-ABOUT */
+/*-----------------------------------------------------------------------*/
+
 #section-a {
   background-color: var(--white-color);
   padding: 10rem 5vw;
 }
 
-#section-a img {
-  width: 100%;
-  height: 40rem;
-  object-fit: cover;
-}
-
-#section-a .card-content {
-  text-align: start;
-}
-
 /* create 1 column ul grid */
 #section-a ul {
+  text-align: start;
   list-style: none;
   padding: 0;
-  margin: 5rem 0 0 0;
+  margin: 0;
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 2.5rem;
+}
+
+#section-a li {
+  text-align: justify;
 }
 
 #section-a i {
   font-size: 3rem;
 }
 
-/*-----------------------------------------------------------------------*/
-/* MOBILE VIEW - SECTION-B / OUR PROJECTS */
-/*-----------------------------------------------------------------------*/
-
-#section-b {
-  padding: 0 5vw 10rem 5vw;
-}
-
-.cards {
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(1, minmax(230px, 1fr));
-  gap: 2.5rem;
-  list-style-type: none;
-}
-
-.card {
-  border: 2.5rem solid white;
-  background-color: #ffffff;
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
-}
-
-.card__image {
-  width: 100%;
-  aspect-ratio: 3/2.1;
-  object-fit: cover;
-  display: block;
-}
-
-.card__content {
+/* remove padding from h4 */
+#section-a h4 {
+  padding: 0 0 0.5rem 0;
   text-align: left;
-  padding: 2rem 0 4rem 0px;
 }
 
-#section-b .card__info {
-  padding: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: var(--blue-color);
+#section-a img {
+  width: 100%;
+  height: 40rem;
+  object-fit: cover;
+  filter: grayscale();
+}
+
+#img__desc {
   font-size: 1.4rem;
 }
 
-#section-b .card__info i {
+#section-a .quote{
+  margin-top:10rem;
+  padding:1rem 0;
+  border-top: var(--quote_line-color) 0.1rem solid;
+  border-bottom: var(--quote_line-color) 0.1rem solid;
+  display:flex;
+  flex-direction: column;
+
+ 
+}
+
+#section-a .quote span {
+  color: var(--blue-color);
+  font-size:5rem;
+
+}
+
+#section-a .quote p {
   font-size: 2rem;
-  margin-right: 0.8rem;
-  color: var(--white-color);
-}
-
-#section-b .card__date {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: var(--white-color);
-}
-
-#section-b .card__link {
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-}
-
-#section-b .card__link:hover {
-  text-decoration: underline;
+  padding:0 0 1rem 0;
+  color:var(--p-color);
 }
 
 /*-----------------------------------------------------------------------*/
-/* MOBILE VIEW - SECTION-C / OUR SERVICES */
+/* MOBILE VIEW - SECTION-B /OUR MOTO */
+/*-----------------------------------------------------------------------*/
+#section-b {
+  background-color: var(--gray-background-color);
+  padding: 10rem 5vw;
+}
+
+/* create 1 column ul grid */
+#section-b ul {
+  text-align: start;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2.5rem;
+}
+
+#section-b li {
+  text-align: justify;
+}
+
+#section-b i {
+  font-size: 3rem;
+}
+
+/* remove padding from h4 */
+#section-b h4 {
+  padding: 0 0 0.5rem 0;
+  text-align: left;
+}
+
+#section-b img {
+  width: 100%;
+  height: 40rem;
+  object-fit: cover;
+  filter: grayscale()
+}
+
+#img__desc {
+  font-size: 1.4rem;
+}
+
+#section-b .quote{
+  margin-top:10rem;
+  padding:1rem 0;
+  border-top: var(--quote_line-color) 0.1rem solid;
+  border-bottom: var(--quote_line-color) 0.1rem solid;
+  display:flex;
+  flex-direction: column;
+}
+
+#section-b .quote span {
+  color: var(--blue-color);
+  font-size:5rem;
+}
+
+#section-b .quote p {
+  font-size: 2rem;
+  padding:0 0 1rem 0;
+  color:var(--p-color);
+}
+
+
+/*-----------------------------------------------------------------------*/
+/* MOBILE VIEW - section-c /OUR MOTO */
 /*-----------------------------------------------------------------------*/
 #section-c {
   background-color: var(--white-color);
-  padding: 0 5vw 10rem 5vw;
-  text-align: start;
+  padding: 10rem 5vw;
 }
 
 /* create 1 column ul grid */
 #section-c ul {
+  text-align: start;
+  list-style: none;
   padding: 0;
-  margin-bottom: 4rem;
+  margin: 0;
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: 1fr;
   grid-gap: 2.5rem;
 }
 
 #section-c li {
-  list-style-type: none;
-  background-color: var(--gray-background-color);
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
-  padding: 1.3rem;
-  height: 10rem;
-}
-
-#section-c ul a {
-  text-decoration: none;
-}
-
-#section-c li:hover {
-  background-color: var(--blue-color);
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-
-#section-c li:hover p {
-  color: white;
-}
-
-#section-c li:hover i {
-  color: white;
-}
-
-#section-c li:hover h3 {
-  color: white;
-}
-
-#section-c h3 {
-  color: var(--h2-color);
-}
-
-#section-c .top__flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: var(--blue-color);
+  text-align: justify;
 }
 
 #section-c i {
   font-size: 3rem;
-  padding: 0.5rem 1rem;
+}
+
+/* remove padding from h4 */
+#section-c h4 {
+  padding: 0 0 0.5rem 0;
+  text-align: left;
 }
 
 #section-c img {
   width: 100%;
   height: 40rem;
   object-fit: cover;
+  filter: grayscale()
 }
 
-/*-----------------------------------------------------------------------*/
-/* MOBILE VIEW   - SECTION-D / OUR CLIENTS  */
-/*-----------------------------------------------------------------------*/
-#section-d {
-  padding: 0 5vw 10rem 5vw;
-  background-color: var(--blue-color);
+#img__desc {
+  font-size: 1.4rem;
 }
 
-#section-d h2 {
-  color: white;
+#section-c .quote{
+  margin-top:10rem;
+  padding:1rem 0;
+  border-top: var(--quote_line-color) 0.1rem solid;
+  border-bottom: var(--quote_line-color) 0.1rem solid;
+  display:flex;
+  flex-direction: column;
 }
 
-#section-d h4 {
-  color: white;
+#section-c .quote span {
+  color: var(--blue-color);
+  font-size:5rem;
 }
 
-#section-d .content {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  row-gap: 2.5rem;
-}
-
-#section-d .item {
-  flex: 0 0 47%;
-  background-color: rgb(252, 252, 252);
-  padding: 2rem
-}
-
-#section-d .content img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  mix-blend-mode: multiply;
-}
-
-/*-----------------------------------------------------------------------*/
-/* MOBILE VIEW - SECTION-E / OUR BASE */
-/*-----------------------------------------------------------------------*/
-#section-e {
-  background-color: var(--white-color);
-  padding: 0 5vw 10rem 5vw;
-}
-
-.google-map {
-  position: relative;
-  height: 40rem;
-}
-
-.google-map iframe {
-  height: 100%;
-  width: 100%;
-  left: 0;
-  top: 0;
-  position: absolute;
+#section-c .quote p {
+  font-size: 2rem;
+  padding:0 0 1rem 0;
+  color:var(--p-color);
 }
 
 /*-----------------------------------------------------------------------*/
@@ -646,52 +645,32 @@ nav .icon-burger .line {
     padding: 0 10vw;
   }
 
-  #showcase {
-    height: 57vw;
-  }
+/*-----------------------------------------------------------------------*/
+/* MOBILE VIEW - SECTION-A */
+/*-----------------------------------------------------------------------*/
 
-  /*-----------------------------------------------------------------------*/
-  /* DESKTOP 576  - SECTION-A / ABOUT US */
-  /*-----------------------------------------------------------------------*/
+#section-a {
+  background-color: var(--white-color);
+  padding: 10rem 10vw;
+}
 
-  /* increase the padding for left and right */
-  #section-a {
-    padding: 10rem 10vw;
-  }
+/*-----------------------------------------------------------------------*/
+/* MOBILE VIEW - SECTION-B */
+/*-----------------------------------------------------------------------*/
 
-  /*-----------------------------------------------------------------------*/
-  /* DESKTOP 576  - SECTION-B / OUR PROJECTS  */
-  /*-----------------------------------------------------------------------*/
+#section-b {
+  background-color: var(--white-color);
+  padding: 10rem 10vw;
+}
 
-  /* increase the padding for left and right */
-  #section-b {
-    padding: 0 10vw 10rem 10vw;
-  }
+/*-----------------------------------------------------------------------*/
+/* MOBILE VIEW - SECTION-A */
+/*-----------------------------------------------------------------------*/
 
-  /*-----------------------------------------------------------------------*/
-  /* DESKTOP 576  - SECTION-C / OUR SERVICES */
-  /*-----------------------------------------------------------------------*/
-  #section-c {
-    /* increase the padding for left and right */
-    padding: 0 10vw 10rem 10vw;
-  }
-
-  /*-----------------------------------------------------------------------*/
-  /* DESKTOP 576   - SECTION-D / OUR CLIENTS */
-  /*-----------------------------------------------------------------------*/
-  #section-d {
-    /* increase the padding for left and right */
-    padding: 0 10vw 10rem 10vw;
-  }
-
-  /*-----------------------------------------------------------------------*/
-  /* DESKTOP 576  - SECTION-E / OUR BASE */
-  /*-----------------------------------------------------------------------*/
-  #section-e {
-    /* increase the padding for left and right */
-    padding: 0 10vw 10rem 10vw;
-  }
-
+#section-c {
+  background-color: var(--white-color);
+  padding: 10rem 10vw;
+}
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 576 - FOOTER */
   /*-----------------------------------------------------------------------*/
@@ -707,86 +686,38 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 768  - SECTION-SHOWCASE */
   /*-----------------------------------------------------------------------*/
-  #showcase {
-    height: 57vw;
-  }
 
   .bg-image {
     /* increase the padding for left and right */
     padding: 0 11vw;
   }
 
-  /*-----------------------------------------------------------------------*/
-  /* DESKTOP 768  - SECTION-A / ABOUT US */
-  /*-----------------------------------------------------------------------*/
-  #section-a {
-    /* increase the padding for left and right */
-    padding: 10rem 11vw;
-  }
+/*-----------------------------------------------------------------------*/
+/* MOBILE VIEW - SECTION-A */
+/*-----------------------------------------------------------------------*/
 
-  /* grid-list for the li objects */
-  #section-a ul {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2.5rem;
-  }
+#section-a {
+  background-color: var(--white-color);
+  padding: 10rem 11vw;
+}
 
-  /*-----------------------------------------------------------------------*/
-  /* DESKTOP 768  - SECTION-B / OUR PROJECTS */
-  /*-----------------------------------------------------------------------*/
-  #section-b {
-    /* increase the padding for left and right */
-    padding: 0 11vw 10rem 11vw;
-  }
+/*-----------------------------------------------------------------------*/
+/* MOBILE VIEW - SECTION-B */
+/*-----------------------------------------------------------------------*/
 
-  .cards {
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(230px, 1fr));
-  }
+#section-b {
+  background-color: var(--white-color);
+  padding: 10rem 11vw;
+}
 
-  /*-----------------------------------------------------------------------*/
-  /* DESKTOP 768  - SECTION-C / OUR SERVICES  */
-  /*-----------------------------------------------------------------------*/
-  #section-c {
-    /* increase the padding for left and right */
-    padding: 0 11vw 10rem 11vw;
-  }
+/*-----------------------------------------------------------------------*/
+/* MOBILE VIEW - SECTION-c */
+/*-----------------------------------------------------------------------*/
 
-  /* create 2 columns ul grid */
-  #section-c ul {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /*-----------------------------------------------------------------------*/
-  /* DESKTOP 768   - SECTION-D / OUR CLIENTS */
-  /*-----------------------------------------------------------------------*/
-  #section-d {
-    /* increase the padding for left and right */
-    padding: 0 11vw 10rem 11vw;
-  }
-
-  #section-d .content {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2.5rem;
-  }
-
-  #section-d .item {
-    flex: 0 0 30%;
-    background-color: var(--white-color);
-    padding: 2rem
-  }
-
-  /*-----------------------------------------------------------------------*/
-  /* DESKTOP 768  - SECTION-E / OUR BASE */
-  /*-----------------------------------------------------------------------*/
-  #section-e {
-    /* increase the padding for left and right */
-    padding: 0 11vw 10rem 11vw;
-  }
-
+#section-c {
+  background-color: var(--white-color);
+  padding: 10rem 11vw;
+}
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 768 - FOOTER */
   /*-----------------------------------------------------------------------*/
@@ -892,6 +823,9 @@ nav .icon-burger .line {
     }
   }
 
+
+
+
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 991  - SECTION-SHOWCASE */
   /*-----------------------------------------------------------------------*/
@@ -899,12 +833,6 @@ nav .icon-burger .line {
     /* decrease the padding for left and right */
     padding: 0 5vw;
   }
-
-  #showcase {
-    /* height: calc(100vh - 80px) !important; */
-    height:70vh;
-  }
-
   /* show card */
   #showcase .showcase-card {
     display: flex;
@@ -927,131 +855,32 @@ nav .icon-burger .line {
     font-size: 2rem;
   }
 
-  /*-----------------------------------------------------------------------*/
-  /* DESKTOP 991  - SECTION-A / ABOUT US */
-  /*-----------------------------------------------------------------------*/
-  #section-a {
-    /* decrease the padding for left and right */
-    padding: 10rem 5vw 10rem 0;
-  }
+/*-----------------------------------------------------------------------*/
+/* MOBILE VIEW - SECTION-A */
+/*-----------------------------------------------------------------------*/
 
-  #section-a .content-wrap {
-    text-align: start;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 3%;
-  }
+#section-a {
+  background-color: var(--white-color);
+  padding: 10rem 5vw;
+}
 
-  #section-a img {
-    /* increase the image height */
-    height: 55rem;
-  }
+/*-----------------------------------------------------------------------*/
+/* MOBILE VIEW - SECTION-B */
+/*-----------------------------------------------------------------------*/
 
-  /* create grid for list */
-  #section-a ul {
-    /* create a margin-top from paragraph text */
-    margin-top: 3rem;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 3rem;
-  }
+#section-b {
+  background-color: var(--white-color);
+  padding: 10rem 5vw;
+}
 
-  /* remove padding from h4 */
-  #section-a h4 {
-    padding: 0 0 0.5rem 0;
-  }
+/*-----------------------------------------------------------------------*/
+/* MOBILE VIEW - SECTION-C */
+/*-----------------------------------------------------------------------*/
 
-  /*-----------------------------------------------------------------------*/
-  /* DESKTOP 991  - SECTION-B / OUR PROJECTS */
-  /*-----------------------------------------------------------------------*/
-  #section-b {
-    /* decrease the padding for left and right */
-    padding: 0 5vw 10rem 5vw;
-  }
-
-  /* create 3 columns grid */
-  .cards {
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(230px, 1fr));
-  }
-
-  /*-----------------------------------------------------------------------*/
-  /* DESKTOP 991  - SECTION-C / OUR SERVICES */
-  /*-----------------------------------------------------------------------*/
-  #section-c {
-    /* decrease the padding for left and right */
-    padding: 10rem 0 10rem 5vw;
-  }
-
-  /* create 2 columns main grid */
-  #section-c .content-wrap {
-    text-align: start;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 3%;
-  }
-
-  /* create 2 columns ul grid */
-  #section-c ul {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 2rem;
-    margin-bottom: 0;
-  }
-
-  #section-c li {
-    margin-bottom: 0rem;
-    height: 8rem;
-  }
-
-  /* increase the image height */
-  #section-c img {
-    width: 100%;
-    height: 55rem;
-    object-fit: cover;
-  }
-
-  /* remove padding from h4 */
-  #section-c h4 {
-    margin: 0rem;
-    padding: 0rem 0rem 0.5rem 0rem;
-  }
-
-  /*-----------------------------------------------------------------------*/
-  /* DESKTOP 991  - SECTION-D / OUR CLIENTS */
-  /*-----------------------------------------------------------------------*/
-  #section-d {
-    /* decrease the padding for left and right */
-    padding: 0 5vw 10rem 5vw;
-  }
-
-  #section-d .content {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2.5rem;
-  }
-
-  #section-d .item {
-    flex: 0 0 16%;
-    background-color: rgb(252, 252, 252);
-    padding: 2rem
-  }
-
-  /*-----------------------------------------------------------------------*/
-  /* DESKTOP 991  - SECTION-E / OUR BASE */
-  /*-----------------------------------------------------------------------*/
-  #section-e {
-    /* decrease the padding for left and right */
-    padding: 0 5vw 10rem 5vw;
-  }
-
-  .google-map {
-    /* increase the image height */
-    height: 55rem;
-  }
-
+#section-c {
+  background-color: var(--white-color);
+  padding: 10rem 5vw;
+}
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 991  - SECTION-FOOTER */
   /*-----------------------------------------------------------------------*/
@@ -1080,8 +909,7 @@ nav .icon-burger .line {
 
   /* full height showcase image */
   #showcase {
-    /* height: calc(100vh - 80px) !important; */
-    height:70vh !important;
+    height: 35vh !important;
   }
 
   /* increase the showcase h2 size */
@@ -1098,42 +926,73 @@ nav .icon-burger .line {
     font-size: 1.6rem;
   }
 
-  /*----------------------------------------------------------------------*/
-  /* DESKTOP 1200  - SECTION-A / ABOUT US  */
-  /*----------------------------------------------------------------------*/
-  #section-a i {
-    /* increase the i height */
-    font-size: 3.5rem;
-  }
 
   /*-----------------------------------------------------------------------*/
-  /* DESKTOP 1200  - SECTION-B / OUR PROJECTS */
+  /* DESKTOP 1200  - SECTION-A / ABOUT US */
+  /*-----------------------------------------------------------------------*/
+
+  #section-a #main__ul {
+    text-align: start;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3%;
+  }
+
+    /*-----------------------------------------------------------------------*/
+  /* DESKTOP 1200  - SECTION-B / ABOUT US */
   /*-----------------------------------------------------------------------*/
   #section-b {
-    padding: 0 5vw 10rem 5vw;
+    background: var(--gray-background-color);
   }
 
-  /*-----------------------------------------------------------------------*/
-  /* DESKTOP 1200  - SECTION-C / OUR SERVICES */
-  /*-----------------------------------------------------------------------*/
-
-  /* create 2 columns ul grid */
-  #section-c ul {
+  #section-b #main__ul {
+    text-align: start;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2rem;
-    margin-bottom: 0;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3%;
   }
 
-  #section-c li {
-    margin-bottom: 0rem;
-    height: 10rem;
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 1200  - SECTION-C / ABOUT US */
+  /*-----------------------------------------------------------------------*/
+
+  #section-c #main__ul {
+    text-align: start;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3%;
   }
 
 }
 
 /*----------------------------DESKTOP-1400 VIEW-------------------------*/
 @media (min-width: 1400px) {
+
+/*-----------------------------------------------------------------------*/
+/* DESKTOP 1400- SECTION BANNER */
+/*-----------------------------------------------------------------------*/
+.banner {
+  width:100%;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  padding:1rem 14vw;
+  background: var(--gray-background-color);
+ }
+
+ .banner i {
+  font-size:2.6rem;
+  color: var(--h2-color);
+  padding:0;
+  margin:0;
+}
+
+ .banner p {
+  color: var(--h2-color);
+  font-size: 1.5rem;
+  font-family: sans-serif;
+ }
+
 
   /*----------------------------------------------------------------------*/
   /* DESKTOP 1400  - SECTION-SHOWCASE */
@@ -1161,59 +1020,113 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
   #section-a {
     /* increase the padding for left and right */
-    padding: 10rem 14vw 10rem 0;
+    padding: 10rem 14vw 10rem 14vw;
   }
 
-  #section-a .content-wrap {
+  #section-a #main__ul {
     text-align: start;
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    grid-column-gap: 3%;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3%;
   }
 
+  #section-a .quote{
+    margin:10rem 14vw 0 14vw;
+    padding:2rem 0;
+    border-top: var(--quote_line-color) 0.1rem solid;
+    border-bottom: var(--quote_line-color) 0.1rem solid;
+    display:flex;
+    flex-direction: row;
+   }
+  
+  #section-a .quote span {
+    color: var(--blue-color);
+    font-size:5rem;
+  }
+  
+  #section-a .quote p {
+    font-size:2.5rem;
+    padding:0 3rem 1rem 3rem;
+    color:var(--p-color);
+    align-self:self-end;
+   }
+  
+
   /*-----------------------------------------------------------------------*/
-  /* DESKTOP 1400  - SECTION-B / OUR PROJECTS*/
+  /* DESKTOP 1400  - SECTION-B / WORK WITH US */
   /*-----------------------------------------------------------------------*/
   #section-b {
     /* increase the padding for left and right */
-    padding: 0 14vw 10rem 14vw;
+    padding: 10rem 14vw 10rem 14vw;
+    background: var(--gray-background-color);
   }
 
-  /*-----------------------------------------------------------------------*/
-  /* DESKTOP 1400  - SECTION-C / OUR SERVICES  */
+  #section-b #main__ul {
+    text-align: start;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3%;
+  }
+
+  #section-b .quote{
+    margin:10rem 14vw 0 14vw;
+    padding:2rem 0;
+    border-top: var(--quote_line-color) 0.1rem solid;
+    border-bottom: var(--quote_line-color) 0.1rem solid;
+    display:flex;
+    flex-direction: row;
+   }
+  
+  #section-b .quote span {
+    color: var(--blue-color);
+    font-size:5rem;
+  }
+  
+  #section-b .quote p {
+    font-size:2.5rem;
+    padding:0 3rem 1rem 3rem;
+    color:var(--p-color);
+    align-self:self-end;
+   }
+
+     /*-----------------------------------------------------------------------*/
+  /* DESKTOP 1400  - SECTION-C / WORK WITH US */
   /*-----------------------------------------------------------------------*/
   #section-c {
     /* increase the padding for left and right */
-    padding: 10rem 0 10rem 14vw;
+    padding: 10rem 14vw 10rem 14vw;
+    background: var(--white-color);
   }
 
-  #section-c .content-wrap {
+  #section-c #main__ul {
     text-align: start;
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    grid-column-gap: 3%;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3%;
   }
 
-  #section-c i {
-    font-size: 3.5rem;
+  #section-c .quote{
+    margin:10rem 14vw 0 14vw;
+    padding:2rem 0;
+    border-top: var(--quote_line-color) 0.1rem solid;
+    border-bottom: var(--quote_line-color) 0.1rem solid;
+    display:flex;
+    flex-direction: row;
+   }
+  
+  #section-c .quote span {
+    color: var(--blue-color);
+    font-size:5rem;
   }
-
-  /*-----------------------------------------------------------------------*/
-  /* DESKTOP 1400  - SECTION-D / OUR CLIENTS */
-  /*-----------------------------------------------------------------------*/
-  #section-d {
-    /* increase the padding for left and right */
-    padding: 0 14vw 10rem 14vw;
-  }
-
-  /*-----------------------------------------------------------------------*/
-  /* DESKTOP 1400  - SECTION-E / OUR BASE*/
-  /*-----------------------------------------------------------------------*/
-  #section-e {
-    /* increase the padding for left and right */
-    padding: 0 14vw 10rem 14vw;
-  }
-
+  
+  #section-c .quote p {
+    font-size:2.5rem;
+    padding:0 3rem 1rem 3rem;
+    color:var(--p-color);
+    align-self:self-end;
+   }
+  
+  
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1400  - SECTION-FOOTER */
   /*-----------------------------------------------------------------------*/
@@ -1226,6 +1139,33 @@ nav .icon-burger .line {
 /*----------------------------DESKTOP-1921 VIEW--------------------------*/
 
 @media (min-width: 1921px) {
+
+  /*-----------------------------------------------------------------------*/
+/* DESKTOP 1400- SECTION BANNER */
+/*-----------------------------------------------------------------------*/
+.banner {
+  width:100%;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  padding:1rem 20vw;
+  background: var(--gray-background-color);
+ }
+
+ .banner i {
+  font-size:2.2rem;
+  color: var(--h2-color);
+  padding:0;
+  margin:0;
+}
+
+ .banner p {
+  color: var(--h2-color);
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  font-weight: 500;
+}
+
 
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1921  - SECTION-SHOWCASE */
@@ -1247,70 +1187,37 @@ nav .icon-burger .line {
     font-size: 1.9rem;
   }
 
-  /*-----------------------------------------------------------------------*/
-  /* DESKTOP 1921  - SECTION-A / ABOUT US*/
-  /*-----------------------------------------------------------------------*/
-  #section-a {
-    /* increase the padding for left and right */
-    padding: 10rem 20vw 10rem 0;
-  }
+/*-----------------------------------------------------------------------*/
+/* DESKTOP 1921- SECTION-A */
+/*-----------------------------------------------------------------------*/
 
-  #section-a i {
-    /* increase the i height */
-    font-size: 4rem;
-  }
+#section-a {
+   padding: 10rem 20vw;
+}
 
-  #section-a img {
-    /* increase the image height */
-    height: 57rem;
-  }
+#section-a img {
+  height: 45rem;
+}
+/*-----------------------------------------------------------------------*/
+/* DESKTOP 1921- SECTION-A */
+/*-----------------------------------------------------------------------*/
 
-  /*-----------------------------------------------------------------------*/
-  /* DESKTOP 1921  - SECTION-B / OUR PROJECTS */
-  /*-----------------------------------------------------------------------*/
-  #section-b {
-    /* increase the padding for left and right */
-    padding: 0 20vw 10rem 20vw;
-  }
+#section-b {
+   padding: 10rem 20vw;
+}
+#section-b img {
+  height: 45rem;
+}
+/*-----------------------------------------------------------------------*/
+/* DESKTOP 1921- SECTION-A */
+/*-----------------------------------------------------------------------*/
 
-  /*-----------------------------------------------------------------------*/
-  /* DESKTOP 1921  - SECTION-C / OUR SERVICES */
-  /*-----------------------------------------------------------------------*/
-  #section-c {
-    /* increase the padding for left and right */
-    padding: 10rem 0 10rem 20vw;
-  }
-
-  #section-c img {
-    /* increase the image height */
-    height: 57rem;
-  }
-
-  #section-c i {
-    font-size: 4rem;
-  }
-
-  /*-----------------------------------------------------------------------*/
-  /* DESKTOP 1921  - SECTION-D / OUR CLIENTS*/
-  /*-----------------------------------------------------------------------*/
-  #section-d {
-    /* increase the padding for left and right */
-    padding: 0 20vw 10rem 20vw;
-  }
-
-  /*-----------------------------------------------------------------------*/
-  /* DESKTOP 1921  - SECTION-E / OUR BASE */
-  /*-----------------------------------------------------------------------*/
-  #section-e {
-    /* increase the padding for left and right */
-    padding: 0 20vw 10rem 20vw;
-  }
-
-  .google-map {
-    /* increase the image height */
-    height: 57rem;
-  }
-
+#section-c {
+   padding: 10rem 20vw;
+}
+#section-c img {
+  height: 45rem;
+}
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1921  - SECTION-FOOTER */
   /*-----------------------------------------------------------------------*/
