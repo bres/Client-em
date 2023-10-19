@@ -23,6 +23,9 @@
 
 html {
   font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: antialiased;
+  font-smoothing: antialiased;
 }
 
 /*-----------------------------------------------------------------------*/
@@ -34,9 +37,6 @@ body {
   font-size: 1.6rem;
   line-height: 1.7;
   text-align: center;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: antialiased;
-  font-smoothing: antialiased;
   height: 100%;
   padding: 0;
   margin: 0;
@@ -52,9 +52,9 @@ h4 {
 }
 
 h2 {
-  font-size: 3rem;
-  margin: 0em 0rem 3.5rem 0rem;
-  padding: 0;
+  font-size: 3.2rem;
+  margin: 0;
+  padding: 0 0 3rem 0;
   color: var(--h2-color);
 }
 
@@ -66,10 +66,10 @@ h3 {
 }
 
 h4 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 3rem 0 0.5rem 0;
   color: var(--h4-color);
-  margin: 0rem;
-  padding: 3rem 0rem 0.5rem 0rem;
 }
 
 p {
@@ -118,11 +118,11 @@ nav .logo {
   font-family: "Roboto Condensed", sans-serif;
 }
 
-  
-nav .logo a{
+
+nav .logo a {
   text-decoration: none;
-  color:var(--blue-color)
-  }
+  color: var(--blue-color)
+}
 
 nav .links {
   float: right;
@@ -156,7 +156,7 @@ nav .links a {
 nav .icon-burger {
   display: none;
   position: absolute;
-  right: 5%;
+  right: 5vw;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -165,7 +165,7 @@ nav .icon-burger .line {
   width: 30px;
   height: 4px;
   background-color: var(--blue-color);
-  margin: 5px;
+  margin: 5px 0;
   border-radius: 4px;
   transition: all 0.3s ease-in-out;
 }
@@ -267,7 +267,8 @@ nav .icon-burger .line {
 }
 
 #showcase {
-  height: calc(100vh - 80px) !important;
+  /* height: calc(100vh - 80px) !important; */
+  height: 50vh;
   color: #fff;
 }
 
@@ -311,16 +312,11 @@ nav .icon-burger .line {
 }
 
 #showcase h2 {
-  margin: 0rem 0rem 0.8rem 0rem;
-  padding: 0;
   color: var(--white-color);
-  font-size: 3.2rem;
-}
+ }
 
 #showcase h4 {
   color: var(--white-color);
-  font-size: 1.6rem;
-
 }
 
 .showcase-card p {
@@ -338,7 +334,7 @@ nav .icon-burger .line {
 
 #section-a img {
   width: 100%;
-  height: 40rem;
+  height: 30rem;
   object-fit: cover;
 }
 
@@ -363,11 +359,10 @@ nav .icon-burger .line {
 /*-----------------------------------------------------------------------*/
 /* MOBILE VIEW - SECTION-B / OUR PROJECTS */
 /*-----------------------------------------------------------------------*/
-
+FIXME:
 #section-b {
   padding: 0 5vw 10rem 5vw;
 }
-
 .cards {
   margin: 0;
   padding: 0;
@@ -491,7 +486,7 @@ nav .icon-burger .line {
 
 #section-c img {
   width: 100%;
-  height: 40rem;
+  height: 30rem;
   object-fit: cover;
 }
 
@@ -541,7 +536,7 @@ nav .icon-burger .line {
 
 .google-map {
   position: relative;
-  height: 40rem;
+  height: 30rem;
 }
 
 .google-map iframe {
@@ -625,8 +620,21 @@ nav .icon-burger .line {
   color: var(--white-color);
 }
 
-/*------------------------------DESKTOP-576 VIEW------------------------------*/
+/*------------------------------DESKTOP-576 VIEW---------------------------*/
 @media (min-width: 576px) {
+
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 576  - NAV-PADDING*/
+  /*-----------------------------------------------------------------------*/
+
+  nav {
+    padding: 0 10vw;
+  }
+
+  nav .icon-burger {
+    right: 10vw;
+  }
+
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 576  - SECTION-SHOWCASE */
   /*-----------------------------------------------------------------------*/
@@ -646,9 +654,6 @@ nav .icon-burger .line {
     padding: 0 10vw;
   }
 
-  #showcase {
-    height: 57vw;
-  }
 
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 576  - SECTION-A / ABOUT US */
@@ -658,7 +663,9 @@ nav .icon-burger .line {
   #section-a {
     padding: 10rem 10vw;
   }
-
+  #section-a img {
+    height: 35rem;
+  }
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 576  - SECTION-B / OUR PROJECTS  */
   /*-----------------------------------------------------------------------*/
@@ -675,7 +682,9 @@ nav .icon-burger .line {
     /* increase the padding for left and right */
     padding: 0 10vw 10rem 10vw;
   }
-
+  #section-c img {
+    height: 35rem;
+  }
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 576   - SECTION-D / OUR CLIENTS */
   /*-----------------------------------------------------------------------*/
@@ -691,7 +700,9 @@ nav .icon-burger .line {
     /* increase the padding for left and right */
     padding: 0 10vw 10rem 10vw;
   }
-
+  .google-map {
+     height: 35rem;
+  }
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 576 - FOOTER */
   /*-----------------------------------------------------------------------*/
@@ -705,17 +716,21 @@ nav .icon-burger .line {
 @media (min-width: 768px) {
 
   /*-----------------------------------------------------------------------*/
+  /* DESKTOP 768  - NAV-PADDING*/
+  /*-----------------------------------------------------------------------*/
+  nav {
+    padding: 0 11vw;
+  }
+  nav .icon-burger {
+    right: 11vw;
+  }
+  /*-----------------------------------------------------------------------*/
   /* DESKTOP 768  - SECTION-SHOWCASE */
   /*-----------------------------------------------------------------------*/
-  #showcase {
-    height: 57vw;
-  }
-
   .bg-image {
     /* increase the padding for left and right */
     padding: 0 11vw;
   }
-
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 768  - SECTION-A / ABOUT US */
   /*-----------------------------------------------------------------------*/
@@ -792,7 +807,7 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
   .footer-content {
     /* increase the padding for left and right */
-    padding: 0 11vw 0 11vw;
+    padding: 0 11vw;
   }
 
   /* create a grid */
@@ -807,12 +822,11 @@ nav .icon-burger .line {
 @media (min-width: 991px) {
 
   /*-----------------------------------------------------------------------*/
-  /* DESKTOP 991  - NAV */
+  /* DESKTOP 991  - NAV-PADDING*/
   /*-----------------------------------------------------------------------*/
   nav {
     padding: 0 5vw;
   }
-
   /*-----------------------------------------------------------------------*/
   /* NAV BUTTON 991 */
   /*-----------------------------------------------------------------------*/
@@ -902,7 +916,7 @@ nav .icon-burger .line {
 
   #showcase {
     /* height: calc(100vh - 80px) !important; */
-    height:70vh;
+    height: 65vh;
   }
 
   /* show card */
@@ -932,7 +946,7 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
   #section-a {
     /* decrease the padding for left and right */
-    padding: 10rem 5vw 10rem 0;
+    padding: 10rem 5vw 10rem 5vw;
   }
 
   #section-a .content-wrap {
@@ -944,7 +958,7 @@ nav .icon-burger .line {
 
   #section-a img {
     /* increase the image height */
-    height: 55rem;
+    height: 50rem;
   }
 
   /* create grid for list */
@@ -981,7 +995,7 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
   #section-c {
     /* decrease the padding for left and right */
-    padding: 10rem 0 10rem 5vw;
+    padding: 10rem 5vw 10rem 5vw;
   }
 
   /* create 2 columns main grid */
@@ -1008,13 +1022,12 @@ nav .icon-burger .line {
   /* increase the image height */
   #section-c img {
     width: 100%;
-    height: 55rem;
+    height: 50rem;
     object-fit: cover;
   }
 
   /* remove padding from h4 */
   #section-c h4 {
-    margin: 0rem;
     padding: 0rem 0rem 0.5rem 0rem;
   }
 
@@ -1049,7 +1062,7 @@ nav .icon-burger .line {
 
   .google-map {
     /* increase the image height */
-    height: 55rem;
+    height: 50rem;
   }
 
   /*-----------------------------------------------------------------------*/
@@ -1078,12 +1091,6 @@ nav .icon-burger .line {
   /* DESKTOP 1200  - SECTION-SHOWCASE */
   /*-----------------------------------------------------------------------*/
 
-  /* full height showcase image */
-  #showcase {
-    /* height: calc(100vh - 80px) !important; */
-    height:70vh !important;
-  }
-
   /* increase the showcase h2 size */
   #showcase h2 {
     font-size: 4.5rem;
@@ -1101,9 +1108,18 @@ nav .icon-burger .line {
   /*----------------------------------------------------------------------*/
   /* DESKTOP 1200  - SECTION-A / ABOUT US  */
   /*----------------------------------------------------------------------*/
+  #section-a {
+    /* decrease the padding for left and right */
+    padding: 10rem 5vw 10rem 5vw;
+  }
+
   #section-a i {
     /* increase the i height */
     font-size: 3.5rem;
+  }
+  #section-a img {
+    /* increase the image height */
+    height: 43rem;
   }
 
   /*-----------------------------------------------------------------------*/
@@ -1117,6 +1133,11 @@ nav .icon-burger .line {
   /* DESKTOP 1200  - SECTION-C / OUR SERVICES */
   /*-----------------------------------------------------------------------*/
 
+  #section-c {
+    /* decrease the padding for left and right */
+    padding: 10rem 5vw 10rem 5vw;
+  }
+
   /* create 2 columns ul grid */
   #section-c ul {
     display: grid;
@@ -1129,18 +1150,34 @@ nav .icon-burger .line {
     margin-bottom: 0rem;
     height: 10rem;
   }
+  #section-c img {
+    /* increase the image height */
+    height: 43rem;
+  }
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 1200  - SECTION-E / OUR BASE */
+  /*-----------------------------------------------------------------------*/
+  .google-map {
+     height: 43rem;
+  }
 
 }
 
 /*----------------------------DESKTOP-1400 VIEW-------------------------*/
 @media (min-width: 1400px) {
 
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 1400  - NAV-PADDING*/
+  /*-----------------------------------------------------------------------*/
+  nav {
+    padding: 0 8vw;
+  }
   /*----------------------------------------------------------------------*/
   /* DESKTOP 1400  - SECTION-SHOWCASE */
   /*----------------------------------------------------------------------*/
   .bg-image {
     /* increase the padding for left and right */
-    padding: 0 14vw;
+    padding: 0 8vw;
   }
 
   #showcase .showcase-card p {
@@ -1152,7 +1189,7 @@ nav .icon-burger .line {
   }
 
   #showcase h4 {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
 
@@ -1161,22 +1198,22 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
   #section-a {
     /* increase the padding for left and right */
-    padding: 10rem 14vw 10rem 0;
+    padding: 10rem 8vw 10rem 8vw;
   }
 
   #section-a .content-wrap {
     text-align: start;
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-column-gap: 3%;
   }
-
+ 
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1400  - SECTION-B / OUR PROJECTS*/
   /*-----------------------------------------------------------------------*/
   #section-b {
     /* increase the padding for left and right */
-    padding: 0 14vw 10rem 14vw;
+    padding: 0 8vw 10rem 8vw;
   }
 
   /*-----------------------------------------------------------------------*/
@@ -1184,13 +1221,13 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
   #section-c {
     /* increase the padding for left and right */
-    padding: 10rem 0 10rem 14vw;
+    padding: 10rem 8vw 10rem 8vw;
   }
 
   #section-c .content-wrap {
     text-align: start;
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
+    grid-template-columns: 1fr 1fr;
     grid-column-gap: 3%;
   }
 
@@ -1198,12 +1235,12 @@ nav .icon-burger .line {
     font-size: 3.5rem;
   }
 
-  /*-----------------------------------------------------------------------*/
+---------------------------------------------------------------------*/
   /* DESKTOP 1400  - SECTION-D / OUR CLIENTS */
   /*-----------------------------------------------------------------------*/
   #section-d {
     /* increase the padding for left and right */
-    padding: 0 14vw 10rem 14vw;
+    padding: 0 8vw 10rem 8vw;
   }
 
   /*-----------------------------------------------------------------------*/
@@ -1211,15 +1248,16 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
   #section-e {
     /* increase the padding for left and right */
-    padding: 0 14vw 10rem 14vw;
+    padding: 0 8vw 10rem 8vw;
   }
+
 
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1400  - SECTION-FOOTER */
   /*-----------------------------------------------------------------------*/
   .footer-content {
     /* increase the padding for left and right */
-    padding: 0 14vw 0 14vw;
+    padding: 0 8vw;
   }
 }
 
@@ -1228,15 +1266,21 @@ nav .icon-burger .line {
 @media (min-width: 1921px) {
 
   /*-----------------------------------------------------------------------*/
+  /* DESKTOP 1921  - NAV-PADDING*/
+  /*-----------------------------------------------------------------------*/
+  nav {
+    padding: 0 18vw;
+  }
+  /*-----------------------------------------------------------------------*/
   /* DESKTOP 1921  - SECTION-SHOWCASE */
   /*-----------------------------------------------------------------------*/
   .bg-image {
     /* increase the padding for left and right */
-    padding: 0 20vw;
+    padding: 0 18vw;
   }
 
   #showcase h4 {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
   #showcase h2 {
@@ -1252,7 +1296,7 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
   #section-a {
     /* increase the padding for left and right */
-    padding: 10rem 20vw 10rem 0;
+    padding: 10rem 18vw 10rem 18vw;
   }
 
   #section-a i {
@@ -1262,7 +1306,7 @@ nav .icon-burger .line {
 
   #section-a img {
     /* increase the image height */
-    height: 57rem;
+    height: 45rem;
   }
 
   /*-----------------------------------------------------------------------*/
@@ -1270,7 +1314,7 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
   #section-b {
     /* increase the padding for left and right */
-    padding: 0 20vw 10rem 20vw;
+    padding: 0 18vw 10rem 18vw;
   }
 
   /*-----------------------------------------------------------------------*/
@@ -1278,12 +1322,12 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
   #section-c {
     /* increase the padding for left and right */
-    padding: 10rem 0 10rem 20vw;
+    padding: 10rem 18vw 10rem 18vw;
   }
 
   #section-c img {
     /* increase the image height */
-    height: 57rem;
+    height: 45rem;
   }
 
   #section-c i {
@@ -1295,7 +1339,7 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
   #section-d {
     /* increase the padding for left and right */
-    padding: 0 20vw 10rem 20vw;
+    padding: 0 18vw 10rem 18vw;
   }
 
   /*-----------------------------------------------------------------------*/
@@ -1303,12 +1347,12 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
   #section-e {
     /* increase the padding for left and right */
-    padding: 0 20vw 10rem 20vw;
+    padding: 0 18vw 10rem 18vw;
   }
 
   .google-map {
     /* increase the image height */
-    height: 57rem;
+    height: 45rem;
   }
 
   /*-----------------------------------------------------------------------*/
@@ -1316,6 +1360,6 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
   .footer-content {
     /* increase the padding for left and right */
-    padding: 0 20vw 0 20vw;
+    padding: 0 18vw;
   }
 }

@@ -52,9 +52,9 @@ h4 {
 }
 
 h2 {
-  font-size: 3rem;
-  margin: 0 0 3rem 0;
-  padding: 0;
+  font-size: 3.2rem;
+  margin: 0;
+  padding: 0 0 3rem 0;
   color: var(--h2-color);
 }
 
@@ -66,10 +66,10 @@ h3 {
 }
 
 h4 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 3rem 0 0.5rem 0;
   color: var(--h4-color);
-  margin: 0rem;
-  padding: 3rem 0rem 0.5rem 0rem;
 }
 
 p {
@@ -164,7 +164,7 @@ nav .icon-burger .line {
   width: 30px;
   height: 4px;
   background-color: var(--blue-color);
-  margin: 5px;
+  margin: 5px 0;
   border-radius: 4px;
   transition: all 0.3s ease-in-out;
 }
@@ -310,16 +310,11 @@ nav .icon-burger .line {
 }
 
 #showcase h2 {
-  margin: 0rem 0rem 0.8rem 0rem;
-  padding: 0;
   color: var(--white-color);
-  font-size: 3.2rem;
 }
 
 #showcase h4 {
   color: var(--white-color);
-  font-size: 1.6rem;
-
 }
 
 .showcase-card p {
@@ -383,14 +378,14 @@ nav .icon-burger .line {
 }
 
 /* remove padding from h4 */
-#section-a h4 {
+/* #section-a h4 {
   padding: 0 0 0.5rem 0;
   text-align: left;
-}
+} */
 
 #section-a img {
   width: 100%;
-  height: 40rem;
+  height: 30rem;
   object-fit: cover;
   filter: grayscale();
 }
@@ -457,7 +452,7 @@ nav .icon-burger .line {
 
 #section-b img {
   width: 100%;
-  height: 40rem;
+  height: 30rem;
   object-fit: cover;
   filter: grayscale()
 }
@@ -522,7 +517,7 @@ nav .icon-burger .line {
 
 #section-c img {
   width: 100%;
-  height: 40rem;
+  height: 30rem;
   object-fit: cover;
   filter: grayscale()
 }
@@ -626,6 +621,18 @@ nav .icon-burger .line {
 
 /*------------------------------DESKTOP-576 VIEW------------------------------*/
 @media (min-width: 576px) {
+ /*-----------------------------------------------------------------------*/
+  /* DESKTOP 576  - NAV-PADDING*/
+  /*-----------------------------------------------------------------------*/
+
+  nav {
+    padding: 0 10vw;
+  }
+
+  nav .icon-burger {
+    right: 10vw;
+  }
+
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 576  - SECTION-SHOWCASE */
   /*-----------------------------------------------------------------------*/
@@ -653,6 +660,9 @@ nav .icon-burger .line {
   background-color: var(--white-color);
   padding: 10rem 10vw;
 }
+#section-a img {
+  height: 35rem;
+}
 
 /*-----------------------------------------------------------------------*/
 /* MOBILE VIEW - SECTION-B */
@@ -662,7 +672,9 @@ nav .icon-burger .line {
   background-color: var(--white-color);
   padding: 10rem 10vw;
 }
-
+#section-b img {
+  height: 35rem;
+}
 /*-----------------------------------------------------------------------*/
 /* MOBILE VIEW - SECTION-A */
 /*-----------------------------------------------------------------------*/
@@ -670,6 +682,9 @@ nav .icon-burger .line {
 #section-c {
   background-color: var(--white-color);
   padding: 10rem 10vw;
+}
+#section-c img {
+  height: 35rem;
 }
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 576 - FOOTER */
@@ -682,6 +697,16 @@ nav .icon-burger .line {
 
 /*---------------------------DESKTOP-768 VIEW---------------------------*/
 @media (min-width: 768px) {
+
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 768  - NAV-PADDING*/
+  /*-----------------------------------------------------------------------*/
+  nav {
+    padding: 0 11vw;
+  }
+  nav .icon-burger {
+    right: 11vw;
+  }
 
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 768  - SECTION-SHOWCASE */
@@ -856,16 +881,26 @@ nav .icon-burger .line {
   }
 
 /*-----------------------------------------------------------------------*/
-/* MOBILE VIEW - SECTION-A */
+/* DESKTOP 991- SECTION-A */
 /*-----------------------------------------------------------------------*/
 
 #section-a {
   background-color: var(--white-color);
   padding: 10rem 5vw;
 }
+#section-a img {
+  /* increase the image height */
+  height: 50rem;
+}
 
+#section-a #main__ul {
+  text-align: start;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3%;
+}
 /*-----------------------------------------------------------------------*/
-/* MOBILE VIEW - SECTION-B */
+/* DESKTOP 991- SECTION-B */
 /*-----------------------------------------------------------------------*/
 
 #section-b {
@@ -873,13 +908,35 @@ nav .icon-burger .line {
   padding: 10rem 5vw;
 }
 
+#section-b #main__ul {
+  text-align: start;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3%;
+}
+
+#section-b img {
+  /* increase the image height */
+  height: 50rem;
+}
 /*-----------------------------------------------------------------------*/
-/* MOBILE VIEW - SECTION-C */
+/* DESKTOP 991 - SECTION-C */
 /*-----------------------------------------------------------------------*/
 
 #section-c {
   background-color: var(--white-color);
   padding: 10rem 5vw;
+}
+
+#section-c #main__ul {
+  text-align: start;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3%;
+}
+#section-c img {
+  /* increase the image height */
+  height: 50rem;
 }
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 991  - SECTION-FOOTER */
@@ -930,13 +987,12 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1200  - SECTION-A / ABOUT US */
   /*-----------------------------------------------------------------------*/
-
-  #section-a #main__ul {
-    text-align: start;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 3%;
+  #section-a img {
+    /* increase the image height */
+    height: 43rem;
   }
+
+ 
 
     /*-----------------------------------------------------------------------*/
   /* DESKTOP 1200  - SECTION-B / ABOUT US */
@@ -945,22 +1001,19 @@ nav .icon-burger .line {
     background: var(--gray-background-color);
   }
 
-  #section-b #main__ul {
-    text-align: start;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 3%;
+  #section-b img {
+    /* increase the image height */
+    height: 43rem;
   }
+
 
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1200  - SECTION-C / ABOUT US */
   /*-----------------------------------------------------------------------*/
 
-  #section-c #main__ul {
-    text-align: start;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 3%;
+  #section-c img {
+    /* increase the image height */
+    height: 43rem;
   }
 
 }
@@ -993,13 +1046,19 @@ nav .icon-burger .line {
   font-family: sans-serif;
  }
 
+  /*-----------------------------------------------------------------------*/
+  /* DESKTOP 1400  - NAV-PADDING*/
+  /*-----------------------------------------------------------------------*/
+  nav {
+    padding: 0 8vw;
+  }
 
   /*----------------------------------------------------------------------*/
   /* DESKTOP 1400  - SECTION-SHOWCASE */
   /*----------------------------------------------------------------------*/
   .bg-image {
     /* increase the padding for left and right */
-    padding: 0 14vw;
+    padding: 0 8vw;
   }
 
   #showcase .showcase-card p {
@@ -1011,7 +1070,7 @@ nav .icon-burger .line {
   }
 
   #showcase h4 {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
 
@@ -1020,7 +1079,7 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
   #section-a {
     /* increase the padding for left and right */
-    padding: 10rem 14vw 10rem 14vw;
+    padding: 10rem 8vw 10rem 8vw;
   }
 
   #section-a #main__ul {
@@ -1057,7 +1116,7 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
   #section-b {
     /* increase the padding for left and right */
-    padding: 10rem 14vw 10rem 14vw;
+    padding: 10rem 8vw 10rem 8vw;
     background: var(--gray-background-color);
   }
 
@@ -1094,7 +1153,7 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
   #section-c {
     /* increase the padding for left and right */
-    padding: 10rem 14vw 10rem 14vw;
+    padding: 10rem 8vw 10rem 8vw;
     background: var(--white-color);
   }
 
@@ -1132,13 +1191,14 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
   .footer-content {
     /* increase the padding for left and right */
-    padding: 0 14vw 0 14vw;
+    padding: 0 8vw;
   }
 }
 
 /*----------------------------DESKTOP-1921 VIEW--------------------------*/
 
 @media (min-width: 1921px) {
+
 
   /*-----------------------------------------------------------------------*/
 /* DESKTOP 1400- SECTION BANNER */
@@ -1166,17 +1226,23 @@ nav .icon-burger .line {
   font-weight: 500;
 }
 
+   /*-----------------------------------------------------------------------*/
+  /* DESKTOP 1921  - NAV-PADDING*/
+  /*-----------------------------------------------------------------------*/
+  nav {
+    padding: 0 18vw;
+  }
 
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1921  - SECTION-SHOWCASE */
   /*-----------------------------------------------------------------------*/
   .bg-image {
     /* increase the padding for left and right */
-    padding: 0 20vw;
+    padding: 0 18vw;
   }
 
   #showcase h4 {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
   #showcase h2 {
@@ -1192,7 +1258,7 @@ nav .icon-burger .line {
 /*-----------------------------------------------------------------------*/
 
 #section-a {
-   padding: 10rem 20vw;
+   padding: 10rem 18vw;
 }
 
 #section-a img {
@@ -1203,7 +1269,7 @@ nav .icon-burger .line {
 /*-----------------------------------------------------------------------*/
 
 #section-b {
-   padding: 10rem 20vw;
+   padding: 10rem 18vw;
 }
 #section-b img {
   height: 45rem;
@@ -1213,7 +1279,7 @@ nav .icon-burger .line {
 /*-----------------------------------------------------------------------*/
 
 #section-c {
-   padding: 10rem 20vw;
+   padding: 10rem 18vw;
 }
 #section-c img {
   height: 45rem;
@@ -1223,6 +1289,6 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
   .footer-content {
     /* increase the padding for left and right */
-    padding: 0 20vw 0 20vw;
+    padding: 0 18vw;
   }
 }
