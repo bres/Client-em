@@ -13,6 +13,14 @@
   --quote_line-color: #e0e0e0;
   --gray-background-color: #f5f5f5;
   --white-color: #fff;
+
+  /*-----------------------------------------------------------------------*/
+  /* Core Padding*/
+  /*-----------------------------------------------------------------------*/
+  --widthA: 1rem;
+  --widthB: calc(100% - 1400px);
+  --widthC: calc(var(--widthB) / 1.94);
+  --widthD: calc(4% + var(--widthC));
 }
 
 *,
@@ -104,7 +112,7 @@ nav {
   height: 80px;
   background-color: var(--white-color);
   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
-  padding: 0 5vw;
+  padding: 0 4vw;
 }
 
 nav .logo {
@@ -156,7 +164,7 @@ nav .links a {
 nav .icon-burger {
   display: none;
   position: absolute;
-  right: 5vw;
+  right: 4vw;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -286,7 +294,7 @@ nav .icon-burger .line {
 }
 
 .bg-image {
-  padding: 0 5vw;
+  padding: 0 4vw;
   display: grid;
   justify-items: start;
   align-items: center;
@@ -313,7 +321,7 @@ nav .icon-burger .line {
 
 #showcase h2 {
   color: var(--white-color);
- }
+}
 
 #showcase h4 {
   color: var(--white-color);
@@ -327,9 +335,10 @@ nav .icon-burger .line {
 /*-----------------------------------------------------------------------*/
 /* MOBILE VIEW - SECTION-A / ABOUT US */
 /*-----------------------------------------------------------------------*/
+
 #section-a {
   background-color: var(--white-color);
-  padding: 10rem 5vw;
+  padding: 10rem 4vw;
 }
 
 #section-a img {
@@ -349,7 +358,7 @@ nav .icon-burger .line {
   margin: 5rem 0 0 0;
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 2.5rem;
+  grid-gap: 1.5rem;
 }
 
 #section-a i {
@@ -359,16 +368,18 @@ nav .icon-burger .line {
 /*-----------------------------------------------------------------------*/
 /* MOBILE VIEW - SECTION-B / OUR PROJECTS */
 /*-----------------------------------------------------------------------*/
-FIXME:
+
+/* TODO: */
 #section-b {
-  padding: 0 5vw 10rem 5vw;
+  padding: 0 4vw 10rem 4vw;
 }
+
 .cards {
   margin: 0;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(1, minmax(230px, 1fr));
-  gap: 2.5rem;
+  gap: 1.5rem;
   list-style-type: none;
 }
 
@@ -424,10 +435,24 @@ FIXME:
 /*-----------------------------------------------------------------------*/
 /* MOBILE VIEW - SECTION-C / OUR SERVICES */
 /*-----------------------------------------------------------------------*/
+
 #section-c {
   background-color: var(--white-color);
-  padding: 0 5vw 10rem 5vw;
+  padding:10rem 4vw;
   text-align: start;
+}
+
+#section-c .content-wrap {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+#section-c .card-content {
+  order: 2;
+}
+
+#section-c img {
+  order: 1;
 }
 
 /* create 1 column ul grid */
@@ -436,7 +461,7 @@ FIXME:
   margin-bottom: 4rem;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-gap: 2.5rem;
+  grid-gap: 1.5rem;
 }
 
 #section-c li {
@@ -493,8 +518,9 @@ FIXME:
 /*-----------------------------------------------------------------------*/
 /* MOBILE VIEW   - SECTION-D / OUR CLIENTS  */
 /*-----------------------------------------------------------------------*/
+
 #section-d {
-  padding: 0 5vw 10rem 5vw;
+  padding: 0 4vw 10rem 4vw;
   background-color: var(--blue-color);
 }
 
@@ -508,15 +534,15 @@ FIXME:
 
 #section-d .content {
   display: flex;
-  justify-content: space-between;
+  justify-content:center;
   flex-wrap: wrap;
-  row-gap: 2.5rem;
+  gap:1.5rem;
 }
 
 #section-d .item {
-  flex: 0 0 47%;
+  flex: 0 0 30%;
   background-color: rgb(252, 252, 252);
-  padding: 2rem
+  padding:1rem
 }
 
 #section-d .content img {
@@ -529,9 +555,10 @@ FIXME:
 /*-----------------------------------------------------------------------*/
 /* MOBILE VIEW - SECTION-E / OUR BASE */
 /*-----------------------------------------------------------------------*/
+
 #section-e {
   background-color: var(--white-color);
-  padding: 0 5vw 10rem 5vw;
+  padding: 0 4vw 10rem 4vw;
 }
 
 .google-map {
@@ -550,6 +577,7 @@ FIXME:
 /*-----------------------------------------------------------------------*/
 /* MOBILE VIEW - SECTION-FOOTER */
 /*-----------------------------------------------------------------------*/
+
 .footer-content {
   background-color: var(--blue-color);
   color: white;
@@ -557,7 +585,7 @@ FIXME:
   text-align: start;
   font-size: 1.5rem;
   font-family: sans-serif;
-  padding: 0 5vw;
+  padding: 0 4vw;
 }
 
 .footer-content ul {
@@ -628,11 +656,11 @@ FIXME:
   /*-----------------------------------------------------------------------*/
 
   nav {
-    padding: 0 10vw;
+    padding: 0 4vw;
   }
 
   nav .icon-burger {
-    right: 10vw;
+    right: 4vw;
   }
 
   /*-----------------------------------------------------------------------*/
@@ -651,7 +679,7 @@ FIXME:
 
   .bg-image {
     /* increase the padding for left and right */
-    padding: 0 10vw;
+    padding: 0 4vw;
   }
 
 
@@ -661,97 +689,114 @@ FIXME:
 
   /* increase the padding for left and right */
   #section-a {
-    padding: 10rem 10vw;
+    padding: 10rem 4vw;
   }
+
   #section-a img {
     height: 35rem;
   }
+
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 576  - SECTION-B / OUR PROJECTS  */
   /*-----------------------------------------------------------------------*/
 
   /* increase the padding for left and right */
   #section-b {
-    padding: 0 10vw 10rem 10vw;
+    padding: 0 4vw 10rem 4vw;
   }
 
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 576  - SECTION-C / OUR SERVICES */
   /*-----------------------------------------------------------------------*/
+
   #section-c {
     /* increase the padding for left and right */
-    padding: 0 10vw 10rem 10vw;
+    /* padding: 0 4vw 10rem 4vw; */
+    padding:10rem 4vw;
+
   }
+
   #section-c img {
     height: 35rem;
   }
+
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 576   - SECTION-D / OUR CLIENTS */
   /*-----------------------------------------------------------------------*/
+
   #section-d {
     /* increase the padding for left and right */
-    padding: 0 10vw 10rem 10vw;
+    padding: 0 4vw 10rem 4vw;
   }
 
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 576  - SECTION-E / OUR BASE */
   /*-----------------------------------------------------------------------*/
+
   #section-e {
     /* increase the padding for left and right */
-    padding: 0 10vw 10rem 10vw;
+    padding: 0 4vw 10rem 4vw;
   }
+
   .google-map {
-     height: 35rem;
+    height: 35rem;
   }
+
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 576 - FOOTER */
   /*-----------------------------------------------------------------------*/
+
   .footer-content {
     /* increase the padding for left and right */
-    padding: 0 10vw;
+    padding: 0 4vw;
   }
 }
 
-/*---------------------------DESKTOP-768 VIEW---------------------------*/
-@media (min-width: 768px) {
+/*---------------------------DESKTOP-700 VIEW----------------------------*/
+@media (min-width: 700px) {
 
   /*-----------------------------------------------------------------------*/
-  /* DESKTOP 768  - NAV-PADDING*/
+  /* DESKTOP 700  - NAV-PADDING*/
   /*-----------------------------------------------------------------------*/
+
   nav {
-    padding: 0 11vw;
+    padding: 0 4vw;
   }
+
   nav .icon-burger {
-    right: 11vw;
+    right: 4vw;
   }
+
   /*-----------------------------------------------------------------------*/
-  /* DESKTOP 768  - SECTION-SHOWCASE */
+  /* DESKTOP 700  - SECTION-SHOWCASE */
   /*-----------------------------------------------------------------------*/
+
   .bg-image {
     /* increase the padding for left and right */
-    padding: 0 11vw;
+    padding: 0 4vw;
   }
+
   /*-----------------------------------------------------------------------*/
-  /* DESKTOP 768  - SECTION-A / ABOUT US */
+  /* DESKTOP 700  - SECTION-A / ABOUT US */
   /*-----------------------------------------------------------------------*/
+
   #section-a {
     /* increase the padding for left and right */
-    padding: 10rem 11vw;
+    padding: 10rem 4vw;
   }
 
   /* grid-list for the li objects */
   #section-a ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2.5rem;
   }
 
   /*-----------------------------------------------------------------------*/
-  /* DESKTOP 768  - SECTION-B / OUR PROJECTS */
+  /* DESKTOP 700  - SECTION-B / OUR PROJECTS */
   /*-----------------------------------------------------------------------*/
   #section-b {
     /* increase the padding for left and right */
-    padding: 0 11vw 10rem 11vw;
+    padding: 0 4vw 10rem 4vw;
   }
 
   .cards {
@@ -761,11 +806,12 @@ FIXME:
   }
 
   /*-----------------------------------------------------------------------*/
-  /* DESKTOP 768  - SECTION-C / OUR SERVICES  */
+  /* DESKTOP 700  - SECTION-C / OUR SERVICES  */
   /*-----------------------------------------------------------------------*/
+
   #section-c {
     /* increase the padding for left and right */
-    padding: 0 11vw 10rem 11vw;
+    padding:10rem 4vw;
   }
 
   /* create 2 columns ul grid */
@@ -774,40 +820,43 @@ FIXME:
   }
 
   /*-----------------------------------------------------------------------*/
-  /* DESKTOP 768   - SECTION-D / OUR CLIENTS */
+  /* DESKTOP 700   - SECTION-D / OUR CLIENTS */
   /*-----------------------------------------------------------------------*/
+
   #section-d {
     /* increase the padding for left and right */
-    padding: 0 11vw 10rem 11vw;
+    padding: 0 4vw 10rem 4vw;
   }
 
   #section-d .content {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 2.5rem;
+    gap: 1.5rem;
   }
 
   #section-d .item {
-    flex: 0 0 30%;
+    flex: 0 0 20%;
     background-color: var(--white-color);
     padding: 2rem
   }
 
   /*-----------------------------------------------------------------------*/
-  /* DESKTOP 768  - SECTION-E / OUR BASE */
+  /* DESKTOP 700  - SECTION-E / OUR BASE */
   /*-----------------------------------------------------------------------*/
+
   #section-e {
     /* increase the padding for left and right */
-    padding: 0 11vw 10rem 11vw;
+    padding: 0 4vw 10rem 4vw;
   }
 
   /*-----------------------------------------------------------------------*/
-  /* DESKTOP 768 - FOOTER */
+  /* DESKTOP 700 - FOOTER */
   /*-----------------------------------------------------------------------*/
+
   .footer-content {
     /* increase the padding for left and right */
-    padding: 0 11vw;
+    padding: 0 4vw;
   }
 
   /* create a grid */
@@ -824,12 +873,15 @@ FIXME:
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 991  - NAV-PADDING*/
   /*-----------------------------------------------------------------------*/
+
   nav {
-    padding: 0 5vw;
+    padding: 0 4vw;
   }
+
   /*-----------------------------------------------------------------------*/
   /* NAV BUTTON 991 */
   /*-----------------------------------------------------------------------*/
+
   #iconlink {
     display: inline-flex;
     justify-content: center;
@@ -909,9 +961,10 @@ FIXME:
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 991  - SECTION-SHOWCASE */
   /*-----------------------------------------------------------------------*/
+
   .bg-image {
     /* decrease the padding for left and right */
-    padding: 0 5vw;
+    padding: 0 4vw;
   }
 
   #showcase {
@@ -944,9 +997,10 @@ FIXME:
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 991  - SECTION-A / ABOUT US */
   /*-----------------------------------------------------------------------*/
+
   #section-a {
     /* decrease the padding for left and right */
-    padding: 10rem 5vw 10rem 5vw;
+    padding: 10rem 4vw 10rem 4vw;
   }
 
   #section-a .content-wrap {
@@ -967,7 +1021,6 @@ FIXME:
     margin-top: 3rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 3rem;
   }
 
   /* remove padding from h4 */
@@ -978,9 +1031,10 @@ FIXME:
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 991  - SECTION-B / OUR PROJECTS */
   /*-----------------------------------------------------------------------*/
+
   #section-b {
     /* decrease the padding for left and right */
-    padding: 0 5vw 10rem 5vw;
+    padding: 0 4vw 10rem 4vw;
   }
 
   /* create 3 columns grid */
@@ -993,9 +1047,10 @@ FIXME:
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 991  - SECTION-C / OUR SERVICES */
   /*-----------------------------------------------------------------------*/
+
   #section-c {
     /* decrease the padding for left and right */
-    padding: 10rem 5vw 10rem 5vw;
+    padding: 10rem 4vw 10rem 4vw;
   }
 
   /* create 2 columns main grid */
@@ -1006,11 +1061,18 @@ FIXME:
     grid-column-gap: 3%;
   }
 
+  #section-c .card-content {
+    order: 1;
+  }
+
+  #section-c img {
+    order: 2;
+  }
+
   /* create 2 columns ul grid */
   #section-c ul {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-gap: 2rem;
     margin-bottom: 0;
   }
 
@@ -1034,16 +1096,16 @@ FIXME:
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 991  - SECTION-D / OUR CLIENTS */
   /*-----------------------------------------------------------------------*/
+
   #section-d {
     /* decrease the padding for left and right */
-    padding: 0 5vw 10rem 5vw;
+    padding: 0 4vw 10rem 4vw;
   }
 
   #section-d .content {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 2.5rem;
   }
 
   #section-d .item {
@@ -1055,9 +1117,10 @@ FIXME:
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 991  - SECTION-E / OUR BASE */
   /*-----------------------------------------------------------------------*/
+
   #section-e {
     /* decrease the padding for left and right */
-    padding: 0 5vw 10rem 5vw;
+    padding: 0 4vw 10rem 4vw;
   }
 
   .google-map {
@@ -1068,9 +1131,10 @@ FIXME:
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 991  - SECTION-FOOTER */
   /*-----------------------------------------------------------------------*/
+
   .footer-content {
     /* decrease the padding for left and right */
-    padding: 0 5vw;
+    padding: 0 4vw;
   }
 
   footer .content-wrap {
@@ -1108,15 +1172,17 @@ FIXME:
   /*----------------------------------------------------------------------*/
   /* DESKTOP 1200  - SECTION-A / ABOUT US  */
   /*----------------------------------------------------------------------*/
+
   #section-a {
     /* decrease the padding for left and right */
-    padding: 10rem 5vw 10rem 5vw;
+    padding: 10rem 4vw 10rem 4vw;
   }
 
   #section-a i {
     /* increase the i height */
     font-size: 3.5rem;
   }
+
   #section-a img {
     /* increase the image height */
     height: 43rem;
@@ -1125,8 +1191,9 @@ FIXME:
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1200  - SECTION-B / OUR PROJECTS */
   /*-----------------------------------------------------------------------*/
+
   #section-b {
-    padding: 0 5vw 10rem 5vw;
+    padding: 0 4vw 10rem 4vw;
   }
 
   /*-----------------------------------------------------------------------*/
@@ -1135,14 +1202,13 @@ FIXME:
 
   #section-c {
     /* decrease the padding for left and right */
-    padding: 10rem 5vw 10rem 5vw;
+    padding: 10rem 4vw 10rem 4vw;
   }
 
   /* create 2 columns ul grid */
   #section-c ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2rem;
     margin-bottom: 0;
   }
 
@@ -1150,34 +1216,40 @@ FIXME:
     margin-bottom: 0rem;
     height: 10rem;
   }
+
   #section-c img {
     /* increase the image height */
     height: 43rem;
   }
+
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1200  - SECTION-E / OUR BASE */
   /*-----------------------------------------------------------------------*/
+
   .google-map {
-     height: 43rem;
+    height: 43rem;
   }
 
 }
 
-/*----------------------------DESKTOP-1400 VIEW-------------------------*/
+/*----------------------------DESKTOP-1400 VIEW--------------------------*/
 @media (min-width: 1400px) {
+
 
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1400  - NAV-PADDING*/
   /*-----------------------------------------------------------------------*/
+
   nav {
-    padding: 0 8vw;
+    padding: 0 var(--widthD);
   }
+
   /*----------------------------------------------------------------------*/
   /* DESKTOP 1400  - SECTION-SHOWCASE */
   /*----------------------------------------------------------------------*/
+
   .bg-image {
-    /* increase the padding for left and right */
-    padding: 0 8vw;
+    padding: 0 var(--widthD);
   }
 
   #showcase .showcase-card p {
@@ -1196,9 +1268,10 @@ FIXME:
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1400  - SECTION-A / ABOUT US */
   /*-----------------------------------------------------------------------*/
+
   #section-a {
     /* increase the padding for left and right */
-    padding: 10rem 8vw 10rem 8vw;
+    padding: 10rem var(--widthD);
   }
 
   #section-a .content-wrap {
@@ -1207,21 +1280,29 @@ FIXME:
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 3%;
   }
- 
+
+  /* create 1 column ul grid */
+  #section-a ul {
+    grid-gap: 2rem;
+  }
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1400  - SECTION-B / OUR PROJECTS*/
   /*-----------------------------------------------------------------------*/
+
   #section-b {
     /* increase the padding for left and right */
-    padding: 0 8vw 10rem 8vw;
+    padding: 0 var(--widthD) 10rem var(--widthD);
   }
-
+  .cards {
+    gap:2rem;
+  }
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1400  - SECTION-C / OUR SERVICES  */
   /*-----------------------------------------------------------------------*/
+
   #section-c {
     /* increase the padding for left and right */
-    padding: 10rem 8vw 10rem 8vw;
+    padding: 10rem var(--widthD) 10rem var(--widthD);
   }
 
   #section-c .content-wrap {
@@ -1231,33 +1312,49 @@ FIXME:
     grid-column-gap: 3%;
   }
 
+  /* create 1 column ul grid */
+#section-c ul {
+  grid-gap: 2rem;
+}
+
   #section-c i {
     font-size: 3.5rem;
   }
 
----------------------------------------------------------------------*/
+  /*---------------------------------------------------------------------*/
   /* DESKTOP 1400  - SECTION-D / OUR CLIENTS */
-  /*-----------------------------------------------------------------------*/
+  /*---------------------------------------------------------------------*/
+
   #section-d {
     /* increase the padding for left and right */
-    padding: 0 8vw 10rem 8vw;
+    padding: 0 var(--widthD) 10rem var(--widthD);
+  }
+  #section-d .content {
+    gap:2rem;
+  }
+
+  #section-d .item {
+    flex: 0 0 16%;
+    background-color: rgb(252, 252, 252);
+    padding: 2rem
   }
 
   /*-----------------------------------------------------------------------*/
-  /* DESKTOP 1400  - SECTION-E / OUR BASE*/
+  /* DESKTOP 1400  - SECTION-E / OUR BASE */
   /*-----------------------------------------------------------------------*/
+
   #section-e {
     /* increase the padding for left and right */
-    padding: 0 8vw 10rem 8vw;
+    padding: 0 var(--widthD) 10rem var(--widthD);
   }
-
 
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1400  - SECTION-FOOTER */
   /*-----------------------------------------------------------------------*/
+
   .footer-content {
     /* increase the padding for left and right */
-    padding: 0 8vw;
+    padding: 0 var(--widthD);
   }
 }
 
@@ -1268,12 +1365,15 @@ FIXME:
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1921  - NAV-PADDING*/
   /*-----------------------------------------------------------------------*/
+
   nav {
     padding: 0 18vw;
   }
+
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1921  - SECTION-SHOWCASE */
   /*-----------------------------------------------------------------------*/
+
   .bg-image {
     /* increase the padding for left and right */
     padding: 0 18vw;
@@ -1294,6 +1394,7 @@ FIXME:
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1921  - SECTION-A / ABOUT US*/
   /*-----------------------------------------------------------------------*/
+
   #section-a {
     /* increase the padding for left and right */
     padding: 10rem 18vw 10rem 18vw;
@@ -1312,6 +1413,7 @@ FIXME:
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1921  - SECTION-B / OUR PROJECTS */
   /*-----------------------------------------------------------------------*/
+
   #section-b {
     /* increase the padding for left and right */
     padding: 0 18vw 10rem 18vw;
@@ -1320,6 +1422,7 @@ FIXME:
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1921  - SECTION-C / OUR SERVICES */
   /*-----------------------------------------------------------------------*/
+
   #section-c {
     /* increase the padding for left and right */
     padding: 10rem 18vw 10rem 18vw;
@@ -1337,14 +1440,21 @@ FIXME:
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1921  - SECTION-D / OUR CLIENTS*/
   /*-----------------------------------------------------------------------*/
+
   #section-d {
     /* increase the padding for left and right */
     padding: 0 18vw 10rem 18vw;
+  }
+  #section-d .item {
+    flex: 0 0 16%;
+    background-color: rgb(252, 252, 252);
+    padding: 2rem
   }
 
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1921  - SECTION-E / OUR BASE */
   /*-----------------------------------------------------------------------*/
+
   #section-e {
     /* increase the padding for left and right */
     padding: 0 18vw 10rem 18vw;
@@ -1358,6 +1468,7 @@ FIXME:
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1921  - SECTION-FOOTER */
   /*-----------------------------------------------------------------------*/
+
   .footer-content {
     /* increase the padding for left and right */
     padding: 0 18vw;

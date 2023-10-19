@@ -13,6 +13,14 @@
   --quote_line-color: #e0e0e0;
   --gray-background-color: #f5f5f5;
   --white-color: #fff;
+
+/*-----------------------------------------------------------------------*/
+/* Core Padding*/
+/*-----------------------------------------------------------------------*/
+--widthA:1rem;
+--widthB: calc(100% - 1400px);
+--widthC: calc(var(--widthB) / 1.94);
+--widthD: calc(4% + var(--widthC)); 
 }
 
 *,
@@ -104,7 +112,7 @@ nav {
   height: 80px;
   background-color: var(--white-color);
   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
-  padding: 0 5vw;
+  padding: 0 4vw;
 }
 
 nav .logo {
@@ -273,7 +281,7 @@ nav .icon-burger .line {
 #showcase .bg-image {
   position: absolute;
   background: linear-gradient(rgba(0, 0, 0, 0.116), rgba(0, 0, 0, 0.2)),
-    url("https://scontent.fath7-1.fna.fbcdn.net/v/t39.30808-6/328478972_703159681543134_2801693530372195024_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=_lDeH9osWdwAX9QbB97&_nc_ht=scontent.fath7-1.fna&oh=00_AfD-ljpocZkYYPuU32vHoVAN0A0uEalAa_ipDjLsAibKMQ&oe=6534B947");
+    url("https://www.filepicker.io/api/file/gZqzCUI5Qx6f672vm9WI");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -284,7 +292,7 @@ nav .icon-burger .line {
 }
 
 .bg-image {
-  padding: 0 5vw;
+  padding: 0 4vw;
   display: grid;
   justify-items: start;
   align-items: center;
@@ -331,7 +339,7 @@ nav .icon-burger .line {
   display:flex;
   flex-direction:row;
   justify-content:space-between;
-  padding:1rem 5vw;
+  padding:1rem 4vw;
   background: var(--gray-background-color);
  }
 
@@ -355,7 +363,7 @@ nav .icon-burger .line {
 
 #section-a {
   background-color: var(--white-color);
-  padding: 10rem 5vw;
+  padding: 10rem 4vw;
 }
 
 /* create 1 column ul grid */
@@ -369,25 +377,23 @@ nav .icon-burger .line {
   grid-gap: 2.5rem;
 }
 
-#section-a li {
-  text-align: justify;
-}
+
 
 #section-a i {
   font-size: 3rem;
 }
 
 /* remove padding from h4 */
-/* #section-a h4 {
+#section-a h4 {
   padding: 0 0 0.5rem 0;
   text-align: left;
-} */
+}
 
 #section-a img {
   width: 100%;
   height: 30rem;
   object-fit: cover;
-  filter: grayscale();
+  filter: sepia();
 }
 
 #img__desc {
@@ -401,14 +407,11 @@ nav .icon-burger .line {
   border-bottom: var(--quote_line-color) 0.1rem solid;
   display:flex;
   flex-direction: column;
-
- 
 }
 
 #section-a .quote span {
   color: var(--blue-color);
   font-size:5rem;
-
 }
 
 #section-a .quote p {
@@ -422,7 +425,7 @@ nav .icon-burger .line {
 /*-----------------------------------------------------------------------*/
 #section-b {
   background-color: var(--gray-background-color);
-  padding: 10rem 5vw;
+  padding:10rem 4vw;
 }
 
 /* create 1 column ul grid */
@@ -435,6 +438,12 @@ nav .icon-burger .line {
   grid-template-columns: 1fr;
   grid-gap: 2.5rem;
 }
+#section-b li:first-child{
+  order:2;
+}
+#section-b  li:last-child{
+  order:1;
+}
 
 #section-b li {
   text-align: justify;
@@ -444,18 +453,12 @@ nav .icon-burger .line {
   font-size: 3rem;
 }
 
-/* remove padding from h4 */
-#section-b h4 {
-  padding: 0 0 0.5rem 0;
-  text-align: left;
-}
 
 #section-b img {
   width: 100%;
   height: 30rem;
   object-fit: cover;
-  filter: grayscale()
-}
+ }
 
 #img__desc {
   font-size: 1.4rem;
@@ -480,6 +483,11 @@ nav .icon-burger .line {
   padding:0 0 1rem 0;
   color:var(--p-color);
 }
+/* remove padding from h4 */
+#section-b h4 {
+  padding: 0 0 0.5rem 0;
+  text-align: left;
+}
 
 
 /*-----------------------------------------------------------------------*/
@@ -487,7 +495,7 @@ nav .icon-burger .line {
 /*-----------------------------------------------------------------------*/
 #section-c {
   background-color: var(--white-color);
-  padding: 10rem 5vw;
+  padding: 10rem 4vw;
 }
 
 /* create 1 column ul grid */
@@ -519,8 +527,7 @@ nav .icon-burger .line {
   width: 100%;
   height: 30rem;
   object-fit: cover;
-  filter: grayscale()
-}
+ }
 
 #img__desc {
   font-size: 1.4rem;
@@ -556,7 +563,7 @@ nav .icon-burger .line {
   text-align: start;
   font-size: 1.5rem;
   font-family: sans-serif;
-  padding: 0 5vw;
+  padding: 0 4vw;
 }
 
 .footer-content ul {
@@ -626,11 +633,11 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
 
   nav {
-    padding: 0 10vw;
+    padding: 0 4vw;
   }
 
   nav .icon-burger {
-    right: 10vw;
+    right: 4vw;
   }
 
   /*-----------------------------------------------------------------------*/
@@ -649,106 +656,104 @@ nav .icon-burger .line {
 
   .bg-image {
     /* increase the padding for left and right */
-    padding: 0 10vw;
+    padding: 0 4vw;
   }
 
 /*-----------------------------------------------------------------------*/
-/* MOBILE VIEW - SECTION-A */
+/* DESKTOP 576 - SECTION-A */
 /*-----------------------------------------------------------------------*/
 
 #section-a {
   background-color: var(--white-color);
-  padding: 10rem 10vw;
+  padding: 10rem 4vw;
 }
 #section-a img {
   height: 35rem;
 }
 
 /*-----------------------------------------------------------------------*/
-/* MOBILE VIEW - SECTION-B */
+/* DESKTOP 576 - SECTION-B */
 /*-----------------------------------------------------------------------*/
 
 #section-b {
-  background-color: var(--white-color);
-  padding: 10rem 10vw;
+  padding: 10rem 4vw;
 }
 #section-b img {
   height: 35rem;
 }
 /*-----------------------------------------------------------------------*/
-/* MOBILE VIEW - SECTION-A */
+/* DESKTOP 576 - SECTION-C */
 /*-----------------------------------------------------------------------*/
 
 #section-c {
   background-color: var(--white-color);
-  padding: 10rem 10vw;
+  padding: 10rem 4vw;
 }
 #section-c img {
   height: 35rem;
 }
-  /*-----------------------------------------------------------------------*/
-  /* DESKTOP 576 - FOOTER */
-  /*-----------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------*/
+/* DESKTOP 576 - FOOTER */
+/*-----------------------------------------------------------------------*/
   .footer-content {
     /* increase the padding for left and right */
-    padding: 0 10vw;
+    padding: 0 4vw;
   }
 }
 
-/*---------------------------DESKTOP-768 VIEW---------------------------*/
-@media (min-width: 768px) {
+/*---------------------------DESKTOP-700 VIEW---------------------------*/
+@media (min-width: 700px) {
 
   /*-----------------------------------------------------------------------*/
-  /* DESKTOP 768  - NAV-PADDING*/
+  /* DESKTOP 700  - NAV-PADDING*/
   /*-----------------------------------------------------------------------*/
   nav {
-    padding: 0 11vw;
+    padding: 0 4vw;
   }
   nav .icon-burger {
-    right: 11vw;
+    right: 4vw;
   }
 
   /*-----------------------------------------------------------------------*/
-  /* DESKTOP 768  - SECTION-SHOWCASE */
+  /* DESKTOP 700  - SECTION-SHOWCASE */
   /*-----------------------------------------------------------------------*/
 
   .bg-image {
     /* increase the padding for left and right */
-    padding: 0 11vw;
+    padding: 0 4vw;
   }
 
 /*-----------------------------------------------------------------------*/
-/* MOBILE VIEW - SECTION-A */
+/* DESKTOP 700- SECTION-A */
 /*-----------------------------------------------------------------------*/
 
 #section-a {
   background-color: var(--white-color);
-  padding: 10rem 11vw;
+  padding: 10rem 4vw;
 }
 
 /*-----------------------------------------------------------------------*/
-/* MOBILE VIEW - SECTION-B */
+/* DESKTOP 700 - SECTION-B */
 /*-----------------------------------------------------------------------*/
 
 #section-b {
-  background-color: var(--white-color);
-  padding: 10rem 11vw;
+  padding: 10rem 4vw;
 }
 
 /*-----------------------------------------------------------------------*/
-/* MOBILE VIEW - SECTION-c */
+/* DESKTOP 700 - SECTION-c */
 /*-----------------------------------------------------------------------*/
 
 #section-c {
   background-color: var(--white-color);
-  padding: 10rem 11vw;
+  padding: 10rem 4vw;
 }
   /*-----------------------------------------------------------------------*/
-  /* DESKTOP 768 - FOOTER */
+  /* DESKTOP 700 - FOOTER */
   /*-----------------------------------------------------------------------*/
   .footer-content {
     /* increase the padding for left and right */
-    padding: 0 11vw 0 11vw;
+    padding: 0 4vw 0 4vw;
   }
 
   /* create a grid */
@@ -766,7 +771,7 @@ nav .icon-burger .line {
   /* DESKTOP 991  - NAV */
   /*-----------------------------------------------------------------------*/
   nav {
-    padding: 0 5vw;
+    padding: 0 4vw;
   }
 
   /*-----------------------------------------------------------------------*/
@@ -856,7 +861,7 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
   .bg-image {
     /* decrease the padding for left and right */
-    padding: 0 5vw;
+    padding: 0 4vw;
   }
   /* show card */
   #showcase .showcase-card {
@@ -886,7 +891,7 @@ nav .icon-burger .line {
 
 #section-a {
   background-color: var(--white-color);
-  padding: 10rem 5vw;
+  padding: 10rem 4vw;
 }
 #section-a img {
   /* increase the image height */
@@ -904,8 +909,13 @@ nav .icon-burger .line {
 /*-----------------------------------------------------------------------*/
 
 #section-b {
-  background-color: var(--white-color);
-  padding: 10rem 5vw;
+  padding: 10rem 4vw;
+}
+#section-b li:first-child{
+  order:1;
+}
+#section-b  li:last-child{
+  order:2;
 }
 
 #section-b #main__ul {
@@ -925,7 +935,7 @@ nav .icon-burger .line {
 
 #section-c {
   background-color: var(--white-color);
-  padding: 10rem 5vw;
+  padding: 10rem 4vw;
 }
 
 #section-c #main__ul {
@@ -943,7 +953,7 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
   .footer-content {
     /* decrease the padding for left and right */
-    padding: 0 5vw;
+    padding: 0 4vw;
   }
 
   footer .content-wrap {
@@ -966,7 +976,7 @@ nav .icon-burger .line {
 
   /* full height showcase image */
   #showcase {
-    height: 35vh !important;
+    height: 40vh;
   }
 
   /* increase the showcase h2 size */
@@ -992,20 +1002,15 @@ nav .icon-burger .line {
     height: 43rem;
   }
 
- 
-
-    /*-----------------------------------------------------------------------*/
+  /*-----------------------------------------------------------------------*/
   /* DESKTOP 1200  - SECTION-B / ABOUT US */
   /*-----------------------------------------------------------------------*/
-  #section-b {
-    background: var(--gray-background-color);
-  }
+ 
 
   #section-b img {
     /* increase the image height */
     height: 43rem;
   }
-
 
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1200  - SECTION-C / ABOUT US */
@@ -1050,7 +1055,7 @@ nav .icon-burger .line {
   /* DESKTOP 1400  - NAV-PADDING*/
   /*-----------------------------------------------------------------------*/
   nav {
-    padding: 0 8vw;
+    padding: 0 var(--widthD);
   }
 
   /*----------------------------------------------------------------------*/
@@ -1058,7 +1063,7 @@ nav .icon-burger .line {
   /*----------------------------------------------------------------------*/
   .bg-image {
     /* increase the padding for left and right */
-    padding: 0 8vw;
+    padding: 0 var(--widthD);
   }
 
   #showcase .showcase-card p {
@@ -1079,7 +1084,7 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
   #section-a {
     /* increase the padding for left and right */
-    padding: 10rem 8vw 10rem 8vw;
+    padding: 10rem var(--widthD) 10rem var(--widthD);
   }
 
   #section-a #main__ul {
@@ -1116,8 +1121,7 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
   #section-b {
     /* increase the padding for left and right */
-    padding: 10rem 8vw 10rem 8vw;
-    background: var(--gray-background-color);
+    padding: 10rem var(--widthD) 10rem var(--widthD);
   }
 
   #section-b #main__ul {
@@ -1126,6 +1130,7 @@ nav .icon-burger .line {
     grid-template-columns: 1fr 1fr;
     grid-gap: 3%;
   }
+
 
   #section-b .quote{
     margin:10rem 14vw 0 14vw;
@@ -1153,7 +1158,7 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
   #section-c {
     /* increase the padding for left and right */
-    padding: 10rem 8vw 10rem 8vw;
+    padding: 10rem var(--widthD) 10rem var(--widthD);
     background: var(--white-color);
   }
 
@@ -1191,7 +1196,7 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
   .footer-content {
     /* increase the padding for left and right */
-    padding: 0 8vw;
+    padding: 0 var(--widthD);
   }
 }
 
@@ -1226,7 +1231,7 @@ nav .icon-burger .line {
   font-weight: 500;
 }
 
-   /*-----------------------------------------------------------------------*/
+  /*-----------------------------------------------------------------------*/
   /* DESKTOP 1921  - NAV-PADDING*/
   /*-----------------------------------------------------------------------*/
   nav {
