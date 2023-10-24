@@ -11,7 +11,7 @@
   --button-hover-color: #21358d;
   --line-color: #1276f8;
   --quote_line-color: #e0e0e0;
-  --gray-background-color: #f5f5f5;
+  --gray-background-color: #f8f8f8;
   --white-color: #fff;
 
   /*-----------------------------------------------------------------------*/
@@ -19,7 +19,7 @@
   /*-----------------------------------------------------------------------*/
   --widthA: 1rem;
   --widthB: calc(100% - 1400px);
-  --widthC: calc(var(--widthB) / 1.94);
+  --widthC: calc(var(--widthB) / 2.08);
   --widthD: calc(4% + var(--widthC));
 }
 
@@ -112,7 +112,7 @@ nav {
   height: 80px;
   background-color: var(--white-color);
   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
-  padding: 0 4vw;
+  padding: 0 3vw;
 }
 
 nav .logo {
@@ -164,7 +164,7 @@ nav .links a {
 nav .icon-burger {
   display: none;
   position: absolute;
-  right: 4vw;
+  right: 3vw;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -283,8 +283,8 @@ nav .icon-burger .line {
 #showcase .bg-image {
   position: absolute;
   background: linear-gradient(rgba(0, 0, 0, 0.116), rgba(0, 0, 0, 0.2)),
-    url("https://scontent.fath7-1.fna.fbcdn.net/v/t39.30808-6/332723352_737989887733236_951829062879884596_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=iq8rr-I67NQAX83XlDo&_nc_ht=scontent.fath7-1.fna&oh=00_AfDeWw49KsT-jJTErLOLPWPb76ZjnswsiCsDzSJVBI8y_g&oe=6532EF81");
-  background-position: center;
+    url("https://images.unsplash.com/photo-1542512766-5de0463dc1cc?auto=format&fit=crop&q=80&w=2669&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -294,7 +294,7 @@ nav .icon-burger .line {
 }
 
 .bg-image {
-  padding: 0 4vw;
+  padding: 0 3vw;
   display: grid;
   justify-items: start;
   align-items: center;
@@ -338,21 +338,21 @@ nav .icon-burger .line {
 
 #section-a {
   background-color: var(--white-color);
-  padding: 10rem 4vw;
+  padding: 10rem 3vw;
+}
+/* the main grid */
+#section-a .content-wrap {
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
-#section-a img {
-  width: 100%;
-  height: 30rem;
-  object-fit: cover;
-}
 
 #section-a .card-content {
   text-align: start;
 }
 
-/* create 1 column ul grid */
-#section-a ul {
+/* the nested grid */
+#section-a .card-content ul {
   list-style: none;
   padding: 0;
   margin: 5rem 0 0 0;
@@ -365,71 +365,62 @@ nav .icon-burger .line {
   font-size: 3rem;
 }
 
+#section-a img {
+  width: 100%;
+  height: 30rem;
+  object-fit: cover;
+}
+
 /*-----------------------------------------------------------------------*/
 /* MOBILE VIEW - SECTION-B / OUR PROJECTS */
 /*-----------------------------------------------------------------------*/
 
 /* TODO: */
 #section-b {
-  padding: 0 4vw 10rem 4vw;
+  padding: 0 3vw 10rem 3vw;
 }
 
 .cards {
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(1, minmax(230px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(1, minmax(200px, 1fr));
+  gap: 2rem;
   list-style-type: none;
 }
 
 .card {
-  border: 2.5rem solid white;
+  border: 0.1rem solid var(--quote_line-color);
   background-color: #ffffff;
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+  padding:1.5rem;
+}
+
+.card:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
 .card__image {
   width: 100%;
-  aspect-ratio: 3/2.1;
+  aspect-ratio: 3/1.7;
   object-fit: cover;
   display: block;
 }
 
 .card__content {
   text-align: left;
-  padding: 2rem 0 4rem 0px;
+  padding:2rem 0 0 0;
 }
 
-#section-b .card__info {
-  padding: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: var(--blue-color);
-  font-size: 1.4rem;
+#section-b p:nth-child(2) {
+  font-size: 1.6rem;
+  color: var(--p-color);
 }
 
-#section-b .card__info i {
-  font-size: 2rem;
-  margin-right: 0.8rem;
-  color: var(--white-color);
-}
-
-#section-b .card__date {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: var(--white-color);
-}
-
-#section-b .card__link {
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-}
-
-#section-b .card__link:hover {
-  text-decoration: underline;
+#section-b p:last-child {
+  margin: 0;
+  padding:3rem 0 0 0;
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 1;
 }
 
 /*-----------------------------------------------------------------------*/
@@ -438,13 +429,13 @@ nav .icon-burger .line {
 
 #section-c {
   background-color: var(--white-color);
-  padding:10rem 4vw;
+  padding: 10rem 3vw;
   text-align: start;
 }
-
+/* the main grid */
 #section-c .content-wrap {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: 1fr;
 }
 
 #section-c .card-content {
@@ -455,58 +446,22 @@ nav .icon-burger .line {
   order: 1;
 }
 
-/* create 1 column ul grid */
-#section-c ul {
+/* the nested grid */
+#section-c .card-content ul {
   padding: 0;
-  margin-bottom: 4rem;
+  margin: 0;
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: 1fr;
   grid-gap: 1.5rem;
-}
-
-#section-c li {
   list-style-type: none;
-  background-color: var(--gray-background-color);
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
-  padding: 1.3rem;
-  height: 10rem;
-}
-
-#section-c ul a {
-  text-decoration: none;
-}
-
-#section-c li:hover {
-  background-color: var(--blue-color);
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-
-#section-c li:hover p {
-  color: white;
-}
-
-#section-c li:hover i {
-  color: white;
-}
-
-#section-c li:hover h3 {
-  color: white;
-}
-
-#section-c h3 {
-  color: var(--h2-color);
-}
-
-#section-c .top__flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: var(--blue-color);
 }
 
 #section-c i {
   font-size: 3rem;
-  padding: 0.5rem 1rem;
+}
+
+#section-c p {
+  padding: 0.5rem 0 0 0;
 }
 
 #section-c img {
@@ -520,8 +475,28 @@ nav .icon-burger .line {
 /*-----------------------------------------------------------------------*/
 
 #section-d {
-  padding: 0 4vw 10rem 4vw;
+  padding: 0 3vw 10rem 3vw;
   background-color: var(--blue-color);
+}
+
+#section-d .content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+#section-d .item {
+  flex: 0 0 30%;
+  background-color: rgb(252, 252, 252);
+  padding: 1rem
+}
+
+#section-d .content img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  mix-blend-mode: multiply;
 }
 
 #section-d h2 {
@@ -532,33 +507,13 @@ nav .icon-burger .line {
   color: white;
 }
 
-#section-d .content {
-  display: flex;
-  justify-content:center;
-  flex-wrap: wrap;
-  gap:1.5rem;
-}
-
-#section-d .item {
-  flex: 0 0 30%;
-  background-color: rgb(252, 252, 252);
-  padding:1rem
-}
-
-#section-d .content img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  mix-blend-mode: multiply;
-}
-
 /*-----------------------------------------------------------------------*/
 /* MOBILE VIEW - SECTION-E / OUR BASE */
 /*-----------------------------------------------------------------------*/
 
 #section-e {
   background-color: var(--white-color);
-  padding: 0 4vw 10rem 4vw;
+  padding: 0 3vw 10rem 3vw;
 }
 
 .google-map {
@@ -585,7 +540,7 @@ nav .icon-burger .line {
   text-align: start;
   font-size: 1.5rem;
   font-family: sans-serif;
-  padding: 0 4vw;
+  padding: 0 3vw;
 }
 
 .footer-content ul {
@@ -656,11 +611,11 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
 
   nav {
-    padding: 0 4vw;
+    padding: 0 3vw;
   }
 
   nav .icon-burger {
-    right: 4vw;
+    right: 3vw;
   }
 
   /*-----------------------------------------------------------------------*/
@@ -678,8 +633,7 @@ nav .icon-burger .line {
   }
 
   .bg-image {
-    /* increase the padding for left and right */
-    padding: 0 4vw;
+    padding: 0 3vw;
   }
 
 
@@ -687,9 +641,8 @@ nav .icon-burger .line {
   /* DESKTOP 576  - SECTION-A / ABOUT US */
   /*-----------------------------------------------------------------------*/
 
-  /* increase the padding for left and right */
   #section-a {
-    padding: 10rem 4vw;
+    padding: 10rem 3vw;
   }
 
   #section-a img {
@@ -700,9 +653,8 @@ nav .icon-burger .line {
   /* DESKTOP 576  - SECTION-B / OUR PROJECTS  */
   /*-----------------------------------------------------------------------*/
 
-  /* increase the padding for left and right */
   #section-b {
-    padding: 0 4vw 10rem 4vw;
+    padding: 0 3vw 10rem 3vw;
   }
 
   /*-----------------------------------------------------------------------*/
@@ -710,10 +662,7 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
 
   #section-c {
-    /* increase the padding for left and right */
-    /* padding: 0 4vw 10rem 4vw; */
-    padding:10rem 4vw;
-
+    padding: 10rem 3vw;
   }
 
   #section-c img {
@@ -725,8 +674,7 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
 
   #section-d {
-    /* increase the padding for left and right */
-    padding: 0 4vw 10rem 4vw;
+    padding: 0 3vw 10rem 3vw;
   }
 
   /*-----------------------------------------------------------------------*/
@@ -734,8 +682,7 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
 
   #section-e {
-    /* increase the padding for left and right */
-    padding: 0 4vw 10rem 4vw;
+    padding: 0 3vw 10rem 3vw;
   }
 
   .google-map {
@@ -747,8 +694,7 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
 
   .footer-content {
-    /* increase the padding for left and right */
-    padding: 0 4vw;
+    padding: 0 3vw;
   }
 }
 
@@ -760,11 +706,11 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
 
   nav {
-    padding: 0 4vw;
+    padding: 0 3vw;
   }
 
   nav .icon-burger {
-    right: 4vw;
+    right: 3vw;
   }
 
   /*-----------------------------------------------------------------------*/
@@ -772,8 +718,7 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
 
   .bg-image {
-    /* increase the padding for left and right */
-    padding: 0 4vw;
+    padding: 0 3vw;
   }
 
   /*-----------------------------------------------------------------------*/
@@ -781,12 +726,11 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
 
   #section-a {
-    /* increase the padding for left and right */
-    padding: 10rem 4vw;
+    padding: 10rem 3vw;
   }
 
-  /* grid-list for the li objects */
-  #section-a ul {
+/* the nested grid */
+  #section-a .card-content ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
@@ -795,14 +739,13 @@ nav .icon-burger .line {
   /* DESKTOP 700  - SECTION-B / OUR PROJECTS */
   /*-----------------------------------------------------------------------*/
   #section-b {
-    /* increase the padding for left and right */
-    padding: 0 4vw 10rem 4vw;
+    padding: 0 3vw 10rem 3vw;
   }
 
   .cards {
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(2, minmax(230px, 1fr));
+    grid-template-columns: repeat(1, minmax(230px, 1fr));
   }
 
   /*-----------------------------------------------------------------------*/
@@ -811,11 +754,11 @@ nav .icon-burger .line {
 
   #section-c {
     /* increase the padding for left and right */
-    padding:10rem 4vw;
+    padding: 10rem 3vw;
   }
 
   /* create 2 columns ul grid */
-  #section-c ul {
+  #section-c .card-content ul {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -824,8 +767,7 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
 
   #section-d {
-    /* increase the padding for left and right */
-    padding: 0 4vw 10rem 4vw;
+     padding: 0 3vw 10rem 3vw;
   }
 
   #section-d .content {
@@ -846,8 +788,7 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
 
   #section-e {
-    /* increase the padding for left and right */
-    padding: 0 4vw 10rem 4vw;
+     padding: 0 3vw 10rem 3vw;
   }
 
   /*-----------------------------------------------------------------------*/
@@ -855,15 +796,14 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
 
   .footer-content {
-    /* increase the padding for left and right */
-    padding: 0 4vw;
+     padding: 0 3vw;
   }
 
   /* create a grid */
   footer .content-wrap {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 3rem;
+    grid-column-gap: 3%;
   }
 }
 
@@ -875,7 +815,7 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
 
   nav {
-    padding: 0 4vw;
+    padding: 0 3vw;
   }
 
   /*-----------------------------------------------------------------------*/
@@ -963,13 +903,11 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
 
   .bg-image {
-    /* decrease the padding for left and right */
-    padding: 0 4vw;
+     padding: 0 3vw;
   }
 
   #showcase {
-    /* height: calc(100vh - 80px) !important; */
-    height: 65vh;
+     height: 65vh;
   }
 
   /* show card */
@@ -999,15 +937,15 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
 
   #section-a {
-    /* decrease the padding for left and right */
-    padding: 10rem 4vw 10rem 4vw;
+     padding: 10rem 3vw 10rem 3vw;
   }
 
+  /* the main grid */
   #section-a .content-wrap {
     text-align: start;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 3%;
+    grid-column-gap: 2%;
   }
 
   #section-a img {
@@ -1015,10 +953,10 @@ nav .icon-burger .line {
     height: 50rem;
   }
 
-  /* create grid for list */
-  #section-a ul {
+  /* the nested grid */
+  #section-a .card-content ul {
     /* create a margin-top from paragraph text */
-    margin-top: 3rem;
+    margin-top: 2.5rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1034,14 +972,14 @@ nav .icon-burger .line {
 
   #section-b {
     /* decrease the padding for left and right */
-    padding: 0 4vw 10rem 4vw;
+    padding: 0 3vw 10rem 3vw;
   }
 
   /* create 3 columns grid */
   .cards {
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, minmax(230px, 1fr));
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
   }
 
   /*-----------------------------------------------------------------------*/
@@ -1050,15 +988,15 @@ nav .icon-burger .line {
 
   #section-c {
     /* decrease the padding for left and right */
-    padding: 10rem 4vw 10rem 4vw;
+    padding: 10rem 3vw 10rem 3vw;
   }
 
-  /* create 2 columns main grid */
+  /* the main grid */
   #section-c .content-wrap {
     text-align: start;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 3%;
+    grid-column-gap: 2%;
   }
 
   #section-c .card-content {
@@ -1069,16 +1007,11 @@ nav .icon-burger .line {
     order: 2;
   }
 
-  /* create 2 columns ul grid */
-  #section-c ul {
+  /* the nested grid */
+  #section-c .card-content ul {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    margin-bottom: 0;
-  }
-
-  #section-c li {
-    margin-bottom: 0rem;
-    height: 8rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
   }
 
   /* increase the image height */
@@ -1099,7 +1032,7 @@ nav .icon-burger .line {
 
   #section-d {
     /* decrease the padding for left and right */
-    padding: 0 4vw 10rem 4vw;
+    padding: 0 3vw 10rem 3vw;
   }
 
   #section-d .content {
@@ -1120,7 +1053,7 @@ nav .icon-burger .line {
 
   #section-e {
     /* decrease the padding for left and right */
-    padding: 0 4vw 10rem 4vw;
+    padding: 0 3vw 10rem 3vw;
   }
 
   .google-map {
@@ -1134,7 +1067,7 @@ nav .icon-burger .line {
 
   .footer-content {
     /* decrease the padding for left and right */
-    padding: 0 4vw;
+    padding: 0 3vw;
   }
 
   footer .content-wrap {
@@ -1175,12 +1108,12 @@ nav .icon-burger .line {
 
   #section-a {
     /* decrease the padding for left and right */
-    padding: 10rem 4vw 10rem 4vw;
+    padding: 10rem 3vw 10rem 3vw;
   }
 
   #section-a i {
     /* increase the i height */
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 
   #section-a img {
@@ -1193,7 +1126,7 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
 
   #section-b {
-    padding: 0 4vw 10rem 4vw;
+    padding: 0 3vw 10rem 3vw;
   }
 
   /*-----------------------------------------------------------------------*/
@@ -1202,19 +1135,7 @@ nav .icon-burger .line {
 
   #section-c {
     /* decrease the padding for left and right */
-    padding: 10rem 4vw 10rem 4vw;
-  }
-
-  /* create 2 columns ul grid */
-  #section-c ul {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin-bottom: 0;
-  }
-
-  #section-c li {
-    margin-bottom: 0rem;
-    height: 10rem;
+    padding: 10rem 3vw 10rem 3vw;
   }
 
   #section-c img {
@@ -1274,17 +1195,20 @@ nav .icon-burger .line {
     padding: 10rem var(--widthD);
   }
 
-  #section-a .content-wrap {
-    text-align: start;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 3%;
+  /* the nested grid */
+  #section-a .card-content ul{
+    grid-gap: 1.8rem;
   }
 
-  /* create 1 column ul grid */
-  #section-a ul {
-    grid-gap: 2rem;
+  #section-a i {
+    font-size: 3.3rem;
   }
+
+  #section-a img {
+    /* increase the image height */
+    height: 42rem;
+  }
+
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1400  - SECTION-B / OUR PROJECTS*/
   /*-----------------------------------------------------------------------*/
@@ -1293,9 +1217,12 @@ nav .icon-burger .line {
     /* increase the padding for left and right */
     padding: 0 var(--widthD) 10rem var(--widthD);
   }
+  
+
   .cards {
-    gap:2rem;
+    gap: 2rem;
   }
+
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 1400  - SECTION-C / OUR SERVICES  */
   /*-----------------------------------------------------------------------*/
@@ -1305,20 +1232,17 @@ nav .icon-burger .line {
     padding: 10rem var(--widthD) 10rem var(--widthD);
   }
 
-  #section-c .content-wrap {
-    text-align: start;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 3%;
+  /* the nested grid */
+  #section-c .card-content ul{
+    grid-gap: 1.8rem;
+  }
+  #section-c i {
+    font-size: 3.3rem;
   }
 
-  /* create 1 column ul grid */
-#section-c ul {
-  grid-gap: 2rem;
-}
-
-  #section-c i {
-    font-size: 3.5rem;
+  #section-c img {
+    /* increase the image height */
+    height: 42rem;
   }
 
   /*---------------------------------------------------------------------*/
@@ -1329,8 +1253,9 @@ nav .icon-burger .line {
     /* increase the padding for left and right */
     padding: 0 var(--widthD) 10rem var(--widthD);
   }
+
   #section-d .content {
-    gap:2rem;
+    gap: 2rem;
   }
 
   #section-d .item {
@@ -1346,6 +1271,10 @@ nav .icon-burger .line {
   #section-e {
     /* increase the padding for left and right */
     padding: 0 var(--widthD) 10rem var(--widthD);
+  }
+
+  .google-map {
+    height: 42rem;
   }
 
   /*-----------------------------------------------------------------------*/
@@ -1367,7 +1296,7 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
 
   nav {
-    padding: 0 18vw;
+    padding: 0 17vw;
   }
 
   /*-----------------------------------------------------------------------*/
@@ -1376,7 +1305,7 @@ nav .icon-burger .line {
 
   .bg-image {
     /* increase the padding for left and right */
-    padding: 0 18vw;
+    padding: 0 17vw;
   }
 
   #showcase h4 {
@@ -1397,12 +1326,12 @@ nav .icon-burger .line {
 
   #section-a {
     /* increase the padding for left and right */
-    padding: 10rem 18vw 10rem 18vw;
+    padding: 10rem 17vw;
   }
 
   #section-a i {
     /* increase the i height */
-    font-size: 4rem;
+    font-size: 3.6rem;
   }
 
   #section-a img {
@@ -1416,7 +1345,10 @@ nav .icon-burger .line {
 
   #section-b {
     /* increase the padding for left and right */
-    padding: 0 18vw 10rem 18vw;
+    padding: 0 17vw 10rem 17vw;
+  }
+  .cards {
+    gap: 3rem;
   }
 
   /*-----------------------------------------------------------------------*/
@@ -1425,7 +1357,7 @@ nav .icon-burger .line {
 
   #section-c {
     /* increase the padding for left and right */
-    padding: 10rem 18vw 10rem 18vw;
+    padding: 10rem 17vw;
   }
 
   #section-c img {
@@ -1434,7 +1366,7 @@ nav .icon-burger .line {
   }
 
   #section-c i {
-    font-size: 4rem;
+    font-size: 3.6rem;
   }
 
   /*-----------------------------------------------------------------------*/
@@ -1443,8 +1375,9 @@ nav .icon-burger .line {
 
   #section-d {
     /* increase the padding for left and right */
-    padding: 0 18vw 10rem 18vw;
+    padding: 0 17vw 10rem 17vw;
   }
+
   #section-d .item {
     flex: 0 0 16%;
     background-color: rgb(252, 252, 252);
@@ -1457,7 +1390,7 @@ nav .icon-burger .line {
 
   #section-e {
     /* increase the padding for left and right */
-    padding: 0 18vw 10rem 18vw;
+    padding: 0 17vw 10rem 17vw;
   }
 
   .google-map {
@@ -1471,6 +1404,6 @@ nav .icon-burger .line {
 
   .footer-content {
     /* increase the padding for left and right */
-    padding: 0 18vw;
+    padding: 0 17vw;
   }
 }
