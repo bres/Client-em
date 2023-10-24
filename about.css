@@ -20,7 +20,7 @@
   --widthA: 1rem;
   --widthB: calc(100% - 1400px);
   --widthC: calc(var(--widthB) / 2.08);
-  --widthD: calc(4% + var(--widthC));
+  --widthD: calc(3% + var(--widthC));
 }
 
 *,
@@ -403,12 +403,6 @@ nav .icon-burger .line {
   font-size: 1.3rem;
 }
 
-/* remove padding from h4 */
-/* #section-a h4 {
-  padding: 0 0 0.5rem 0;
-  text-align: left;
-} */
-
 #section-a img {
   width: 100%;
   height: 30rem;
@@ -611,10 +605,6 @@ nav .icon-burger .line {
 /* DESKTOP 576 - SECTION-A */
 /*-----------------------------------------------------------------------*/
 
-#section-a {
-  background-color: var(--white-color);
-  padding: 10rem 3vw;
-}
 #section-a img {
   height: 35rem;
 }
@@ -622,21 +612,12 @@ nav .icon-burger .line {
 /*-----------------------------------------------------------------------*/
 /* DESKTOP 576 - SECTION-B */
 /*-----------------------------------------------------------------------*/
-
-#section-b {
-  padding: 10rem 3vw;
-}
 #section-b img {
   height: 35rem;
 }
 /*-----------------------------------------------------------------------*/
 /* DESKTOP 576 - SECTION-C */
 /*-----------------------------------------------------------------------*/
-
-#section-c {
-  background-color: var(--white-color);
-  padding: 10rem 3vw;
-}
 #section-c img {
   height: 35rem;
 }
@@ -675,34 +656,25 @@ nav .icon-burger .line {
 /* DESKTOP 700- SECTION-A */
 /*-----------------------------------------------------------------------*/
 
-#section-a {
-  background-color: var(--white-color);
-  padding: 10rem 3vw;
-}
+
 
 /*-----------------------------------------------------------------------*/
 /* DESKTOP 700 - SECTION-B */
 /*-----------------------------------------------------------------------*/
 
-#section-b {
-  padding: 10rem 3vw;
-}
 
 /*-----------------------------------------------------------------------*/
 /* DESKTOP 700 - SECTION-c */
 /*-----------------------------------------------------------------------*/
 
-#section-c {
-  background-color: var(--white-color);
-  padding: 10rem 3vw;
+
+/*-----------------------------------------------------------------------*/
+/* DESKTOP 700 - FOOTER */
+/*-----------------------------------------------------------------------*/
+.footer-content {
+  /* increase the padding for left and right */
+  padding: 0 3vw;
 }
-  /*-----------------------------------------------------------------------*/
-  /* DESKTOP 700 - FOOTER */
-  /*-----------------------------------------------------------------------*/
-  .footer-content {
-    /* increase the padding for left and right */
-    padding: 0 3vw 0 3vw;
-  }
 
   /* create a grid */
   footer .content-wrap {
@@ -843,14 +815,20 @@ nav .icon-burger .line {
 }
 #section-a img {
   /* increase the image height */
-  height: 50rem;
+  height: 47rem;
 }
 
-#section-a #main__ul {
+#section-a .content-wrap {
   text-align: start;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 3%;
+  grid-gap: 2%;
+}
+
+/* remove padding from h4 */
+#section-a h4 {
+  padding: 0 0 0.5rem 0;
+  text-align: left;
 }
 /*-----------------------------------------------------------------------*/
 /* DESKTOP 991- SECTION-B */
@@ -859,23 +837,23 @@ nav .icon-burger .line {
 #section-b {
   padding: 10rem 3vw;
 }
-#section-b li:first-child{
-  order:1;
-}
-#section-b  li:last-child{
+#section-b .first__column{
   order:2;
 }
+#section-b  .card-content{
+  order:1;
+}
 
-#section-b #main__ul {
+#section-b .content-wrap {
   text-align: start;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 3%;
+  grid-gap: 2%;
 }
 
 #section-b img {
   /* increase the image height */
-  height: 50rem;
+  height: 47rem;
 }
 /*-----------------------------------------------------------------------*/
 /* DESKTOP 991 - SECTION-C */
@@ -886,15 +864,15 @@ nav .icon-burger .line {
   padding: 10rem 3vw;
 }
 
-#section-c #main__ul {
+#section-c .content-wrap {
   text-align: start;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 3%;
+  grid-gap: 2%;
 }
 #section-c img {
   /* increase the image height */
-  height: 50rem;
+  height: 47rem;
 }
   /*-----------------------------------------------------------------------*/
   /* DESKTOP 991  - SECTION-FOOTER */
@@ -1035,12 +1013,7 @@ nav .icon-burger .line {
     padding: 10rem var(--widthD) 10rem var(--widthD);
   }
 
-  #section-a #main__ul {
-    text-align: start;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 3%;
-  }
+ 
 
   #section-a .quote{
     margin:10rem 14vw 0 14vw;
@@ -1072,12 +1045,6 @@ nav .icon-burger .line {
     padding: 10rem var(--widthD) 10rem var(--widthD);
   }
 
-  #section-b #main__ul {
-    text-align: start;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 3%;
-  }
 
 
   #section-b .quote{
@@ -1108,13 +1075,6 @@ nav .icon-burger .line {
     /* increase the padding for left and right */
     padding: 10rem var(--widthD) 10rem var(--widthD);
     background: var(--white-color);
-  }
-
-  #section-c #main__ul {
-    text-align: start;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 3%;
   }
 
   #section-c .quote{

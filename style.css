@@ -470,6 +470,18 @@ nav .icon-burger .line {
   object-fit: cover;
 }
 
+#section-c ul li {
+  border:var(--quote_line-color) 1px solid;
+  padding:0.8rem;
+}
+
+#section-c ul a {
+  text-decoration: none;
+}
+#section-c ul li:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+}
 /*-----------------------------------------------------------------------*/
 /* MOBILE VIEW   - SECTION-D / OUR CLIENTS  */
 /*-----------------------------------------------------------------------*/
@@ -950,7 +962,7 @@ nav .icon-burger .line {
 
   #section-a img {
     /* increase the image height */
-    height: 50rem;
+    height: 47rem;
   }
 
   /* the nested grid */
@@ -1017,13 +1029,13 @@ nav .icon-burger .line {
   /* increase the image height */
   #section-c img {
     width: 100%;
-    height: 50rem;
+    height: 47rem;
     object-fit: cover;
   }
 
   /* remove padding from h4 */
   #section-c h4 {
-    padding: 0rem 0rem 0.5rem 0rem;
+    padding: 0 0 0.5rem 0;
   }
 
   /*-----------------------------------------------------------------------*/
@@ -1058,7 +1070,7 @@ nav .icon-burger .line {
 
   .google-map {
     /* increase the image height */
-    height: 50rem;
+    height: 47rem;
   }
 
   /*-----------------------------------------------------------------------*/
