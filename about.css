@@ -1143,7 +1143,7 @@ nav .icon-burger .line {
   /* DESKTOP 1921  - NAV-PADDING*/
   /*-----------------------------------------------------------------------*/
   nav {
-    padding: 0 17vw;
+    padding: 0 var(--widthD);
   }
 
   /*-----------------------------------------------------------------------*/
@@ -1151,7 +1151,7 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
   .bg-image {
     /* increase the padding for left and right */
-    padding: 0 17vw;
+    padding: 0 var(--widthD);
   }
 
   #showcase h4 {
@@ -1171,7 +1171,7 @@ nav .icon-burger .line {
 /*-----------------------------------------------------------------------*/
 
 #section-a {
-   padding: 10rem 17vw;
+   padding: 10rem var(--widthD);
 }
 
 #section-a img {
@@ -1182,7 +1182,7 @@ nav .icon-burger .line {
 /*-----------------------------------------------------------------------*/
 
 #section-b {
-   padding: 10rem 17vw;
+   padding: 10rem var(--widthD);
 }
 #section-b img {
   height: 45rem;
@@ -1192,7 +1192,7 @@ nav .icon-burger .line {
 /*-----------------------------------------------------------------------*/
 
 #section-c {
-   padding: 10rem 17vw;
+   padding: 10rem var(--widthD);
 }
 #section-c img {
   height: 45rem;
@@ -1202,6 +1202,6 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
   .footer-content {
     /* increase the padding for left and right */
-    padding: 0 17vw;
+    padding: 0 var(--widthD);
   }
 }

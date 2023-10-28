@@ -1308,7 +1308,7 @@ nav .icon-burger .line {
   /*-----------------------------------------------------------------------*/
 
   nav {
-    padding: 0 17vw;
+    padding: 0 var(--widthD);
   }
 
   /*-----------------------------------------------------------------------*/
@@ -1317,7 +1317,7 @@ nav .icon-burger .line {
 
   .bg-image {
     /* increase the padding for left and right */
-    padding: 0 17vw;
+    padding: 0 var(--widthD);
   }
 
   #showcase h4 {
@@ -1338,7 +1338,7 @@ nav .icon-burger .line {
 
   #section-a {
     /* increase the padding for left and right */
-    padding: 10rem 17vw;
+    padding: 10rem var(--widthD);
   }
 
   #section-a i {
@@ -1357,7 +1357,7 @@ nav .icon-burger .line {
 
   #section-b {
     /* increase the padding for left and right */
-    padding: 0 17vw 10rem 17vw;
+    padding: 0 var(--widthD) 10rem var(--widthD);
   }
   .cards {
     gap: 3rem;
@@ -1369,7 +1369,7 @@ nav .icon-burger .line {
 
   #section-c {
     /* increase the padding for left and right */
-    padding: 10rem 17vw;
+    padding: 10rem var(--widthD);
   }
 
   #section-c img {
@@ -1387,7 +1387,7 @@ nav .icon-burger .line {
 
   #section-d {
     /* increase the padding for left and right */
-    padding: 0 17vw 10rem 17vw;
+    padding: 0 var(--widthD) 10rem var(--widthD);
   }
 
   #section-d .item {
@@ -1402,7 +1402,7 @@ nav .icon-burger .line {
 
   #section-e {
     /* increase the padding for left and right */
-    padding: 0 17vw 10rem 17vw;
+    padding: 0 var(--widthD) 10rem var(--widthD);
   }
 
   .google-map {
@@ -1416,6 +1416,6 @@ nav .icon-burger .line {
 
   .footer-content {
     /* increase the padding for left and right */
-    padding: 0 17vw;
+    padding: 0 var(--widthD);
   }
 }
