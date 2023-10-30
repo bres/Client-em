@@ -8,7 +8,7 @@
   --h2-color: #3f3f3f;
   --h3-color: #3f3f3f;
   --h4-color: var(--blue-color);
-  --button-hover-color: #21358d;
+  --button-hover-color: #0f65d6;
   --line-color: #1276f8;
   --quote_line-color: #e0e0e0;
   --gray-background-color: #f8f8f8;
@@ -62,7 +62,7 @@ h4 {
 h2 {
   font-size: 3.2rem;
   margin: 0;
-  padding: 0 0 3rem 0;
+  padding: 0 0 3.5rem 0;
   color: var(--h2-color);
 }
 
@@ -76,7 +76,7 @@ h3 {
 h4 {
   font-size: 1.6rem;
   margin: 0;
-  padding: 3rem 0 0.5rem 0;
+  padding: 3rem 0 0 0;
   color: var(--h4-color);
 }
 
@@ -453,7 +453,7 @@ nav .icon-burger .line {
 
 /* remove padding from h4 */
 #section-b h4 {
-  padding: 0 0 0.5rem 0;
+  padding: 0 0 0 0;
   text-align: left;
 }
 
@@ -484,7 +484,7 @@ nav .icon-burger .line {
 
 /* remove padding from h4 */
 #section-c h4 {
-  padding: 0 0 0.5rem 0;
+  padding: 0 0 0 0;
   text-align: left;
 }
 
@@ -652,20 +652,6 @@ nav .icon-burger .line {
     padding: 0 3vw;
   }
 
-/*-----------------------------------------------------------------------*/
-/* DESKTOP 700- SECTION-A */
-/*-----------------------------------------------------------------------*/
-
-
-
-/*-----------------------------------------------------------------------*/
-/* DESKTOP 700 - SECTION-B */
-/*-----------------------------------------------------------------------*/
-
-
-/*-----------------------------------------------------------------------*/
-/* DESKTOP 700 - SECTION-c */
-/*-----------------------------------------------------------------------*/
 
 
 /*-----------------------------------------------------------------------*/
@@ -827,7 +813,7 @@ nav .icon-burger .line {
 
 /* remove padding from h4 */
 #section-a h4 {
-  padding: 0 0 0.5rem 0;
+  padding: 0 0 0 0;
   text-align: left;
 }
 /*-----------------------------------------------------------------------*/
@@ -1044,8 +1030,6 @@ nav .icon-burger .line {
     /* increase the padding for left and right */
     padding: 10rem var(--widthD) 10rem var(--widthD);
   }
-
-
 
   #section-b .quote{
     margin:10rem 14vw 0 14vw;

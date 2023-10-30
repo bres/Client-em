@@ -14,11 +14,6 @@
     --gray-background-color: #f8f8f8;
     --white-color: #fff;
 
-
-    --primary: #106ce6;
-    --greyLight: #106ce6;
-    --greyLight-2: #106ce6;
-    --greyDark: #106ce6;
   
     /*-----------------------------------------------------------------------*/
     /* Core Padding*/
@@ -269,100 +264,6 @@
     }
   }
 
-/*------------------------------ PAGINATION ------------------------------*/
-
-.items-list {
-    max-width: 90vw;
-    margin: 2rem;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 3rem;
-    justify-content: center;
-    align-content: center;
-  }
-  @media only screen and (max-width: 600px) {
-    .items-list {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  .item {
-    width: 10rem;
-    height: 10rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: var(--greyDark);
-    cursor: pointer;
-  }
-  .item span {
-    background: #ffffff;
-    box-shadow: 0 0.8rem 2rem rgba(90, 97, 129, 0.05);
-    border-radius: 0.6rem;
-    padding: 2rem;
-    font-size: 3rem;
-    transition: all 0.3s ease;
-  }
-  .item:hover span {
-    transform: scale(1.2);
-    color: var(--primary);
-  }
-  .item p {
-    font-size: 1.2rem;
-    margin-top: 1rem;
-    color: var(--greyLight);
-  }
-  
-  .page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 5rem;
-    margin: 3rem;
-    border-radius: 0.6rem;
-    background: #ffffff;
-    box-shadow: 0 0.8rem 2rem rgba(90, 97, 129, 0.05);
-  }
-  .page__numbers, .page__btn, .page__dots {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0.8rem;
-    font-size: 1.4rem;
-    cursor: pointer;
-  }
-  .page__dots {
-    width: 2.6rem;
-    height: 2.6rem;
-    color: var(--greyLight);
-    cursor: initial;
-  }
-  .page__numbers {
-    width: 2.6rem;
-    height: 2.6rem;
-    border-radius: 0.4rem;
-  }
-  .page__numbers:hover {
-    color: var(--primary);
-  }
-  .page__numbers.active {
-    color: #ffffff;
-    background: var(--primary);
-    font-weight: 600;
-    border: 1px solid var(--primary);
-  }
-  .page__btn {
-    color: var(--greyLight);
-    pointer-events: none;
-  }
-  .page__btn.active {
-    color: var(--greyDark);
-    pointer-events: initial;
-  }
-  .page__btn.active:hover {
-    color: var(--primary);
-  }
 
   
 /*------------------------------MOBILE VIEW------------------------------*/
@@ -384,8 +285,8 @@
   #showcase .bg-image {
     position: absolute;
     background: linear-gradient(rgba(0, 0, 0, 0.116), rgba(0, 0, 0, 0.2)),
-      url("https://images.unsplash.com/photo-1561728130-afd430af0493?auto=format&fit=crop&q=80&w=2670&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-    background-position: center;
+      url("https://news.cgtn.com/news/3d3d414f354d544e7a457a6333566d54/img/b40dbf5fe6004a0082aab625fe9a399c/b40dbf5fe6004a0082aab625fe9a399c.jpg");
+    background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -434,67 +335,48 @@
   }
   
   
-
-  
   /*-----------------------------------------------------------------------*/
-  /* MOBILE VIEW - section-a / OUR PROJECTS */
+  /* MOBILE VIEW - section-contact / ABOUT US */
   /*-----------------------------------------------------------------------*/
   
-  /* TODO: */
-  #section-a {
+  #section-contact {
+    background-color: var(--white-color);
     padding: 10rem 3vw;
-
-    /* padding: 0 3vw 10rem 3vw; */
   }
-  
-  .cards {
-    margin: 0;
-    padding: 0;
+  /* the main grid */
+  #section-contact .content-wrap {
     display: grid;
-    grid-template-columns: repeat(1, minmax(200px, 1fr));
-    gap: 2rem;
-    list-style-type: none;
+    grid-template-columns: 1fr;
   }
   
-  .card {
-    border: 0.1rem solid var(--quote_line-color);
-    background-color: #ffffff;
-    padding:1.5rem;
-  }
-  
-  .card:hover {
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-  }
-  
-  .card__image {
+  #section-contact img {
     width: 100%;
-    aspect-ratio: 3/1.7;
+    height: 30rem;
     object-fit: cover;
-    display: block;
   }
   
-  .card__content {
-    text-align: left;
-    padding:2rem 0 0 0;
+/* Style inputs */
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
   }
   
-  #section-a p:nth-child(2) {
-    font-size: 1.6rem;
-    color: var(--p-color);
+  input[type=submit] {
+    background-color: var(--blue-color);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
   }
   
-  #section-a p:last-child {
-    margin: 0;
-    padding:3rem 0 0 0;
-    font-family: 'Courier New', Courier, monospace;
-    line-height: 1;
+  input[type=submit]:hover {
+    background-color: var(--button-hover-color);
   }
-  
-  #section-a h4 {
-
-  }
-  
-  
+ 
   /*-----------------------------------------------------------------------*/
   /* MOBILE VIEW - SECTION-FOOTER */
   /*-----------------------------------------------------------------------*/
@@ -604,15 +486,21 @@
     padding: 0 3vw;
   }
 
-
+  
     /*-----------------------------------------------------------------------*/
-    /* DESKTOP 576  - section-a / OUR PROJECTS  */
+    /* DESKTOP 576  - section-contact / ABOUT US */
     /*-----------------------------------------------------------------------*/
   
-    #section-a {
+    #section-contact {
       padding: 10rem 3vw;
     }
-
+  
+    #section-contact img {
+      height: 35rem;
+    }
+  
+    
+  
     /*-----------------------------------------------------------------------*/
     /* DESKTOP 576 - FOOTER */
     /*-----------------------------------------------------------------------*/
@@ -645,21 +533,21 @@
       padding: 0 3vw;
     }
   
- 
+    /*-----------------------------------------------------------------------*/
+    /* DESKTOP 700  - section-contact / ABOUT US */
+    /*-----------------------------------------------------------------------*/
   
-    /*-----------------------------------------------------------------------*/
-    /* DESKTOP 700  - section-a / OUR PROJECTS */
-    /*-----------------------------------------------------------------------*/
-    #section-a {
+    #section-contact {
       padding: 10rem 3vw;
-      
     }
   
-    .cards {
-      margin: 0 auto;
+  /* the nested grid */
+    #section-contact .card-content ul {
       display: grid;
-      grid-template-columns: repeat(1, minmax(230px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
     }
+  
+   
   
     /*-----------------------------------------------------------------------*/
     /* DESKTOP 700 - FOOTER */
@@ -796,24 +684,42 @@
   #showcase h4 {
     font-size: 2rem;
   }
-
+  
     /*-----------------------------------------------------------------------*/
-    /* DESKTOP 991  - section-a / OUR PROJECTS */
+    /* DESKTOP 991  - section-contact / ABOUT US */
     /*-----------------------------------------------------------------------*/
   
-    #section-a {
-      padding: 10rem 3vw;
+    #section-contact {
+       padding: 10rem 3vw 10rem 3vw;
     }
   
-    /* create 3 columns grid */
-    .cards {
-      margin: 0 auto;
+    /* the main grid */
+    #section-contact .content-wrap {
+      text-align: start;
       display: grid;
-      grid-template-columns: repeat(3, minmax(200px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 2%;
     }
-
- 
   
+    #section-contact img {
+      /* increase the image height */
+      height: 47rem;
+    }
+  
+    /* the nested grid */
+    #section-contact .card-content ul {
+      /* create a margin-top from paragraph text */
+      margin-top: 2.5rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    /* remove padding from h4 */
+    #section-contact h4 {
+      padding: 0 0 0.5rem 0;
+    }
+  
+    
     /*-----------------------------------------------------------------------*/
     /* DESKTOP 991  - SECTION-FOOTER */
     /*-----------------------------------------------------------------------*/
@@ -862,14 +768,26 @@
   }
 
   
-    /*-----------------------------------------------------------------------*/
-    /* DESKTOP 1200  - section-a / OUR PROJECTS */
-    /*-----------------------------------------------------------------------*/
+    /*----------------------------------------------------------------------*/
+    /* DESKTOP 1200  - section-contact / ABOUT US  */
+    /*----------------------------------------------------------------------*/
   
-    #section-a {
-      padding: 10rem 3vw;
+    #section-contact {
+      /* decrease the padding for left and right */
+      padding: 10rem 3vw 10rem 3vw;
     }
-  }
+  
+    #section-contact i {
+      /* increase the i height */
+      font-size: 3rem;
+    }
+  
+    #section-contact img {
+      /* increase the image height */
+      height: 43rem;
+    }
+  
+}
   
   /*----------------------------DESKTOP-1400 VIEW--------------------------*/
   @media (min-width: 1400px) {
@@ -903,18 +821,31 @@
     font-size: 3rem;
   }
   
+  
     /*-----------------------------------------------------------------------*/
-    /* DESKTOP 1400  - section-a / OUR PROJECTS*/
+    /* DESKTOP 1400  - section-contact / ABOUT US */
     /*-----------------------------------------------------------------------*/
   
-    #section-a {
+    #section-contact {
       /* increase the padding for left and right */
-      padding: 10rem var(--widthD) ;
+      padding: 10rem var(--widthD);
     }
+  
+    /* the nested grid */
+    #section-contact .card-content ul{
+      grid-gap: 1.8rem;
+    }
+  
+    #section-contact i {
+      font-size: 3.3rem;
+    }
+  
+    #section-contact img {
+      /* increase the image height */
+      height: 42rem;
+    }
+  
     
-    .cards {
-      gap: 2rem;
-    }
   
     /*-----------------------------------------------------------------------*/
     /* DESKTOP 1400  - SECTION-FOOTER */
@@ -957,17 +888,27 @@
   #showcase .showcase-card p {
     font-size: 1.9rem;
   }
+
     /*-----------------------------------------------------------------------*/
-    /* DESKTOP 1921  - section-a / OUR PROJECTS */
+    /* DESKTOP 1921  - section-contact / ABOUT US*/
     /*-----------------------------------------------------------------------*/
   
-    #section-a {
+    #section-contact {
+      /* increase the padding for left and right */
       padding: 10rem var(--widthD);
     }
-    .cards {
-      gap: 3rem;
+  
+    #section-contact i {
+      /* increase the i height */
+      font-size: 3.6rem;
     }
-
+  
+    #section-contact img {
+      /* increase the image height */
+      height: 45rem;
+    }
+  
+   
     /*-----------------------------------------------------------------------*/
     /* DESKTOP 1921  - SECTION-FOOTER */
     /*-----------------------------------------------------------------------*/
