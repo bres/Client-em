@@ -888,7 +888,7 @@ nav .icon-burger .line {
 
   /* full height showcase image */
   #showcase {
-    height: 40vh;
+    height: 37vh;
   }
 
   /* increase the showcase h2 size */
@@ -998,8 +998,6 @@ nav .icon-burger .line {
     /* increase the padding for left and right */
     padding: 10rem var(--widthD) 10rem var(--widthD);
   }
-
- 
 
   #section-a .quote{
     margin:10rem 14vw 0 14vw;

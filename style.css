@@ -381,6 +381,10 @@ nav .icon-burger .line {
   padding: 0 3vw 10rem 3vw;
 }
 
+#section-b a{
+  text-decoration: none;
+}
+
 .cards {
   margin: 0;
   padding: 0;
@@ -474,6 +478,7 @@ nav .icon-burger .line {
 #section-c ul li {
   border:var(--quote_line-color) 1px solid;
   padding:0.8rem;
+  background-color: var(--gray-background-color);
 }
 
 #section-c ul a {
@@ -920,7 +925,7 @@ nav .icon-burger .line {
   }
 
   #showcase {
-     height: 65vh;
+     height: 55vh;
   }
 
   /* show card */

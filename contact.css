@@ -354,6 +354,11 @@
     height: 30rem;
     object-fit: cover;
   }
+
+    /* remove padding from h4 */
+    #section-contact h4 {
+      padding: 0 0 0 0;
+    }
   
 /* Style inputs */
 input[type=text], select, textarea {
@@ -714,12 +719,6 @@ input[type=text], select, textarea {
       grid-template-columns: repeat(2, 1fr);
     }
   
-    /* remove padding from h4 */
-    #section-contact h4 {
-      padding: 0 0 0.5rem 0;
-    }
-  
-    
     /*-----------------------------------------------------------------------*/
     /* DESKTOP 991  - SECTION-FOOTER */
     /*-----------------------------------------------------------------------*/
@@ -750,7 +749,7 @@ input[type=text], select, textarea {
 
   /* full height showcase image */
   #showcase {
-    height: 40vh;
+    height: 37vh;
   }
 
   /* increase the showcase h2 size */
